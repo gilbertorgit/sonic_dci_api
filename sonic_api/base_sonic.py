@@ -164,7 +164,7 @@ class Sonic():
         self.base_url = 'https://' + self.address + ':' + self.port
 
     """
-    System configuration
+    # System configuration
     """
     def hostnameConfigure(self, hostname):
         """
@@ -172,6 +172,8 @@ class Sonic():
         :param hostname: receives hostname, send to Interfaces.hostnameSet and configures using urlRequest
         :return: return the API response
         """
+        print("-" * 50)
+        print(f'- {self.address}: Configuring hostname: {hostname}')
         url = self.base_url + self.url_system
 
         sonic_obj = SystemSonic()
@@ -186,6 +188,8 @@ class Sonic():
         :param mode: receives interface naming mode, send to Interfaces.interfaceNamingSet and configures using urlRequest
         :return:
         """
+        print("-" * 50)
+        print(f'- {self.address}: Configuring Naming Standard: {mode}')
         url = self.base_url + self.url_system
 
         sonic_obj = SystemSonic()
@@ -201,6 +205,8 @@ class Sonic():
         :param speed: openconfig-if-ethernet:SPEED_25GB, openconfig-if-ethernet:SPEED_10GB
         :return:
         """
+        print("-" * 50)
+        print(f'- {self.address}: Configuring Port Group {id}, speed: {speed}')
         url = self.base_url + self.url_portgroup
 
         sonic_obj = SystemSonic()
@@ -218,6 +224,8 @@ class Sonic():
         :param vrf_name: i.e: default
         :return:
         """
+        print("-" * 50)
+        print(f'- {self.address}: Configuring Anycast MAC: {anycast_mac}, VRF: {vrf_name}')
         url = self.base_url + self.url_network_instances + f'/network-instance={vrf_name}/openconfig-network-instance-ext:global-sag'
 
         sonic_obj = SystemSonic()
@@ -238,6 +246,8 @@ class Sonic():
         :param description:
         :return:
         """
+        print("-" * 50)
+        print(f'- {self.address}: Configuring Vlan: {name}')
         url = self.base_url + self.url_interface_all
 
         sonic_obj = InterfacesSonic()
@@ -464,6 +474,47 @@ class Sonic():
 
         return response
 
+    def vrfBgpGlobalConfigure(self, as_number, router_id, rd_number, rt_export, rt_import, vrf_name):
+
+        url = self.base_url + self.url_network_instances + f'/network-instance={vrf_name}/protocols/protocol=BGP,bgp/'
+
+        sonic_obj = VrfSonic()
+        data = sonic_obj.vrfBgpGlobalSet(as_number=as_number, router_id=router_id, rd_number=rd_number,
+                                         rt_export=rt_export, rt_import=rt_import)
+        response = self.urlRequest(url=url, method='PATCH', data=data)
+
+        return response
+
+    def vrfBgpPeerGroupL3rtrConfigure(self, pg_name, vrf_name):
+
+        url = self.base_url + self.url_network_instances + f'/network-instance={vrf_name}/protocols/protocol=BGP,bgp/'
+
+        sonic_obj = VrfSonic()
+        data = sonic_obj.vrfBgpPeerGroupL3rtrSet(pg_name=pg_name)
+
+        response = self.urlRequest(url=url, method='PATCH', data=data)
+        return response
+
+    def vrfBgpPeerGroupMcLagPeerConfigure(self, pg_name, vrf_name):
+
+        url = self.base_url + self.url_network_instances + f'/network-instance={vrf_name}/protocols/protocol=BGP,bgp/'
+
+        sonic_obj = VrfSonic()
+        data = sonic_obj.vrfBgpPeerGroupMcLagPeerSet(pg_name=pg_name)
+        response = self.urlRequest(url=url, method='PATCH', data=data)
+
+        return response
+
+    def vrfRedistributeConnectedIpv4DefaultConfigure(self, instance_name):
+
+        url = self.base_url + self.url_network_instances + f'/network-instance={instance_name}/table-connections'
+
+        sonic_obj = VrfSonic()
+        data = sonic_obj.vrfRedistributeConnectedIpv4DefaultSet()
+        response = self.urlRequest(url=url, method='PATCH', data=data)
+
+        return response
+
     """
     # Routing Policy / Route MAP Configuration
     """
@@ -478,7 +529,7 @@ class Sonic():
         response = self.urlRequest(url=url, method='PATCH', data=data)
         return response
 
-    def redistributeConnectedIpv4Default(self, instance_name):
+    def redistributeConnectedIpv4DefaultConfigure(self, instance_name):
 
         url = self.base_url + self.url_network_instances + f'/network-instance={instance_name}/table-connections/'
 
@@ -491,7 +542,7 @@ class Sonic():
 
 
     """
-    # BGP Global Configuration
+    # BGP Configuration Global
     """
 
     def bgpGlobalConfigure(self, as_number, router_id, maximum_paths):
@@ -579,8 +630,9 @@ if __name__ == "__main__":
 
     """
     """
+
     """
-    #system basic configuration
+    # System Configuration basic configuration
     """
     a.hostnameConfigure("leaf-test-1")
     a.interfaceNamingModeConfigure("STANDARD")
@@ -601,11 +653,11 @@ if __name__ == "__main__":
     #basic vlan configuration
     """
 
-    a.vlanBasicConfigure("Vlan2", "9050", "true")
+    a.vlanBasicConfigure("Vlan2", "9050", "true", "Vrf-Customer-1-Vlan")
     a.arpSuppressConfigure("Vlan2")
     a.vrfInterfaceAttachConfigure("Vlan2", "Vrf-customer-1")
 
-    a.vlanBasicConfigure("Vlan3", "9050", "true")
+    a.vlanBasicConfigure("Vlan3", "9050", "true", "Vrf-Customer-2-Vlan")
     a.arpSuppressConfigure("Vlan3")
     a.vrfInterfaceAttachConfigure("Vlan3", "Vrf-customer-2")
 
@@ -630,7 +682,7 @@ if __name__ == "__main__":
     a.interfaceAnyCastGwConfigure("Vlan200", "192.168.200.1/24")
 
     """
-    # Loopback
+    # Loopback Configuration
     """
     a.loopBackBasicConfigure("Loopback0", "true", "router-id")
     a.ipv4InterfaceAddressConfigure("Loopback0", "10.10.10.3", "32")
@@ -647,7 +699,7 @@ if __name__ == "__main__":
     a.ipv4InterfaceAddressConfigure("Loopback3", "10.100.100.5", "32")
 
     """
-    # PortChannel configuration -> MClag, Vlan2999 flow
+    # PortChannel Configuration -> MClag, Vlan2999 flow
     """
 
     a.portChannelTaggedConfigure("PortChannel2", 9050, '"2-3", "10", "20", "100", "200", "2999"', "up")
@@ -660,7 +712,7 @@ if __name__ == "__main__":
 
 
     """
-    # Physical Interfaces
+    # Physical Interfaces Configuration
     """
 
     a.interfaceIpv4FullConfigure("Eth1/2", "10.0.0.3", "31", "true", "to_spine1")
@@ -671,21 +723,18 @@ if __name__ == "__main__":
     a.portChannelMemberConfigure("Eth1/6", "PortChannel1")
     a.portChannelMemberConfigure("Eth1/12", "PortChannel2")
 
-
-
     """
-    # Routing Policy - Route MAP
+    # Routing Policy Configuration - Route MAP
     """
 
     a.rpPrependMcLagPeerConfigure("MlagPeer", "ACCEPT_ROUTE", "65103", "10", "ANY")
 
-
     """
-    BGP
+    # BGP Configuration
     """
 
     a.bgpGlobalConfigure(65103, "10.10.10.3", 16)
-    a.redistributeConnectedIpv4Default("default")
+    a.redistributeConnectedIpv4DefaultConfigure("default")
 
     a.bgpL2vpnVniMappingConfigure("default", 5010, "10.10.10.3:10", "5010:1", "5010:1")
     a.bgpL2vpnVniMappingConfigure("default", 5020, "10.10.10.3:20", "5020:1", "5020:1")
@@ -702,9 +751,18 @@ if __name__ == "__main__":
     a.bgpNeighborConfigure("10.10.10.2", 65102, "fabric-overlay", "to_dc1-sonic-spine2-evpn-overlay")
     a.bgpNeighborConfigure("10.101.101.1", 65104, "mclag-peer", "facing_sonic-mclag-leaf2")
 
+    a.vrfBgpGlobalConfigure(65103, "10.100.100.1", "10.10.10.3:2", "10010:1", "10010:1", "Vrf-customer-1")
+    a.vrfRedistributeConnectedIpv4DefaultConfigure("Vrf-customer-1")
+    a.vrfBgpPeerGroupL3rtrConfigure("l3rtr", "Vrf-customer-1")
+    a.vrfBgpPeerGroupMcLagPeerConfigure("mclag-peer", "Vrf-customer-1")
+
+    a.vrfBgpGlobalConfigure(65103, "10.100.100.5", "10.10.10.3:3", "10020:1", "10020:1", "Vrf-customer-2")
+    a.vrfRedistributeConnectedIpv4DefaultConfigure("Vrf-customer-2")
+    a.vrfBgpPeerGroupL3rtrConfigure("l3rtr", "Vrf-customer-2")
+    a.vrfBgpPeerGroupMcLagPeerConfigure("mclag-peer", "Vrf-customer-2")
 
     """
-    # VTEP VXLAN
+    # VTEP Configuration - VXLAN
     """
 
     a.vTepVxLanInterfaceConfigure("vtep1", "10.10.10.10")
