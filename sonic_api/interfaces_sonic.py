@@ -18,7 +18,7 @@ class InterfacesSonic():
         :param name: 2 ( just the vlan number )
         :param mtu: 9000, 9050
         :param enabled: true/false (no shut / shut )
-        :param description: interface description i.e: to_spine1_interface_eth1/1
+        :param description: interface description i.e: to_áspine1_interface_eth1/1
         :return:
         """
         data = f'''
