@@ -253,6 +253,7 @@ class Sonic():
         sonic_obj = InterfacesSonic()
         data = sonic_obj.vlanBasicSet(name=name, mtu=mtu, enabled=enabled, description=description)
         response = self.urlRequest(url=url, method='PATCH', data=data)
+
         return response
 
     def arpSuppressConfigure(self, vlan):
@@ -290,6 +291,17 @@ class Sonic():
         sonic_obj = InterfacesSonic()
         data = sonic_obj.vlanIpv4AddressSet(name=name, ip=ip, prefix=prefix)
         response = self.urlRequest(url=url, method='PATCH', data=data)
+
+        return response
+
+    def vlanAccessConfigure(self, name, mtu, enabled, access_vlan):
+
+        url = self.base_url + self.url_interface_all
+
+        sonic_obj = InterfacesSonic()
+        data = sonic_obj.vlanAccessSet(name=name, mtu=mtu, enabled=enabled, access_vlan=access_vlan)
+        response = self.urlRequest(url=url, method='PATCH', data=data)
+
         return response
 
     """
@@ -406,6 +418,7 @@ class Sonic():
         data = sonic_obj.portChannelTaggedSet(name=name, mtu=mtu, tagged_list_vlan=tagged_list_vlan,
                                               admin_status=admin_status)
         response = self.urlRequest(url=url, method='PATCH', data=data)
+
         return response
 
     def portChannelMemberConfigure(self, int_name, port_channel_name):
@@ -460,9 +473,21 @@ class Sonic():
 
         sonic_obj = InterfacesSonic()
         data = sonic_obj.vrfInterfaceAttachSet(name=name)
+        print(data)
+        response = self.urlRequest(url=url, method='PATCH', data=data)
+        print(response)
+        return response
+
+    def vrfInterfaceLoopBackAttachConfigure(self, name, vrf_name):
+
+        url = self.base_url + self.url_network_instances + f'/network-instance={vrf_name}/interfaces'
+
+        sonic_obj = InterfacesSonic()
+        data = sonic_obj.vrfInterfaceLoopBackAttachSet(name=name)
         response = self.urlRequest(url=url, method='PATCH', data=data)
 
         return response
+
 
     def vrfVniMapConfigure(self, vrf_name, vni_number):
 
@@ -620,14 +645,16 @@ if __name__ == "__main__":
     test_dict = {
         'username': 'admin',
         'password': 'admin',
-        'address': '192.168.0.215',
+        'address': '192.168.0.218',
         'port': '443'
     }
     a.loginRequest(**test_dict)
     #a.getAllInterfaces()
 
+
     """
     """
+    
 
     """
     # System Configuration basic configuration
@@ -689,11 +716,11 @@ if __name__ == "__main__":
     a.ipv4InterfaceAddressConfigure("Loopback1", "10.10.10.10", "32")
 
     a.loopBackBasicConfigure("Loopback2", "true", "vrf1_loopback")
-    a.vrfInterfaceAttachConfigure("Loopback2", "Vrf-customer-1")
+    a.vrfInterfaceLoopBackAttachConfigure("Loopback2", "Vrf-customer-1")
     a.ipv4InterfaceAddressConfigure("Loopback2", "10.100.100.1", "32")
 
     a.loopBackBasicConfigure("Loopback3", "true", "vrf2_loopback")
-    a.vrfInterfaceAttachConfigure("Loopback3", "Vrf-customer-2")
+    a.vrfInterfaceLoopBackAttachConfigure("Loopback3", "Vrf-customer-2")
     a.ipv4InterfaceAddressConfigure("Loopback3", "10.100.100.5", "32")
 
     """
@@ -718,8 +745,13 @@ if __name__ == "__main__":
 
     a.physicalIntBasicConfigure("Eth1/6", 9000, "true", "sonic-mclag-leaf-1-customer1-vlan10")
     a.physicalIntBasicConfigure("Eth1/12", 9050, "true", "to_mclag_leaf_pair")
+
     a.portChannelMemberConfigure("Eth1/6", "PortChannel1")
     a.portChannelMemberConfigure("Eth1/12", "PortChannel2")
+
+
+    a.vlanAccessConfigure("Eth1/8", 9100, "true", 100)
+
 
     """
     # Routing Policy Configuration - Route MAP

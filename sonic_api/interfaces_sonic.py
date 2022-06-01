@@ -14,8 +14,8 @@ class InterfacesSonic():
     @staticmethod
     def vlanBasicSet(name: str, mtu: str, enabled: str, description: str = None):
         """
-        it can be used to configure a basic VLAN or Interface without any additional parameters ( ip, etc )
-        :param name: Vlan250, Eth1/12, Ethernet1/12
+        it can be used to configure a basic VLAN
+        :param name: 2 ( just the vlan number )
         :param mtu: 9000, 9050
         :param enabled: true/false (no shut / shut )
         :param description: interface description i.e: to_spine1_interface_eth1/1
@@ -29,11 +29,11 @@ class InterfacesSonic():
                         "config": {{
                             "description": "{description}",
                             "enabled": {enabled},
-                            "name": "{name}",
+                            "name": "Vlan{name}",
                             "mtu": {mtu},
                             "type": "iana-if-type:l2vlan"
                         }},
-                        "name": "{name}"
+                        "name": "Vlan{name}"
                     }}
                 ]
             }}
@@ -43,12 +43,17 @@ class InterfacesSonic():
 
     @staticmethod
     def vlanArpSuppressSet(vlan: str):
+        """
+        enable  neigh-suppress
+        :param vlan: 2 ( just the vlan number )
+        :return:
+        """
         data = f'''{{
             "sonic-vxlan:sonic-vxlan": {{
                 "SUPPRESS_VLAN_NEIGH": {{
                     "SUPPRESS_VLAN_NEIGH_LIST": [
                         {{
-                            "name": "{vlan}",
+                            "name": "Vlan{vlan}",
                             "suppress": "on"
                         }}
                     ]
@@ -61,6 +66,35 @@ class InterfacesSonic():
 
     @staticmethod
     def vrfInterfaceAttachSet(name: str):
+        """
+        attach interface to a specific Vrf
+        :param name:  2 ( just the vlan number )
+        :return:
+        """
+        data = f'''{{
+            "openconfig-network-instance:interfaces": {{
+                "interface": [
+                    {{
+                        "config": {{
+                            "id": "Vlan{name}",
+                            "interface": "Vlan{name}"
+                        }},
+                        "id": "Vlan{name}"
+                    }}
+                ]
+            }}
+        }}
+        '''
+
+        return data
+
+    @staticmethod
+    def vrfInterfaceLoopBackAttachSet(name: str):
+        """
+        attach interface to a specific Vrf
+        :param name:  2 ( just the vlan number )
+        :return:
+        """
         data = f'''{{
             "openconfig-network-instance:interfaces": {{
                 "interface": [
@@ -80,11 +114,12 @@ class InterfacesSonic():
 
     @staticmethod
     def vlanIpv4AddressSet(name: str, ip: str, prefix):
-        data = f'''{{
+        data = f'''
+        {{
             "openconfig-interfaces:interfaces": {{
                 "interface": [
                     {{
-                        "name": "{name}",
+                        "name": "Vlan{name}",
                         "openconfig-vlan:routed-vlan": {{
                             "openconfig-if-ip:ipv4": {{
                                 "addresses": {{
@@ -109,6 +144,37 @@ class InterfacesSonic():
 
         return data
 
+    @staticmethod
+    def vlanAccessSet(name, mtu, enabled, access_vlan):
+
+        data = f'''
+        {{
+            "openconfig-interfaces:interfaces": {{
+                "interface": [
+                    {{
+                        "config": {{
+                            "enabled": {enabled},
+                            "mtu": {mtu},
+                            "name": "{name}",
+                            "type": "iana-if-type:ethernetCsmacd"
+                        }},
+                        "name": "{name}",
+                        "openconfig-if-ethernet:ethernet": {{
+                            "openconfig-vlan:switched-vlan": {{
+                                "config": {{
+                                    "access-vlan": {access_vlan},
+                                    "interface-mode": "ACCESS"
+                                }}
+                            }}
+                        }}
+                    }}
+                ]
+            }}
+        }}
+        '''
+
+        return data
+
     """
     # Anycast Gateway
     """
@@ -117,7 +183,7 @@ class InterfacesSonic():
     def interfaceAnyCastGwSet(vlan: str, ip_address: str):
         """
 
-        :param vlan: vlan name i.e Vlan150
+        :param vlan: vlan name i.e 2 ( just the vlan number )
         :param ip_address: anycast gateway ip i.e 192.168.10.1/24
         :return: return  data
         """
@@ -126,7 +192,7 @@ class InterfacesSonic():
             "openconfig-interfaces:interfaces": {{
                 "interface": [
                     {{
-                        "name": "{vlan}",
+                        "name": "Vlan{vlan}",
                         "openconfig-vlan:routed-vlan": {{
                             "openconfig-if-ip:ipv4": {{
                                 "openconfig-interfaces-ext:sag-ipv4": {{
@@ -264,7 +330,7 @@ class InterfacesSonic():
                 "MCLAG_UNIQUE_IP": {{
                     "MCLAG_UNIQUE_IP_LIST": [
                         {{
-                            "if_name": "{name}",
+                            "if_name": "Vlan{name}",
                             "unique_ip": "enable"
                         }}
                     ]
