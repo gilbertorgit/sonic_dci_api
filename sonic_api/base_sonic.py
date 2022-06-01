@@ -174,7 +174,7 @@ class Sonic():
         """
         print("-" * 50)
         print(f'- {self.address}: Configuring hostname: {hostname}')
-        url = self.base_url + self.url_system
+        url = f'{self.base_url}{self.url_system}'
 
         sonic_obj = SystemSonic()
         data = sonic_obj.hostnameSet(hostname=hostname)
@@ -190,7 +190,7 @@ class Sonic():
         """
         print("-" * 50)
         print(f'- {self.address}: Configuring Naming Standard: {mode}')
-        url = self.base_url + self.url_system
+        url = f'{self.base_url}{self.url_system}'
 
         sonic_obj = SystemSonic()
         data = sonic_obj.interfaceNamingSet(mode=mode)
@@ -207,7 +207,7 @@ class Sonic():
         """
         print("-" * 50)
         print(f'- {self.address}: Configuring Port Group {id}, speed: {speed}')
-        url = self.base_url + self.url_portgroup
+        url = f'{self.base_url}{self.url_portgroup}'
 
         sonic_obj = SystemSonic()
         data = sonic_obj.portGroupSet(id=id, speed=speed)
@@ -226,7 +226,7 @@ class Sonic():
         """
         print("-" * 50)
         print(f'- {self.address}: Configuring Anycast MAC: {anycast_mac}, VRF: {vrf_name}')
-        url = self.base_url + self.url_network_instances + f'/network-instance={vrf_name}/openconfig-network-instance-ext:global-sag'
+        url = f'{self.base_url}{self.url_network_instances}/network-instance={vrf_name}/openconfig-network-instance-ext:global-sag'
 
         sonic_obj = SystemSonic()
         data = sonic_obj.anyCastMacSet(anycast_mac=anycast_mac, ipv4_enable=ipv4_enable, ipv6_enable=ipv6_enable)
@@ -606,8 +606,6 @@ class Sonic():
         response = self.urlRequest(url=url, method='PATCH', data=data)
 
         return response
-
-
 
     def getAllInterfaces(self):
 
