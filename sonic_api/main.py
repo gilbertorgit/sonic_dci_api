@@ -29,9 +29,14 @@ class CreateSonicConfig:
         self.BGP_VRF = {}
         self.VTEP = {}
 
+    @staticmethod
+    def convertToList(string_name):
+
+        li = list(string_name.split(","))
+        return li
+
     def generateDataInfo(self, excel_file: str, tab_name: str):
 
-        print(f'Reading file: {excel_file} and generating tab: {tab_name} dictionary')
         df = pd.read_excel(excel_file, sheet_name=tab_name)
 
         df['mgmt_ip'] = df['mgmt_ip'].replace({0: np.nan}).fillna(method='ffill')
@@ -84,12 +89,6 @@ class CreateSonicConfig:
         for name in excel_tab_list:
             self.generateDataInfo('sonic_data.xlsx', name)
 
-    def read_excel_data(self, file, sheet_name):
-        db = pd.read_excel(file, sheet_name=sheet_name)
-        return db
-
-
-
     def createSystemSonic(self):
 
         db = self.SYSTEM
@@ -123,50 +122,6 @@ class CreateSonicConfig:
     
                 if 'spine' not in hostname:
                     a.anyCastMacConfigure(anycast_mac, str(anycast_ipv4).lower(), str(anycast_ipv6).lower(), instance)
-    
-
-
-    def getVlanTab(self):
-
-        df = pd.read_excel('sonic_data.xlsx', sheet_name='VLAN')
-        df['mgmt_ip'] = df['mgmt_ip'].replace({0: np.nan}).fillna(method='ffill')
-        df = df.replace({None: np.nan})
-        df = df.dropna(thresh=2)
-        df = df.fillna('None')
-
-
-        results = {}
-        for name, g in df.groupby(by=['mgmt_ip']):
-            g = g.drop('mgmt_ip', axis=1)
-            data = json.loads(g.to_json(orient='table'))['data']
-            for d in data:
-                __ = d.pop('index')
-            results[name] = {
-                'interface': data
-            }
-
-        return results
-
-
-    def getLoopbackTab(self):
-
-        df = pd.read_excel('sonic_data.xlsx', sheet_name='LOOPBACK')
-        df['mgmt_ip'] = df['mgmt_ip'].replace({0: np.nan}).fillna(method='ffill')
-        df = df.replace({None: np.nan})
-        df = df.dropna(thresh=2)
-        df = df.fillna('None')
-
-
-        results = {}
-        for name, g in df.groupby(by=['mgmt_ip']):
-            g = g.drop('mgmt_ip', axis=1)
-            data = json.loads(g.to_json(orient='table'))['data']
-            for d in data:
-                __ = d.pop('index')
-            results[name] = {
-                'interface': data
-            }
-        return results
 
     def createVrfSonic(self):
 
@@ -354,11 +309,230 @@ class CreateSonicConfig:
                     # print("is access interface")
                     a.vlanAccessConfigure(interface, int(mtu), enabled, access_vlan)
 
+    def createRouteMapSonic(self):
+
+        db = self.ROUTEMAP
+
+        for i in db.keys():
+            address = i
+            for v in range(len(db[i]['interface'])):
+
+                name = str(db[i]['interface'][v]['name'])
+                policy_result = db[i]['interface'][v]['policy_result']
+                as_number = str(db[i]['interface'][v]['as_number']).lower()
+                sequence_number = str(db[i]['interface'][v]['sequence_number'])
+                match_set = str(db[i]['interface'][v]['match_set'])
+
+                a = Sonic()
+
+                connection_dict = {
+                    'username': 'admin',
+                    'password': 'admin',
+                    'address': address,
+                    'port': '443'
+                }
+
+                a.loginRequest(**connection_dict)
+
+                a.rpPrependMcLagPeerConfigure(name, str(policy_result).upper(), int(as_number),
+                                              int(sequence_number), str(match_set).upper())
+
+    def createBgpGlobalSonic(self):
+
+        db = self.BGP_GLOBAL
+
+        for i in db.keys():
+            address = i
+            for v in range(len(db[i]['interface'])):
+
+                as_number = db[i]['interface'][v]['as_number']
+                router_id = db[i]['interface'][v]['router_id']
+                maximum_paths = db[i]['interface'][v]['maximum_paths']
+                instance = db[i]['interface'][v]['instance']
+
+                a = Sonic()
+
+                connection_dict = {
+                    'username': 'admin',
+                    'password': 'admin',
+                    'address': address,
+                    'port': '443'
+                }
+
+                a.loginRequest(**connection_dict)
+
+                if as_number != 'None' and router_id != 'None':
+                    a.bgpGlobalConfigure(as_number, router_id, int(maximum_paths))
+                    a.redistributeConnectedIpv4DefaultConfigure(instance)
+
+    def createBgpPeerGroup(self):
+
+        db = self.BGP_GLOBAL
+
+        for i in db.keys():
+            address = i
+            for v in range(len(db[i]['interface'])):
+
+                peer_group = db[i]['interface'][v]['peer_group']
+                export_policy = db[i]['interface'][v]['export_policy']
+                source_ip = db[i]['interface'][v]['source_ip']
+
+                a = Sonic()
+
+                connection_dict = {
+                    'username': 'admin',
+                    'password': 'admin',
+                    'address': address,
+                    'port': '443'
+                }
+
+                a.loginRequest(**connection_dict)
+
+                if peer_group != 'None':
+                    if peer_group == 'fabric-underlay':
+                        a.bgpPeerGroupUnderlayConfigure(peer_group)
+                    elif peer_group == 'fabric-overlay':
+                        a.bgpPeerGroupOverlayConfigure(peer_group, source_ip)
+                    elif peer_group == 'mclag-peer':
+                        a.bgpPeerGroupMcLagConfigure(peer_group, export_policy)
+
+    def createBgpNeighbor(self):
+
+        db = self.BGP_NEIGH
+
+        for i in db.keys():
+            address = i
+            for v in range(len(db[i]['interface'])):
+
+                peer_address = db[i]['interface'][v]['peer_address']
+                peer_as = db[i]['interface'][v]['peer_as']
+                peer_group = db[i]['interface'][v]['peer_group']
+                description = db[i]['interface'][v]['description']
+
+                a = Sonic()
+
+                connection_dict = {
+                    'username': 'admin',
+                    'password': 'admin',
+                    'address': address,
+                    'port': '443'
+                }
+
+                a.loginRequest(**connection_dict)
+
+                if peer_address != 'None' and peer_as != 'None':
+                    a.bgpNeighborConfigure(peer_address, int(peer_as), peer_group, description)
+
+    def createBgpVniMap(self):
+
+        db = self.BGP_VNI_MAP
+
+        for i in db.keys():
+            address = i
+            for v in range(len(db[i]['interface'])):
+
+                instance = db[i]['interface'][v]['instance']
+                vni = db[i]['interface'][v]['vni']
+                rd_number = db[i]['interface'][v]['rd_number']
+                rt_export = db[i]['interface'][v]['rt_export']
+                rt_import = db[i]['interface'][v]['rt_import']
+
+                a = Sonic()
+
+                connection_dict = {
+                    'username': 'admin',
+                    'password': 'admin',
+                    'address': address,
+                    'port': '443'
+                }
+
+                a.loginRequest(**connection_dict)
+
+                if vni != 'None' and instance != 'None':
+                    a.bgpL2vpnVniMappingConfigure(instance, int(vni), rd_number, rt_import, rt_export)
+
+    def createBgpVrf(self):
+
+        db = self.BGP_VRF
+
+        for i in db.keys():
+            address = i
+            for v in range(len(db[i]['interface'])):
+
+                as_number = db[i]['interface'][v]['as_number']
+                router_id = db[i]['interface'][v]['router_id']
+                rd_number = db[i]['interface'][v]['rd_number']
+                rt_export = db[i]['interface'][v]['rt_export']
+                rt_import = db[i]['interface'][v]['rt_import']
+                instance = db[i]['interface'][v]['instance']
+                peer_group = self.convertToList(db[i]['interface'][v]['peer_group'])
+
+                a = Sonic()
+
+                connection_dict = {
+                    'username': 'admin',
+                    'password': 'admin',
+                    'address': address,
+                    'port': '443'
+                }
+
+                a.loginRequest(**connection_dict)
+
+                if as_number != 'None' and instance != 'None':
+                    a.vrfBgpGlobalConfigure(int(as_number), router_id, rd_number, rt_export, rt_import, instance)
+                    a.vrfRedistributeConnectedIpv4DefaultConfigure(instance)
+
+                    if peer_group != None:
+                        for pg_name in peer_group:
+                            if pg_name == 'mclag-peer':
+                                a.vrfBgpPeerGroupMcLagPeerConfigure(pg_name, instance)
+                            elif pg_name == 'l3rtr':
+                                a.vrfBgpPeerGroupL3rtrConfigure(pg_name, instance)
+
+    def createVtepSonic(self):
+
+        db = self.VTEP
+
+        for i in db.keys():
+            address = i
+            for v in range(len(db[i]['interface'])):
+
+                vtep_name = db[i]['interface'][v]['vtep_name']
+                source_ip = db[i]['interface'][v]['source_ip']
+                external_ip = db[i]['interface'][v]['external_ip']
+                vni = db[i]['interface'][v]['vni']
+                vlan = db[i]['interface'][v]['vlan']
+                instance = db[i]['interface'][v]['instance']
+                vni_vrf = db[i]['interface'][v]['vni_vrf']
+
+                a = Sonic()
+
+                connection_dict = {
+                    'username': 'admin',
+                    'password': 'admin',
+                    'address': address,
+                    'port': '443'
+                }
+
+                a.loginRequest(**connection_dict)
+
+                if vtep_name != 'None' and source_ip != 'None':
+                    # print("creating vtep interface", vtep_name, source_ip)
+                    a.vTepVxLanInterfaceConfigure(vtep_name, source_ip)
+
+                elif vtep_name != 'None' and vni != 'None' and vlan != 'None':
+                    # print("creating vni vlan map", vtep_name, int(vni), int(vlan))
+                    a.vTepVxLanVniMapConfigure(vtep_name, int(vni), str(int(vlan)))
+
+                elif instance != 'None' and vni_vrf != 'None':
+                    # print("creating vni vrf", instance, int(vni_vrf))
+                    a.vrfVniMapConfigure(instance, int(vni_vrf))
+
 
 if __name__ == "__main__":
 
-
     sonic_instance = CreateSonicConfig()
+    sonic_instance.sendListInfo()
 
     #sonic_instance.sendListInfo()
     #sonic_instance.createSystemSonic()
@@ -367,4 +541,11 @@ if __name__ == "__main__":
     #sonic_instance.createLoopbackSonic()
     #sonic_instance.createPortchannelSonic()
     #sonic_instance.createInterfaceSonic()
+    #sonic_instance.createRouteMapSonic()
+    #sonic_instance.createBgpGlobalSonic()
+    #sonic_instance.createBgpPeerGroup()
+    #sonic_instance.createBgpNeighbor()
+    #sonic_instance.createBgpVniMap()
+    #sonic_instance.createBgpVrf()
+    #sonic_instance.createVtepSonic()
 
