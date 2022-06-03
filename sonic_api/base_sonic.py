@@ -859,13 +859,14 @@ class Sonic():
         data = f'''
         {{
             "openconfig-file-mgmt-private:input": {{
-                "source": "running-configuration"",
+                "source": "running-configuration",
                 "overwrite": true,
                 "destination": "startup-configuration"
             }}
         }}
         '''
         response = self.urlRequest(url=url, method='POST', data=data)
+
         print(response)
         return response
 
