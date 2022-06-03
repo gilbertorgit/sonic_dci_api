@@ -188,6 +188,36 @@ class CreateSonicConfig:
                     a.vrfInterfaceAttachConfigure(vlan, instance)
                     a.interfaceAnyCastGwConfigure(vlan, anycast_ip)
 
+    def shutNoShutVlanSonic(self):
+
+        print("#" * 80)
+
+        db = self.VLAN
+
+        for i in db.keys():
+
+            address = i
+            for v in range(len(db[i]['interface'])):
+                vlan = int(db[i]['interface'][v]['vlan'])
+                mtu = int(db[i]['interface'][v]['mtu'])
+                enabled = str(db[i]['interface'][v]['enabled']).lower()
+                instance = str(db[i]['interface'][v]['instance'])
+                description = db[i]['interface'][v]['description']
+                anycast_ip = db[i]['interface'][v]['anycast_ip']
+
+                a = Sonic()
+
+                connection_dict = {
+                    'username': 'admin',
+                    'password': 'admin',
+                    'address': address,
+                    'port': '443'
+                }
+                a.loginRequest(**connection_dict)
+
+                if vlan != 'None' and mtu != 'None' and enabled != 'None':
+                    a.vlanShutNoShutConfigure(vlan, mtu, enabled, description)
+
     def createLoopbackSonic(self):
 
         print("#" * 80)
@@ -583,15 +613,18 @@ if __name__ == "__main__":
 
     sonic_instance = CreateSonicConfig()
     sonic_instance.sendListInfo()
-    """
+
     sonic_instance.createSystemSonic()
     sonic_instance.createVrfSonic()
     sonic_instance.createVlanSonic()
+    
     sonic_instance.createLoopbackSonic()
-    """
+
     sonic_instance.createPortchannelSonic()
-    """
+
     sonic_instance.createInterfaceSonic()
+    
+    sonic_instance.shutNoShutVlanSonic()
     
     sonic_instance.createRouteMapSonic()
     sonic_instance.createBgpGlobalSonic()
@@ -602,5 +635,5 @@ if __name__ == "__main__":
     sonic_instance.createBgpVniMap()
     sonic_instance.createBgpVrf()
     sonic_instance.createVtepSonic()
-    #sonic_instance.saveConfigSonic()
-    """
+
+    sonic_instance.saveConfigSonic()

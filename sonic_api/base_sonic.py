@@ -258,6 +258,26 @@ class Sonic():
 
         return response
 
+    def vlanShutNoShutConfigure(self, name, mtu, enabled, description=None):
+        """
+
+        :param name: vlan name i.e Vlan250, Vlan150 ( upercase  "V" )
+        :param mtu: 9000, 9050 etc
+        :param enabled: true or false ( no shut / shut )
+        :param description:
+        :return:
+        """
+        print("-" * 50)
+        print(f'- {self.address}: Enabling Vlan Interface - Vlan: {name}, Enabled: {enabled}')
+        url = self.base_url + self.url_interface_all + f'interface=Vlan{name}/'
+
+        sonic_obj = InterfacesSonic()
+        data = sonic_obj.vlanShutNoShutSet(name=name, mtu=mtu, enabled=enabled, description=description)
+
+        response = self.urlRequest(url=url, method='PUT', data=data)
+
+        return response
+
     def arpSuppressConfigure(self, vlan):
         """
 

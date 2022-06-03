@@ -42,6 +42,26 @@ class InterfacesSonic():
         return data
 
     @staticmethod
+    def vlanShutNoShutSet(name: str, mtu, enabled, description: str = None):
+        data = f'''
+        {{
+            "openconfig-interfaces:interface": [
+                {{
+                    "config": {{
+                        "description": "{description}",
+                        "enabled": {enabled},
+                        "mtu": {mtu},
+                        "name": "Vlan{name}",
+                        "type": "iana-if-type:l2vlan"
+                    }},
+                    "name": "Vlan{name}"
+                }}
+            ]
+        }}
+        '''
+        return data
+
+    @staticmethod
     def vlanArpSuppressSet(vlan: str):
         """
         enable  neigh-suppress

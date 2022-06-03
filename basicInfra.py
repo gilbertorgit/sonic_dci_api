@@ -153,7 +153,7 @@ class BasicInfra():
             if server != '':
                 command = f'/usr/bin/virsh {virsh_action} {server}'
                 subprocess.call(command, shell=True)
-                sleep(2)
+                sleep(1)
 
     def createVirtualVmDic(self, csv_file):
 
