@@ -302,7 +302,8 @@ class InterfacesSonic():
 
     @staticmethod
     def mcLagSet(domain_id, source_ip: str, peer_ip: str, peer_link: str):
-        data = f'''{{
+        data = f'''
+        {{
             "sonic-mclag:sonic-mclag": {{
                 "MCLAG_DOMAIN": {{
                     "MCLAG_DOMAIN_LIST": [
@@ -321,6 +322,25 @@ class InterfacesSonic():
         }}
         '''
 
+        return data
+
+    @staticmethod
+    def mcLagPortChannelSet(channel_group, portchannel_interface):
+        data = f'''
+        {{
+            "sonic-mclag:sonic-mclag": {{
+                "MCLAG_INTERFACE": {{
+                    "MCLAG_INTERFACE_LIST": [
+                        {{
+                            "domain_id": {channel_group},
+                            "if_name": "{portchannel_interface}",
+                            "if_type": "PortChannel"
+                        }}
+                    ]
+                }}
+            }}
+        }}
+        '''
         return data
 
     @staticmethod

@@ -191,7 +191,7 @@ class Sonic():
         :return:
         """
         print("-" * 50)
-        print(f'- {self.address}: Configuring Naming Standard - MODE {mode}')
+        print(f'- {self.address}: Configuring Naming Standard - MODE: {mode}')
         url = f'{self.base_url}{self.url_system}'
 
         sonic_obj = SystemSonic()
@@ -539,6 +539,26 @@ class Sonic():
 
         sonic_obj = InterfacesSonic()
         data = sonic_obj.mcLagSet(domain_id=domain_id, source_ip=source_ip, peer_ip=peer_ip, peer_link=peer_link)
+        response = self.urlRequest(url=url, method='PATCH', data=data)
+
+        return response
+
+    def mcLagPortChannelConfigure(self, channel_group, portchannel_interface):
+        """
+        # it's used to configure the mclag 1, 2 to a customer interfaces to be part of the lag
+        :param domain_id:
+        :param source_ip:
+        :param peer_ip:
+        :param peer_link:
+        :return:
+        """
+        print("-" * 50)
+        print(f'- {self.address}: Configuring MCLag Domain to PortChannel- MCLAG: {channel_group}, PortChannel: {portchannel_interface}')
+
+        url = self.base_url + self.url_mclag_sonic
+
+        sonic_obj = InterfacesSonic()
+        data = sonic_obj.mcLagPortChannelSet(channel_group=channel_group, portchannel_interface=portchannel_interface)
         response = self.urlRequest(url=url, method='PATCH', data=data)
 
         return response

@@ -275,6 +275,8 @@ class CreateSonicConfig:
                 elif access_vlan != 'None' and tagged_vlan == 'None':
                     #print(address, interface, "é portchannel access")
                     a.portChannelAccessConfigure(interface, int(mtu), int(access_vlan), admin_status)
+                    if 'customer' in description:
+                        a.mcLagPortChannelConfigure(int(mclag_domain), interface)
 
     def createInterfaceSonic(self):
 
@@ -581,13 +583,16 @@ if __name__ == "__main__":
 
     sonic_instance = CreateSonicConfig()
     sonic_instance.sendListInfo()
-
+    """
     sonic_instance.createSystemSonic()
     sonic_instance.createVrfSonic()
     sonic_instance.createVlanSonic()
     sonic_instance.createLoopbackSonic()
+    """
     sonic_instance.createPortchannelSonic()
+    """
     sonic_instance.createInterfaceSonic()
+    
     sonic_instance.createRouteMapSonic()
     sonic_instance.createBgpGlobalSonic()
     sonic_instance.createBgpPeerGroup()
@@ -597,5 +602,5 @@ if __name__ == "__main__":
     sonic_instance.createBgpVniMap()
     sonic_instance.createBgpVrf()
     sonic_instance.createVtepSonic()
-    sonic_instance.saveConfigSonic()
-
+    #sonic_instance.saveConfigSonic()
+    """
