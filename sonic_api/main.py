@@ -528,6 +528,26 @@ class CreateSonicConfig:
                     # print("creating vni vrf", instance, int(vni_vrf))
                     a.vrfVniMapConfigure(instance, int(vni_vrf))
 
+    def saveConfigSonic(self):
+
+        db = self.LOOPBACK
+
+        for i in db.keys():
+            address = i
+
+            a = Sonic()
+
+            connection_dict = {
+                'username': 'admin',
+                'password': 'admin',
+                'address': address,
+                'port': '443'
+            }
+
+            a.loginRequest(**connection_dict)
+
+            a.writeMemorySonic()
+
 
 if __name__ == "__main__":
 
@@ -547,4 +567,5 @@ if __name__ == "__main__":
     #sonic_instance.createBgpVniMap()
     #sonic_instance.createBgpVrf()
     #sonic_instance.createVtepSonic()
+    sonic_instance.saveConfigSonic()
 

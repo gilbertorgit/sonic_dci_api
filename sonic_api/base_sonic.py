@@ -55,15 +55,18 @@ class Sonic():
         self.url_mclag_separate_ip_sonic = '/restconf/data/sonic-mclag:sonic-mclag'
 
 
-        #Routing Policy / Route MAP URL
+        # Routing Policy / Route MAP URL
         self.url_routing_policy = '/restconf/data/openconfig-routing-policy:routing-policy'
 
         # L2vpn-evpn VNI mapping BGP URL
         self.url_bgp_l2vpn_evpn_vni_mapping = '/restconf/data/sonic-bgp-global:sonic-bgp-global'
 
 
-        #VTEP VXLAN Configuration VNI Mapping
+        # VTEP VXLAN Configuration VNI Mapping
         self.url_vni_vlan_mapping = '/restconf/data/sonic-vxlan:sonic-vxlan'
+
+        # Write Memory
+        self.url_write_memory = '/restconf/operations/openconfig-file-mgmt-private:copy'
 
     def urlRequest(self, method: str, url: str, data: str = None):
         """
@@ -846,6 +849,24 @@ class Sonic():
 
         return response
 
+    def writeMemorySonic(self):
 
+        print("-" * 50)
+        print(f'- {self.address}: Saving Config - Write Memory')
+
+        url = self.base_url + self.url_write_memory
+
+        data = f'''
+        {{
+            "openconfig-file-mgmt-private:input": {{
+                "source": "running-configuration"",
+                "overwrite": true,
+                "destination": "startup-configuration"
+            }}
+        }}
+        '''
+        response = self.urlRequest(url=url, method='POST', data=data)
+        print(response)
+        return response
 
 
