@@ -91,6 +91,8 @@ class CreateSonicConfig:
 
     def createSystemSonic(self):
 
+        print("#" * 80)
+
         db = self.SYSTEM
 
         for i in db.keys():
@@ -125,6 +127,8 @@ class CreateSonicConfig:
 
     def createVrfSonic(self):
 
+        print("#" * 80)
+
         db = self.VRF
 
         for i in db.keys():
@@ -146,6 +150,8 @@ class CreateSonicConfig:
                 a.vrfConfigure(instance)
 
     def createVlanSonic(self):
+
+        print("#" * 80)
 
         db = self.VLAN
 
@@ -184,6 +190,8 @@ class CreateSonicConfig:
 
     def createLoopbackSonic(self):
 
+        print("#" * 80)
+
         db = self.LOOPBACK
 
         for i in db.keys():
@@ -216,6 +224,8 @@ class CreateSonicConfig:
                     a.ipv4InterfaceAddressConfigure(loopback, ip_address, prefix)
 
     def createPortchannelSonic(self):
+
+        print("#" * 80)
 
         db = self.PORTCHANNEL
 
@@ -268,6 +278,8 @@ class CreateSonicConfig:
 
     def createInterfaceSonic(self):
 
+        print("#" * 80)
+
         db = self.INTERFACE
 
         for i in db.keys():
@@ -311,6 +323,8 @@ class CreateSonicConfig:
 
     def createRouteMapSonic(self):
 
+        print("#" * 80)
+
         db = self.ROUTEMAP
 
         for i in db.keys():
@@ -339,6 +353,8 @@ class CreateSonicConfig:
 
     def createBgpGlobalSonic(self):
 
+        print("#" * 80)
+
         db = self.BGP_GLOBAL
 
         for i in db.keys():
@@ -366,6 +382,8 @@ class CreateSonicConfig:
                     a.redistributeConnectedIpv4DefaultConfigure(instance)
 
     def createBgpPeerGroup(self):
+
+        print("#" * 80)
 
         db = self.BGP_GLOBAL
 
@@ -398,6 +416,8 @@ class CreateSonicConfig:
 
     def createBgpNeighbor(self):
 
+        print("#" * 80)
+
         db = self.BGP_NEIGH
 
         for i in db.keys():
@@ -424,6 +444,8 @@ class CreateSonicConfig:
                     a.bgpNeighborConfigure(peer_address, int(peer_as), peer_group, description)
 
     def createBgpVniMap(self):
+
+        print("#" * 80)
 
         db = self.BGP_VNI_MAP
 
@@ -452,6 +474,8 @@ class CreateSonicConfig:
                     a.bgpL2vpnVniMappingConfigure(instance, int(vni), rd_number, rt_import, rt_export)
 
     def createBgpVrf(self):
+
+        print("#" * 80)
 
         db = self.BGP_VRF
 
@@ -490,6 +514,8 @@ class CreateSonicConfig:
                                 a.vrfBgpPeerGroupL3rtrConfigure(pg_name, instance)
 
     def createVtepSonic(self):
+
+        print("#" * 80)
 
         db = self.VTEP
 
@@ -530,6 +556,8 @@ class CreateSonicConfig:
 
     def saveConfigSonic(self):
 
+        print("#" * 80)
+
         db = self.LOOPBACK
 
         for i in db.keys():
@@ -563,7 +591,9 @@ if __name__ == "__main__":
     sonic_instance.createRouteMapSonic()
     sonic_instance.createBgpGlobalSonic()
     sonic_instance.createBgpPeerGroup()
+
     sonic_instance.createBgpNeighbor()
+
     sonic_instance.createBgpVniMap()
     sonic_instance.createBgpVrf()
     sonic_instance.createVtepSonic()

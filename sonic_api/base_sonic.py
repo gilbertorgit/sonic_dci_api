@@ -867,7 +867,6 @@ class Sonic():
         '''
         response = self.urlRequest(url=url, method='POST', data=data)
 
-        print(response)
         return response
 
 
