@@ -210,7 +210,7 @@ class CreateSonicConfig:
                     a.loopBackBasicConfigure(loopback, enabled, description)
                     a.ipv4InterfaceAddressConfigure(loopback, ip_address, prefix)
                 else:
-                    print(address, "com VRF instance")
+                    # print(address, "com VRF instance")
                     a.loopBackBasicConfigure(loopback, enabled, description)
                     a.vrfInterfaceLoopBackAttachConfigure(loopback, instance)
                     a.ipv4InterfaceAddressConfigure(loopback, ip_address, prefix)
@@ -319,8 +319,8 @@ class CreateSonicConfig:
 
                 name = str(db[i]['interface'][v]['name'])
                 policy_result = db[i]['interface'][v]['policy_result']
-                as_number = str(db[i]['interface'][v]['as_number']).lower()
-                sequence_number = str(db[i]['interface'][v]['sequence_number'])
+                as_number = db[i]['interface'][v]['as_number']
+                sequence_number = db[i]['interface'][v]['sequence_number']
                 match_set = str(db[i]['interface'][v]['match_set'])
 
                 a = Sonic()
@@ -534,7 +534,6 @@ if __name__ == "__main__":
     sonic_instance = CreateSonicConfig()
     sonic_instance.sendListInfo()
 
-    #sonic_instance.sendListInfo()
     #sonic_instance.createSystemSonic()
     #sonic_instance.createVrfSonic()
     #sonic_instance.createVlanSonic()

@@ -15,7 +15,6 @@ from bgp_sonic import *
 
 requests.packages.urllib3.disable_warnings() #Supress SSL verify warnings
 
-
 class Sonic():
 
     def __init__(self):
@@ -173,7 +172,7 @@ class Sonic():
         :return: return the API response
         """
         print("-" * 50)
-        print(f'- {self.address}: Configuring hostname: {hostname}')
+        print(f'- {self.address}: Configuring hostname - Hostname: {hostname}')
         url = f'{self.base_url}{self.url_system}'
 
         sonic_obj = SystemSonic()
@@ -189,7 +188,7 @@ class Sonic():
         :return:
         """
         print("-" * 50)
-        print(f'- {self.address}: Configuring Naming Standard: {mode}')
+        print(f'- {self.address}: Configuring Naming Standard - MODE {mode}')
         url = f'{self.base_url}{self.url_system}'
 
         sonic_obj = SystemSonic()
@@ -206,7 +205,7 @@ class Sonic():
         :return:
         """
         print("-" * 50)
-        print(f'- {self.address}: Configuring Port Group {id}, speed: {speed}')
+        print(f'- {self.address}: Configuring Port Group - PortGroup: {id}, SPEED: {speed}')
         url = f'{self.base_url}{self.url_portgroup}'
 
         sonic_obj = SystemSonic()
@@ -225,7 +224,7 @@ class Sonic():
         :return:
         """
         print("-" * 50)
-        print(f'- {self.address}: Configuring Anycast MAC: {anycast_mac}, VRF: {vrf_name}')
+        print(f'- {self.address}: Configuring Anycast MAC - MAC: {anycast_mac}, VRF: {vrf_name}')
         url = f'{self.base_url}{self.url_network_instances}/network-instance={vrf_name}/openconfig-network-instance-ext:global-sag'
 
         sonic_obj = SystemSonic()
@@ -247,7 +246,7 @@ class Sonic():
         :return:
         """
         print("-" * 50)
-        print(f'- {self.address}: Configuring Vlan: {name}')
+        print(f'- {self.address}: Configuring Vlan Interface - Vlan {name}')
         url = self.base_url + self.url_interface_all
 
         sonic_obj = InterfacesSonic()
@@ -262,6 +261,9 @@ class Sonic():
         :param vlan: vlan name to enable arp suppress
         :return:
         """
+        print("-" * 50)
+        print(f'- {self.address}: Configuring Arp Suppress - Vlan {vlan}')
+
         url = self.base_url + self.url_arp_suppress
 
         sonic_obj = InterfacesSonic()
@@ -271,7 +273,15 @@ class Sonic():
         return response
 
     def interfaceAnyCastGwConfigure(self, vlan, ip_address):
+        """
 
+        :param vlan:
+        :param ip_address:
+        :return:
+        """
+
+        print("-" * 50)
+        print(f'- {self.address}: Configuring Anycast Gateway - Vlan: {vlan}, IP Address: {ip_address}')
         url = self.base_url + self.url_interface_all
 
         sonic_obj = InterfacesSonic()
@@ -285,6 +295,8 @@ class Sonic():
 
         :return: Check interfaceIpv4Set for documentation
         """
+        print("-" * 50)
+        print(f'- {self.address}: Configuring Vlan IP Address - Vlan: {name}, IP: {ip}, Prefix: {prefix}')
 
         url = self.base_url + self.url_interface_all
 
@@ -295,7 +307,16 @@ class Sonic():
         return response
 
     def vlanAccessConfigure(self, name, mtu, enabled, access_vlan):
+        """
 
+        :param name:
+        :param mtu:
+        :param enabled:
+        :param access_vlan:
+        :return:
+        """
+        print("-" * 50)
+        print(f'- {self.address}: Configuring Access Vlan - Vlan {name}, Access: {access_vlan}')
         url = self.base_url + self.url_interface_all
 
         sonic_obj = InterfacesSonic()
@@ -317,6 +338,9 @@ class Sonic():
         :param description:
         :return:
         """
+        print("-" * 50)
+        print(f'- {self.address}: Configuring Basic Physical Interface - Interface {name}, MTU: {mtu}, Description: {description}')
+
         url = self.base_url + self.url_interface_all
 
         sonic_obj = InterfacesSonic()
@@ -335,6 +359,8 @@ class Sonic():
 
         :return: Check loopBackBasicSet for documentation
         """
+        print("-" * 50)
+        print(f'- {self.address}: Configuring Loopback Basic Interface - Interface {name}, Description: {description}')
 
         url = self.base_url + self.url_interface_all
 
@@ -354,6 +380,8 @@ class Sonic():
 
         :return: Check interfaceIpv4Set for documentation
         """
+        print("-" * 50)
+        print(f'- {self.address}: Configuring Interface IPv4 Address - Interface {name}, IP: {ip}, Prefix: {prefix}')
 
         url = self.base_url + self.url_interface_all
 
@@ -363,6 +391,18 @@ class Sonic():
         return response
 
     def interfaceIpv4FullConfigure(self, name, ip, prefix, enabled, description=None):
+        """
+
+        :param name:
+        :param ip:
+        :param prefix:
+        :param enabled:
+        :param description:
+        :return:
+        """
+
+        print("-" * 50)
+        print(f'- {self.address}: Configuring Interface IPv4 Interface - Interface {name}, IP: {ip}, Prefix: {prefix}, Description: {description}')
 
         url = self.base_url + self.url_interface_all
 
@@ -377,6 +417,14 @@ class Sonic():
     """
 
     def vTepVxLanInterfaceConfigure(self, vtep_name: str, source_ip: str):
+        """
+
+        :param vtep_name:
+        :param source_ip:
+        :return:
+        """
+        print("-" * 50)
+        print(f'- {self.address}: Configuring VTEP Interface - Interface: {vtep_name}, Source IP: {source_ip}')
 
         url = self.base_url + self.url_vni_vlan_mapping
 
@@ -387,6 +435,16 @@ class Sonic():
         return response
 
     def vTepVxLanVniMapConfigure(self, vtep_name: str, vni_number, vlan_name: str):
+        """
+
+        :param vtep_name:
+        :param vni_number:
+        :param vlan_name:
+        :return:
+        """
+        print("-" * 50)
+        print(f'- {self.address}: Configuring VTEP VNI VLAN Mapping - VTEP: {vtep_name}, VNI: {vni_number}, VLAN: {vlan_name}')
+
 
         url = self.base_url + self.url_vni_vlan_mapping
 
@@ -401,6 +459,16 @@ class Sonic():
     """
 
     def portChannelAccessConfigure(self, name, mtu, access_vlan, admin_status):
+        """
+
+        :param name:
+        :param mtu:
+        :param access_vlan:
+        :param admin_status:
+        :return:
+        """
+        print("-" * 50)
+        print(f'- {self.address}: Configuring PortChannel Access Interface - Interface: {name}, VLAN: {access_vlan}')
 
         url = self.base_url + self.url_portchannel_int
 
@@ -411,6 +479,16 @@ class Sonic():
         return response
 
     def portChannelTaggedConfigure(self, name, mtu, tagged_list_vlan, admin_status):
+        """
+
+        :param name:
+        :param mtu:
+        :param tagged_list_vlan:
+        :param admin_status:
+        :return:
+        """
+        print("-" * 50)
+        print(f'- {self.address}: Configuring PortChannel Tagged Interface - Interface: {name}, VLAN: {tagged_list_vlan}')
 
         url = self.base_url + self.url_portchannel_int
 
@@ -422,6 +500,14 @@ class Sonic():
         return response
 
     def portChannelMemberConfigure(self, int_name, port_channel_name):
+        """
+
+        :param int_name:
+        :param port_channel_name:
+        :return:
+        """
+        print("-" * 50)
+        print(f'- {self.address}: Configuring PortChannel Interface Member - Interface: {int_name}, PortChannel: {port_channel_name}')
 
         url = self.base_url + self.url_portchannel_int
 
@@ -435,6 +521,16 @@ class Sonic():
     """
 
     def mcLagConfigure(self, domain_id, source_ip: str, peer_ip: str, peer_link: str):
+        """
+
+        :param domain_id:
+        :param source_ip:
+        :param peer_ip:
+        :param peer_link:
+        :return:
+        """
+        print("-" * 50)
+        print(f'- {self.address}: Configuring MCLag Domain - Domain: {domain_id}, Source IP: {source_ip}, Peer IP: {peer_ip}, Peer Link: {peer_link}')
 
         url = self.base_url + self.url_mclag_sonic
 
@@ -445,6 +541,14 @@ class Sonic():
         return response
 
     def mcLagSeparateIpConfigure(self, name):
+        """
+
+        :param name:
+        :return:
+        """
+
+        print("-" * 50)
+        print(f'- {self.address}: Configuring MCLAG Separate IP - Interface: {name}')
 
         url = self.base_url + self.url_mclag_separate_ip_sonic
 
@@ -459,6 +563,13 @@ class Sonic():
     """
 
     def vrfConfigure(self, vrf_name):
+        """
+
+        :param vrf_name:
+        :return:
+        """
+        print("-" * 50)
+        print(f'- {self.address}: Creating VRF Instance - VRF Name: {vrf_name}')
 
         url = self.base_url + self.url_vrf_sonic
 
@@ -468,28 +579,50 @@ class Sonic():
         return response
 
     def vrfInterfaceAttachConfigure(self, name, vrf_name):
+        """
+
+        :param name:
+        :param vrf_name:
+        :return:
+        """
+        print("-" * 50)
+        print(f'- {self.address}: Attaching Interface to VRF Instance - VRF Name: {vrf_name}, Interface: {name}')
 
         url = self.base_url + self.url_network_instances + f'/network-instance={vrf_name}/interfaces'
 
         sonic_obj = InterfacesSonic()
         data = sonic_obj.vrfInterfaceAttachSet(name=name)
-        print(data)
         response = self.urlRequest(url=url, method='PATCH', data=data)
-        print(response)
+
         return response
 
     def vrfInterfaceLoopBackAttachConfigure(self, name, vrf_name):
+        """
+
+        :param name:
+        :param vrf_name:
+        :return:
+        """
+        print("-" * 50)
+        print(f'- {self.address}: Attaching Loopback Interface to VRF Instance - VRF Name: {vrf_name}, Interface: {name}')
 
         url = self.base_url + self.url_network_instances + f'/network-instance={vrf_name}/interfaces'
 
         sonic_obj = InterfacesSonic()
         data = sonic_obj.vrfInterfaceLoopBackAttachSet(name=name)
         response = self.urlRequest(url=url, method='PATCH', data=data)
-
         return response
 
 
     def vrfVniMapConfigure(self, vrf_name, vni_number):
+        """
+
+        :param vrf_name:
+        :param vni_number:
+        :return:
+        """
+        print("-" * 50)
+        print(f'- {self.address}: Creating VRF VNI MAP - VRF Name: {vrf_name}, VNI Number: {vni_number}')
 
         url = self.base_url + self.url_vrf_sonic
 
@@ -500,6 +633,19 @@ class Sonic():
         return response
 
     def vrfBgpGlobalConfigure(self, as_number, router_id, rd_number, rt_export, rt_import, vrf_name):
+        """
+
+        :param as_number:
+        :param router_id:
+        :param rd_number:
+        :param rt_export:
+        :param rt_import:
+        :param vrf_name:
+        :return:
+        """
+        print("-" * 50)
+        print(f'- {self.address}: Configuring VRF BGP Global Config - VRF Name: {vrf_name}, AS: {as_number}, '
+              f'Router ID: {router_id}, RD: {rd_number}, RT-Import: {rt_import}, RT-Export: {rt_export}')
 
         url = self.base_url + self.url_network_instances + f'/network-instance={vrf_name}/protocols/protocol=BGP,bgp/'
 
@@ -511,6 +657,14 @@ class Sonic():
         return response
 
     def vrfBgpPeerGroupL3rtrConfigure(self, pg_name, vrf_name):
+        """
+
+        :param pg_name:
+        :param vrf_name:
+        :return:
+        """
+        print("-" * 50)
+        print(f'- {self.address}: Creating VRF BGP Peer Group - VRF Name: {vrf_name}, Peer Group: {pg_name}')
 
         url = self.base_url + self.url_network_instances + f'/network-instance={vrf_name}/protocols/protocol=BGP,bgp/'
 
@@ -522,6 +676,9 @@ class Sonic():
 
     def vrfBgpPeerGroupMcLagPeerConfigure(self, pg_name, vrf_name):
 
+        print("-" * 50)
+        print(f'- {self.address}: Creating VRF BGP Peer Group - VRF Name: {vrf_name}, Peer Group: {pg_name}')
+
         url = self.base_url + self.url_network_instances + f'/network-instance={vrf_name}/protocols/protocol=BGP,bgp/'
 
         sonic_obj = VrfSonic()
@@ -531,6 +688,9 @@ class Sonic():
         return response
 
     def vrfRedistributeConnectedIpv4DefaultConfigure(self, instance_name):
+
+        print("-" * 50)
+        print(f'- {self.address}: VRF IPv4 Redistribute Connected IPv4 - VRF Name: {instance_name}')
 
         url = self.base_url + self.url_network_instances + f'/network-instance={instance_name}/table-connections'
 
@@ -546,6 +706,18 @@ class Sonic():
 
     def rpPrependMcLagPeerConfigure(self, name, policy_result, as_number, sequence_number, match_set: str = "ANY"):
 
+        """
+
+        :param name:
+        :param policy_result:
+        :param as_number:
+        :param sequence_number:
+        :param match_set:
+        :return:
+        """
+        print("-" * 50)
+        print(f'- {self.address}: Configuring Route MAP - Route MAP: {name}')
+
         url = self.base_url + self.url_routing_policy
 
         sonic_obj = RoutingPolicySonic()
@@ -556,6 +728,9 @@ class Sonic():
 
     def redistributeConnectedIpv4DefaultConfigure(self, instance_name):
 
+        print("-" * 50)
+        print(f'- {self.address}: BGP IPv4 Redistribute Connected IPv4 - VRF Name: {instance_name}')
+
         url = self.base_url + self.url_network_instances + f'/network-instance={instance_name}/table-connections/'
 
         sonic_obj = RoutingPolicySonic()
@@ -564,13 +739,22 @@ class Sonic():
 
         return response
 
-
-
     """
     # BGP Configuration Global
     """
 
     def bgpGlobalConfigure(self, as_number, router_id, maximum_paths):
+
+        """
+
+        :param as_number:
+        :param router_id:
+        :param maximum_paths:
+        :return:
+        """
+
+        print("-" * 50)
+        print(f'- {self.address}: Configuring BGP Global Config - AS Number: {as_number}, Router ID: {router_id}')
 
         url = self.base_url + self.url_network_instances_bgp
 
@@ -581,6 +765,19 @@ class Sonic():
         return response
 
     def bgpL2vpnVniMappingConfigure(self, vrf_name, vni_number, rd_number, rt_export, rt_import):
+
+        """
+
+        :param vrf_name:
+        :param vni_number:
+        :param rd_number:
+        :param rt_export:
+        :param rt_import:
+        :return:
+        """
+
+        print("-" * 50)
+        print(f'- {self.address}: BGP L2VPN VNI Config - VRF Name: {vrf_name}, VNI: {vni_number}, RD: {rd_number}, RT-Import: {rt_import}, RT Export: {rt_export}')
 
         url = self.base_url + self.url_bgp_l2vpn_evpn_vni_mapping
 
@@ -593,6 +790,14 @@ class Sonic():
 
     def bgpPeerGroupUnderlayConfigure(self, pg_name):
 
+        """
+
+        :param pg_name:
+        :return:
+        """
+        print("-" * 50)
+        print(f'- {self.address}: BGP Peer Group - Peer Group: {pg_name}')
+
         url = self.base_url + self.url_network_instances_bgp
 
         sonic_obj = BGPSonic()
@@ -602,6 +807,9 @@ class Sonic():
         return response
 
     def bgpPeerGroupOverlayConfigure(self, pg_name, source_ip):
+
+        print("-" * 50)
+        print(f'- {self.address}: BGP Peer Group - Peer Group: {pg_name}')
 
         url = self.base_url + self.url_network_instances_bgp
 
@@ -613,6 +821,9 @@ class Sonic():
 
     def bgpPeerGroupMcLagConfigure(self, pg_name, export_policy):
 
+        print("-" * 50)
+        print(f'- {self.address}: BGP Peer Group - Peer Group: {pg_name}, Export Policy: {export_policy}')
+
         url = self.base_url + self.url_network_instances_bgp
 
         sonic_obj = BGPSonic()
@@ -623,6 +834,9 @@ class Sonic():
 
     def bgpNeighborConfigure(self, neighbor_address: str, peer_as, peer_group: str, description: str = None):
 
+        print("-" * 50)
+        print(f'- {self.address}: BGP Neighbor Config - Neighbor: {neighbor_address}, Peer AS: {peer_as}, Peer Group: {peer_group}, Description: {description}')
+
         url = self.base_url + self.url_network_instances_bgp
 
         sonic_obj = BGPSonic()
@@ -631,14 +845,6 @@ class Sonic():
         response = self.urlRequest(url=url, method='PATCH', data=data)
 
         return response
-
-    def getAllInterfaces(self):
-
-        url = self.base_url + self.self.url_table_connections
-        response = self.urlRequest(url=url, method='GET')
-        return response
-
-
 
 
 
