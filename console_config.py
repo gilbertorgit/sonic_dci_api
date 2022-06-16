@@ -20,7 +20,7 @@ def config_virtual_sonic_ztp(hostname):
     print("-" * 60)
     print(f"- {hostname}: Disabling Sonic ZTP")
 
-    child = pexpect.spawn(f"virsh console {quote(hostname)} --force", timeout=200, maxread=4000)
+    child = pexpect.spawn(f"virsh console {hostname} --force", timeout=200, maxread=4000)
     logging.debug("Got console, Logging in as admin")
     child.send("\r\r\r")
 
@@ -32,16 +32,10 @@ def config_virtual_sonic_ztp(hostname):
     logging.debug(f"sending user: {pwd}")
     child.sendline(pwd)
 
-    child.send("\r")
-    child.expect(admin_prompt)
+    child.send("\r\r\r\r")
+    child.expect("admin\@.*")
     logging.debug("disabling ZTP")
     child.sendline("sudo config ztp disable -y")
-    print("1")
-    child.expect("Verifying if core services have started", timeout=300)
-    print("2")
-    child.send("\r")
-    print("3")
-    child.expect(admin_prompt, timeout=300)
     print(f"- {hostname}: ZTP Finished")
     child.sendline("exit")
     child.send("\r")
