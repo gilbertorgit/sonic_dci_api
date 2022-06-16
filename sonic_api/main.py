@@ -24,7 +24,6 @@ class CreateSonicConfig:
         self.INTERFACE = {}
         self.ROUTEMAP = {}
         self.BGP_GLOBAL = {}
-        self.BGP_PG = {}
         self.BGP_NEIGH = {}
         self.BG_VNI_MAP = {}
         self.BGP_VRF = {}
@@ -71,8 +70,6 @@ class CreateSonicConfig:
             self.ROUTEMAP = results
         elif tab_name == 'BGP_GLOBAL':
             self.BGP_GLOBAL = results
-        elif tab_name == 'BGP_PG':
-            self.BGP_PG = results
         elif tab_name == 'BGP_NEIGH':
             self.BGP_NEIGH = results
         elif tab_name == 'BGP_VNI_MAP':
