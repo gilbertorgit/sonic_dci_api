@@ -131,6 +131,7 @@ root@lab:/home/lab/# ls -l /home/lab/sonic_dci_api/images/
 
 -rw-r--r-- 1 root root  858783744 Jan 14 08:55 CentOS-7-x86_64-GenericCloud.qcow2
 -rw-r--r-- 1 root root 2473066496 Jan 14 08:55 Enterprise_SONiC_OS_4.0.0.img
+-rw-r--r-- 1 root root 53 Jun 16 12:33 README.md
 ```
 
 ## Python Script
@@ -151,14 +152,16 @@ root@lab:~# export LIBGUESTFS_BACKEND_SETTINGS=force_tcg
 ```
 root@lab:~# cd /home/lab/sonic_dci_api/
 
-root@lab:/home/lab/sonic_dci_api/# python3.7 start_stop.py 
-
+root@lab:/home/lab/sonic_dci_api# python3.7 main.py
 1 - Start Topology
+
 2 - Stop Topology
+
 3 - Create topology
+
 4 - Delete topology
 
-Select one Option: 
+Select one Option:
 ```
 
 ## Sonic API Configuration Script
@@ -237,9 +240,9 @@ Enter new: admin
 
 * The script below will configure the entire topology using REST APIs
 ```
-root@lab:# cd /home/lab/ent_sonic_apstra/sonic_3clos/api_config/
+root@lab:# cd /home/lab/sonic_dci_api/sonic_api/
 
-root@lab:/home/lab/ent_sonic_apstra/sonic_3clos/api_config# python3.7 create_config_apstra_api.py
+root@lab:/home/lab/sonic_dci_api/sonic_api# python3.7 main.py
 ```
 
 **You can check some scripts output in the folder "Output_Script_Example**
