@@ -120,14 +120,14 @@ root@lab:~$ cd /home/lab
 * Enterprise_SONiC_OS_3.3.0.img - https://www.dell.com/support/home/en-us/product-support/product/enterprise-sonic-distribution/drivers
 
 ```
-root@lab:/home/lab# cp Enterprise_SONiC_OS_3.3.0.img CentOS-7-x86_64-GenericCloud.qcow2 /home/lab/ent_sonic_apstra/sonic_3clos/images/
+root@lab:/home/lab# cp Enterprise_SONiC_OS_3.3.0.img CentOS-7-x86_64-GenericCloud.qcow2 /home/lab/sonic_dci_api/images/
 ```
 
 ***Make sure you download the right version as described in this guide. 
 You will have a directory like that one:***
 
 ```
-root@lab:/home/lab/# ls -l /home/lab/ent_sonic_apstra/sonic_3clos/images/
+root@lab:/home/lab/# ls -l /home/lab/sonic_dci_api/images/
 
 -rw-r--r-- 1 root root  858783744 Jan 14 08:55 CentOS-7-x86_64-GenericCloud.qcow2
 -rw-r--r-- 1 root root 2473066496 Jan 14 08:55 Enterprise_SONiC_OS_4.0.0.img
@@ -149,9 +149,9 @@ root@lab:~# export LIBGUESTFS_BACKEND_SETTINGS=force_tcg
 ```
 
 ```
-root@lab:~# cd /home/lab/ent_sonic_apstra/sonic_3clos/
+root@lab:~# cd /home/lab/sonic_dci_api/
 
-root@lab:/home/lab/ent_sonic_apstra/sonic_3clos/# python3.7 start_stop.py 
+root@lab:/home/lab/sonic_dci_api/# python3.7 start_stop.py 
 
 1 - Start Topology
 2 - Stop Topology
