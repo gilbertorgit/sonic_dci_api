@@ -7,16 +7,12 @@
 ## Topology
 
 <p align="center">
-  <img 
-    width="300"
-    height="300"
+  <img
     src="https://github.com/gilbertorgit/sonic_dci_api/blob/main/topology_prints/DCI-TOPOLOGY.JPG"
   >
 </p>
 <p align="center">
-  <img 
-    width="300"
-    height="300"
+  <img
     src="https://github.com/gilbertorgit/sonic_dci_api/blob/main/topology_prints/MGMT_IP.JPG"
   >
 </p>
