@@ -268,19 +268,3 @@ root@lab:# virsh console <VM_NAME>
 
 root@lab:# virsh console c1_v10_h1
 ```
-
-***In case your bond0 (vm_v10_h1) is not working properly, you will need to update the interface configuration***
-```
-root@lab:~# virsh console c1_v10_h1
-
---> login using root credentials: root/lab123
-
-[root@c1_v10_h1 ~]#vi /etc/sysconfig/network-scripts/ifcfg-bond0
-
-Add the line below to the end of the file: 
-
-BONDING_OPTS="mode=4 miimon=100 lacp_rate=1"
-
-[root@c1_v10_h1 ~]# shutdown -r now
-```
-
