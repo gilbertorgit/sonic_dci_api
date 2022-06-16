@@ -380,6 +380,148 @@ class BGPSonic():
         return data
 
     @staticmethod
+    def bgpPeerGroupEvpnGwSet(pg_name, source_ip, multi_hop):
+
+        data = f'''
+        {{
+            "openconfig-network-instance:protocol": [
+                {{
+                    "bgp": {{
+                        "peer-groups": {{
+                            "peer-group": [
+                                {{
+                                    "afi-safis": {{
+                                        "afi-safi": [
+                                            {{
+                                                "afi-safi-name": "openconfig-bgp-types:L2VPN_EVPN",
+                                                "config": {{
+                                                    "afi-safi-name": "openconfig-bgp-types:L2VPN_EVPN",
+                                                    "enabled": true
+                                                }}
+                                            }}
+                                        ]
+                                    }},
+                                    "config": {{
+                                        "enabled": true,
+                                        "peer-group-name": "{pg_name}"
+                                    }},
+                                    "ebgp-multihop": {{
+                                        "config": {{
+                                            "enabled": true,
+                                            "multihop-ttl": {multi_hop}
+                                        }}
+                                    }},
+                                    "peer-group-name": "{pg_name}",
+                                    "timers": {{
+                                        "config": {{
+                                            "connect-retry": 5,
+                                            "hold-time": 30,
+                                            "keepalive-interval": 10,
+                                            "minimum-advertisement-interval": 0
+                                        }}
+                                    }},
+                                    "transport": {{
+                                        "config": {{
+                                            "local-address": "{source_ip}",
+                                            "passive-mode": false
+                                        }}
+                                    }}
+                                }}
+                            ]
+                        }}
+                    }},
+                    "identifier": "openconfig-policy-types:BGP",
+                    "name": "bgp"
+                }}
+            ]
+        }}
+        '''
+
+        return data
+
+    @staticmethod
+    def bgpPeerGroupExtRouterSet(pg_name, multi_hop):
+
+        data = f'''
+        {{
+            "openconfig-network-instance:protocol": [
+                {{
+                    "bgp": {{
+                        "peer-groups": {{
+                            "peer-group": [
+                                {{
+                                    "afi-safis": {{
+                                        "afi-safi": [
+                                            {{
+                                                "afi-safi-name": "openconfig-bgp-types:IPV4_UNICAST",
+                                                "allow-own-as": {{
+                                                    "config": {{
+                                                        "as-count": 1,
+                                                        "enabled": true,
+                                                        "origin": false
+                                                    }}
+                                                }},
+                                                "config": {{
+                                                    "afi-safi-name": "openconfig-bgp-types:IPV4_UNICAST",
+                                                    "enabled": true,
+                                                    "route-reflector-client": false,
+                                                    "send-community": "BOTH",
+                                                    "soft-reconfiguration-in": true
+                                                }},
+                                                "ipv4-unicast": {{
+                                                    "config": {{
+                                                        "send-default-route": false
+                                                    }},
+                                                    "prefix-limit": {{
+                                                        "config": {{
+                                                            "prevent-teardown": false
+                                                        }}
+                                                    }}
+                                                }},
+                                                "next-hop-self": {{
+                                                    "config": {{
+                                                        "enabled": true
+                                                    }}
+                                                }}
+                                            }}
+                                        ]
+                                    }},
+                                    "config": {{
+                                        "enabled": true,
+                                        "peer-group-name": "{pg_name}"
+                                    }},
+                                    "ebgp-multihop": {{
+                                        "config": {{
+                                            "enabled": true,
+                                            "multihop-ttl": {multi_hop}
+                                        }}
+                                    }},
+                                    "peer-group-name": "{pg_name}",
+                                    "timers": {{
+                                        "config": {{
+                                            "connect-retry": 5,
+                                            "minimum-advertisement-interval": 0
+                                        }}
+                                    }},
+                                    "transport": {{
+                                        "config": {{
+                                            "passive-mode": false
+                                        }}
+                                    }}
+                                }}
+                            ]
+                        }}
+                    }},
+                    "identifier": "openconfig-policy-types:BGP",
+                    "name": "bgp"
+                }}
+            ]
+        }}
+        '''
+
+        return data
+
+    @staticmethod
     def bgpNeighborSet(neighbor_address: str, peer_as, peer_group: str, description: str = None):
         """
 

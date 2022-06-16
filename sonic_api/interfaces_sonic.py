@@ -568,15 +568,21 @@ class InterfacesSonic():
 
         data = f'''
         {{
-            "sonic-vxlan:sonic-vxlan": {{
-                "VXLAN_TUNNEL": {{
-                    "VXLAN_TUNNEL_LIST": [
-                        {{
+            "openconfig-interfaces:interfaces": {{
+                "interface": [
+                    {{
+                        "config": {{
                             "name": "{vtep_name}",
-                            "src_ip": "{source_ip}"
+                            "type": "openconfig-if-types-ext:IF_NVE"
+                        }},
+                        "name": "vtep1",
+                        "openconfig-vxlan:vxlan-if": {{
+                            "config": {{
+                                "source-vtep-ip": "{source_ip}"
+                            }}
                         }}
-                    ]
-                }}
+                    }}
+                ]
             }}
         }}
         '''

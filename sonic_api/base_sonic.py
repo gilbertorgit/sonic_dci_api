@@ -61,7 +61,8 @@ class Sonic():
         # L2vpn-evpn VNI mapping BGP URL
         self.url_bgp_l2vpn_evpn_vni_mapping = '/restconf/data/sonic-bgp-global:sonic-bgp-global'
 
-
+        # VTEP Interface - Open Config - Only working to create VTEP Interface
+        self.url_vtep_interface = '/restconf/data/openconfig-interfaces:interfaces/'
         # VTEP VXLAN Configuration VNI Mapping
         self.url_vni_vlan_mapping = '/restconf/data/sonic-vxlan:sonic-vxlan'
 
@@ -449,7 +450,7 @@ class Sonic():
         print("-" * 50)
         print(f'- {self.address}: Configuring VTEP Interface - Interface: {vtep_name}, Source IP: {source_ip}')
 
-        url = self.base_url + self.url_vni_vlan_mapping
+        url = self.base_url + self.url_vtep_interface
 
         sonic_obj = InterfacesSonic()
         data = sonic_obj.vTepVxLanInterfaceSet(vtep_name=vtep_name, source_ip=source_ip)
@@ -699,7 +700,7 @@ class Sonic():
 
         return response
 
-    def vrfBgpPeerGroupL3rtrConfigure(self, pg_name, vrf_name):
+    def vrfBgpPeerGroupExtRouterConfigure(self, pg_name, vrf_name):
         """
 
         :param pg_name:
@@ -712,7 +713,7 @@ class Sonic():
         url = self.base_url + self.url_network_instances + f'/network-instance={vrf_name}/protocols/protocol=BGP,bgp/'
 
         sonic_obj = VrfSonic()
-        data = sonic_obj.vrfBgpPeerGroupL3rtrSet(pg_name=pg_name)
+        data = sonic_obj.vrfBgpPeerGroupExtRouterSet(pg_name=pg_name)
 
         response = self.urlRequest(url=url, method='PATCH', data=data)
         return response
@@ -871,6 +872,32 @@ class Sonic():
 
         sonic_obj = BGPSonic()
         data = sonic_obj.bgpPeerGroupMcLagSet(pg_name=pg_name, export_policy=export_policy)
+        response = self.urlRequest(url=url, method='PATCH', data=data)
+
+        return response
+
+    def bgpPeerGroupEvpnGwConfigure(self, pg_name, source_ip, multi_hop):
+
+        print("-" * 50)
+        print(f'- {self.address}: BGP Peer Group - Peer Group: {pg_name}, Multi-hop: {multi_hop}')
+
+        url = self.base_url + self.url_network_instances_bgp
+
+        sonic_obj = BGPSonic()
+        data = sonic_obj.bgpPeerGroupEvpnGwSet(pg_name=pg_name, source_ip=source_ip, multi_hop=multi_hop)
+        response = self.urlRequest(url=url, method='PATCH', data=data)
+
+        return response
+
+    def bgpPeerGroupExtRouterConfigure(self, pg_name, multi_hop):
+
+        print("-" * 50)
+        print(f'- {self.address}: BGP Peer Group - Peer Group: {pg_name}, Multi-hop: {multi_hop}')
+
+        url = self.base_url + self.url_network_instances_bgp
+
+        sonic_obj = BGPSonic()
+        data = sonic_obj.bgpPeerGroupExtRouterSet(pg_name=pg_name, multi_hop=multi_hop)
         response = self.urlRequest(url=url, method='PATCH', data=data)
 
         return response

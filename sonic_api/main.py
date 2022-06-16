@@ -10,6 +10,7 @@ import json
 import numpy as np
 import openpyxl
 from base_sonic import *
+from time import sleep
 
 
 class CreateSonicConfig:
@@ -351,7 +352,7 @@ class CreateSonicConfig:
 
                 elif access_vlan != 'None' and ip_address == 'None':
                     # print("is access interface")
-                    a.vlanAccessConfigure(interface, int(mtu), enabled, access_vlan)
+                    a.vlanAccessConfigure(interface, int(mtu), enabled, int(access_vlan))
 
     def createRouteMapSonic(self):
 
@@ -410,7 +411,7 @@ class CreateSonicConfig:
                 a.loginRequest(**connection_dict)
 
                 if as_number != 'None' and router_id != 'None':
-                    a.bgpGlobalConfigure(as_number, router_id, int(maximum_paths))
+                    a.bgpGlobalConfigure(int(as_number), router_id, int(maximum_paths))
                     a.redistributeConnectedIpv4DefaultConfigure(instance)
 
     def createBgpPeerGroup(self):
@@ -426,6 +427,7 @@ class CreateSonicConfig:
                 peer_group = db[i]['interface'][v]['peer_group']
                 export_policy = db[i]['interface'][v]['export_policy']
                 source_ip = db[i]['interface'][v]['source_ip']
+                multi_hop = db[i]['interface'][v]['multi_hop']
 
                 a = Sonic()
 
@@ -445,6 +447,10 @@ class CreateSonicConfig:
                         a.bgpPeerGroupOverlayConfigure(peer_group, source_ip)
                     elif peer_group == 'mclag-peer':
                         a.bgpPeerGroupMcLagConfigure(peer_group, export_policy)
+                    elif peer_group == 'evpn-gw':
+                        a.bgpPeerGroupEvpnGwConfigure(peer_group, source_ip, int(multi_hop))
+                    elif peer_group == 'ext-router':
+                        a.bgpPeerGroupExtRouterConfigure(peer_group, int(multi_hop))
 
     def createBgpNeighbor(self):
 
@@ -542,8 +548,8 @@ class CreateSonicConfig:
                         for pg_name in peer_group:
                             if pg_name == 'mclag-peer':
                                 a.vrfBgpPeerGroupMcLagPeerConfigure(pg_name, instance)
-                            elif pg_name == 'l3rtr':
-                                a.vrfBgpPeerGroupL3rtrConfigure(pg_name, instance)
+                            elif pg_name == 'ext-router':
+                                a.vrfBgpPeerGroupExtRouterConfigure(pg_name, instance)
 
     def createVtepSonic(self):
 
@@ -615,25 +621,32 @@ if __name__ == "__main__":
     sonic_instance.sendListInfo()
 
     sonic_instance.createSystemSonic()
+    sleep(1)
     sonic_instance.createVrfSonic()
+    sleep(1)
     sonic_instance.createVlanSonic()
-    
+    sleep(1)
     sonic_instance.createLoopbackSonic()
-
+    sleep(1)
     sonic_instance.createPortchannelSonic()
-
+    sleep(1)
     sonic_instance.createInterfaceSonic()
-    
+    sleep(1)
     sonic_instance.shutNoShutVlanSonic()
-    
+    sleep(1)
     sonic_instance.createRouteMapSonic()
+    sleep(1)
     sonic_instance.createBgpGlobalSonic()
+    sleep(1)
     sonic_instance.createBgpPeerGroup()
-
+    sleep(1)
     sonic_instance.createBgpNeighbor()
-
+    sleep(1)
     sonic_instance.createBgpVniMap()
+    sleep(1)
     sonic_instance.createBgpVrf()
+    sleep(1)
     sonic_instance.createVtepSonic()
-
+    sleep(1)
     sonic_instance.saveConfigSonic()
+

@@ -263,7 +263,7 @@ class VrfSonic():
         return data
 
     @staticmethod
-    def vrfBgpPeerGroupL3rtrSet(pg_name: str):
+    def vrfBgpPeerGroupExtRouterSet(pg_name: str):
 
         data = f'''{{
             "openconfig-network-instance:protocol": [
@@ -285,7 +285,7 @@ class VrfSonic():
                                                 }},
                                                 "config": {{
                                                     "afi-safi-name": "openconfig-bgp-types:IPV4_UNICAST",
-                                                    "enabled": false,
+                                                    "enabled": true,
                                                     "route-reflector-client": false,
                                                     "send-community": "BOTH",
                                                     "soft-reconfiguration-in": true
