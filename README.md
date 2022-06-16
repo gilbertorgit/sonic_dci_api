@@ -19,7 +19,7 @@
 
 ## Getting Started
 
-This document provides some basic configuration examples for lab purposes only in order to help you get started with Virtual Sonic Enterprise Powered by Dell using Python and REST API. 
+This repository provides configuration examples for lab purposes only in order to help you get started with Virtual Enterprise Sonic Powered by Dell using Python and REST API.
 
 * **This lab guide does not intend to cover any best practice and/or production configuration. All the configuration provided in this guide, are just "simple examples"**
 
