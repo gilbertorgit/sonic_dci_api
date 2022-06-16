@@ -5,13 +5,6 @@
 **Gilberto Rampini**
 
 ## Topology
-<center>
-    <img src="https://github.com/gilbertorgit/sonic_dci_api/blob/main/topology_prints/DCI-TOPOLOGY.JPG">
-</center>
-
-<center>
-    <img src="https://github.com/gilbertorgit/sonic_dci_api/blob/main/topology_prints/MGMT_IP.JPG">
-</center>
 
 ![Topology](https://github.com/gilbertorgit/sonic_dci_api/blob/main/topology_prints/DCI-TOPOLOGY.JPG)
 
