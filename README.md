@@ -17,10 +17,6 @@
   >
 </p>
 
-![Topology](https://github.com/gilbertorgit/sonic_dci_api/blob/main/topology_prints/DCI-TOPOLOGY.JPG)
-
-![MGMT IP](https://github.com/gilbertorgit/sonic_dci_api/blob/main/topology_prints/MGMT_IP.JPG)
-
 ## Getting Started
 
 This document provides some basic configuration examples for lab purposes only in order to help you get started with Virtual Sonic Enterprise Powered by Dell using Python and REST-API. 
