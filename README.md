@@ -6,7 +6,7 @@
 
 ## Topology
 
-![Topology](https://github.com/gilbertorgit/ent_sonic_apstra/blob/main/sonic_3clos/topology_prints/Topology.png)
+![Topology](https://github.com/gilbertorgit/sonic_dci_api/blob/main/topology_prints/DCI-TOPOLOGY.JPG)
 
 ![MGMT IP](https://github.com/gilbertorgit/ent_sonic_apstra/blob/main/sonic_3clos/topology_prints/MGMT-IP.png)
 
