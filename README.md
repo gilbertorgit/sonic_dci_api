@@ -88,7 +88,7 @@ root@lab:/home/lab# apt -y install ansible git
 
 root@lab:/home/lab# git clone https://github.com/gilbertorgit/sonic_dci_api.git
 
-root@lab:/home/lab# ansible-playbook ent_sonic_apstra/base-pkg-kvm/playbook.yml
+root@lab:/home/lab# ansible-playbook sonic_dci_api/base-pkg-kvm/playbook.yml
 ```
 
 **Change default virbr0 dhcp range from .254 to .100**
