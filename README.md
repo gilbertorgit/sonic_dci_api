@@ -111,7 +111,7 @@ to
 <range start='192.168.122.2' end='192.168.122.100'/>
 ```
 
-**Reboot your server to confirm all changes are working**
+**Reload your server to confirm all changes are working**
 
 ```
 root@lab:/home/lab# shutdown -r now
@@ -150,8 +150,8 @@ root@lab:/home/lab/# ls -l /home/lab/sonic_dci_api/images/
 
 1. - Start Topology - It will start the entire topology (you have to create it first - Option 4)
 2. - Stop Topology - It will stop the entire topology
-3- Create Topology - It will create the entire topology from scratch
-4- Delete Topology - It will delete and remove the entire topology and images
+3. - Create Topology - It will create the entire topology from scratch
+4. - Delete Topology - It will delete and remove the entire topology and images
 
 * In case you are running your environment under a vmware hypervisor, you have to run a guestfish workaround before this script:
 

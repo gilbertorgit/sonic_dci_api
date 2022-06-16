@@ -1,0 +1,1645 @@
+(my-env) root@lab:/home/lab/sonic_dci_api/sonic_api# cd /home/lab/sonic_dci_api/sonic_api/
+(my-env) root@lab:/home/lab/sonic_dci_api/sonic_api# python main.py
+################################################################################
+--------------------------------------------------
+- 192.168.122.215: Configuring hostname - Hostname: lab3-dc1-sonic-spine-1
+--------------------------------------------------
+- 192.168.122.215: Configuring Naming Standard - MODE: STANDARD
+--------------------------------------------------
+- 192.168.122.215: Configuring Port Group - PortGroup: 1, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.215: Configuring Port Group - PortGroup: 2, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.215: Configuring Port Group - PortGroup: 3, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.215: Configuring Port Group - PortGroup: 4, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.215: Configuring Port Group - PortGroup: 5, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.216: Configuring hostname - Hostname: lab3-dc1-sonic-spine-2
+--------------------------------------------------
+- 192.168.122.216: Configuring Naming Standard - MODE: STANDARD
+--------------------------------------------------
+- 192.168.122.216: Configuring Port Group - PortGroup: 1, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.216: Configuring Port Group - PortGroup: 2, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.216: Configuring Port Group - PortGroup: 3, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.216: Configuring Port Group - PortGroup: 4, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.216: Configuring Port Group - PortGroup: 5, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.217: Configuring hostname - Hostname: lab3-dc1-sonic-leaf-1
+--------------------------------------------------
+- 192.168.122.217: Configuring Naming Standard - MODE: STANDARD
+--------------------------------------------------
+- 192.168.122.217: Configuring Port Group - PortGroup: 1, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.217: Configuring Port Group - PortGroup: 2, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.217: Configuring Port Group - PortGroup: 3, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.217: Configuring Port Group - PortGroup: 4, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.217: Configuring Port Group - PortGroup: 5, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.217: Configuring Anycast MAC - MAC: 00:00:00:00:01:02, VRF: default
+--------------------------------------------------
+- 192.168.122.218: Configuring hostname - Hostname: lab3-dc1-sonic-leaf-2
+--------------------------------------------------
+- 192.168.122.218: Configuring Naming Standard - MODE: STANDARD
+--------------------------------------------------
+- 192.168.122.218: Configuring Port Group - PortGroup: 1, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.218: Configuring Port Group - PortGroup: 2, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.218: Configuring Port Group - PortGroup: 3, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.218: Configuring Port Group - PortGroup: 4, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.218: Configuring Port Group - PortGroup: 5, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.218: Configuring Anycast MAC - MAC: 00:00:00:00:01:02, VRF: default
+--------------------------------------------------
+- 192.168.122.219: Configuring hostname - Hostname: lab3-dc1-sonic-leaf-3
+--------------------------------------------------
+- 192.168.122.219: Configuring Naming Standard - MODE: STANDARD
+--------------------------------------------------
+- 192.168.122.219: Configuring Port Group - PortGroup: 1, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.219: Configuring Port Group - PortGroup: 2, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.219: Configuring Port Group - PortGroup: 3, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.219: Configuring Port Group - PortGroup: 4, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.219: Configuring Port Group - PortGroup: 5, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.219: Configuring Anycast MAC - MAC: 00:00:00:00:01:02, VRF: default
+--------------------------------------------------
+- 192.168.122.220: Configuring hostname - Hostname: lab3-dc1-sonic-borderleaf-1
+--------------------------------------------------
+- 192.168.122.220: Configuring Naming Standard - MODE: STANDARD
+--------------------------------------------------
+- 192.168.122.220: Configuring Port Group - PortGroup: 1, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.220: Configuring Port Group - PortGroup: 2, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.220: Configuring Port Group - PortGroup: 3, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.220: Configuring Port Group - PortGroup: 4, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.220: Configuring Port Group - PortGroup: 5, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.220: Configuring Anycast MAC - MAC: 00:00:00:00:01:02, VRF: default
+--------------------------------------------------
+- 192.168.122.225: Configuring hostname - Hostname: lab3-dc2-sonic-spine-1
+--------------------------------------------------
+- 192.168.122.225: Configuring Naming Standard - MODE: STANDARD
+--------------------------------------------------
+- 192.168.122.225: Configuring Port Group - PortGroup: 1, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.225: Configuring Port Group - PortGroup: 2, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.225: Configuring Port Group - PortGroup: 3, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.225: Configuring Port Group - PortGroup: 4, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.225: Configuring Port Group - PortGroup: 5, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.226: Configuring hostname - Hostname: lab3-dc2-sonic-spine-2
+--------------------------------------------------
+- 192.168.122.226: Configuring Naming Standard - MODE: STANDARD
+--------------------------------------------------
+- 192.168.122.226: Configuring Port Group - PortGroup: 1, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.226: Configuring Port Group - PortGroup: 2, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.226: Configuring Port Group - PortGroup: 3, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.226: Configuring Port Group - PortGroup: 4, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.226: Configuring Port Group - PortGroup: 5, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.227: Configuring hostname - Hostname: lab3-dc2-sonic-leaf-1
+--------------------------------------------------
+- 192.168.122.227: Configuring Naming Standard - MODE: STANDARD
+--------------------------------------------------
+- 192.168.122.227: Configuring Port Group - PortGroup: 1, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.227: Configuring Port Group - PortGroup: 2, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.227: Configuring Port Group - PortGroup: 3, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.227: Configuring Port Group - PortGroup: 4, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.227: Configuring Port Group - PortGroup: 5, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.227: Configuring Anycast MAC - MAC: 00:00:00:00:02:02, VRF: default
+--------------------------------------------------
+- 192.168.122.228: Configuring hostname - Hostname: lab3-dc2-sonic-leaf-2
+--------------------------------------------------
+- 192.168.122.228: Configuring Naming Standard - MODE: STANDARD
+--------------------------------------------------
+- 192.168.122.228: Configuring Port Group - PortGroup: 1, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.228: Configuring Port Group - PortGroup: 2, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.228: Configuring Port Group - PortGroup: 3, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.228: Configuring Port Group - PortGroup: 4, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.228: Configuring Port Group - PortGroup: 5, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.228: Configuring Anycast MAC - MAC: 00:00:00:00:02:02, VRF: default
+--------------------------------------------------
+- 192.168.122.229: Configuring hostname - Hostname: lab3-dc3-sonic-leaf-3
+--------------------------------------------------
+- 192.168.122.229: Configuring Naming Standard - MODE: STANDARD
+--------------------------------------------------
+- 192.168.122.229: Configuring Port Group - PortGroup: 1, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.229: Configuring Port Group - PortGroup: 2, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.229: Configuring Port Group - PortGroup: 3, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.229: Configuring Port Group - PortGroup: 4, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.229: Configuring Port Group - PortGroup: 5, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.229: Configuring Anycast MAC - MAC: 00:00:00:00:02:02, VRF: default
+--------------------------------------------------
+- 192.168.122.230: Configuring hostname - Hostname: lab3-dc2-sonic-borderleaf-1
+--------------------------------------------------
+- 192.168.122.230: Configuring Naming Standard - MODE: STANDARD
+--------------------------------------------------
+- 192.168.122.230: Configuring Port Group - PortGroup: 1, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.230: Configuring Port Group - PortGroup: 2, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.230: Configuring Port Group - PortGroup: 3, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.230: Configuring Port Group - PortGroup: 4, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.230: Configuring Port Group - PortGroup: 5, SPEED: SPEED_10GB
+--------------------------------------------------
+- 192.168.122.230: Configuring Anycast MAC - MAC: 00:00:00:00:02:02, VRF: default
+################################################################################
+--------------------------------------------------
+- 192.168.122.217: Creating VRF Instance - VRF Name: Vrf-customer-1
+--------------------------------------------------
+- 192.168.122.217: Creating VRF Instance - VRF Name: Vrf-customer-2
+--------------------------------------------------
+- 192.168.122.218: Creating VRF Instance - VRF Name: Vrf-customer-1
+--------------------------------------------------
+- 192.168.122.218: Creating VRF Instance - VRF Name: Vrf-customer-2
+--------------------------------------------------
+- 192.168.122.219: Creating VRF Instance - VRF Name: Vrf-customer-1
+--------------------------------------------------
+- 192.168.122.219: Creating VRF Instance - VRF Name: Vrf-customer-2
+--------------------------------------------------
+- 192.168.122.220: Creating VRF Instance - VRF Name: Vrf-customer-1
+--------------------------------------------------
+- 192.168.122.220: Creating VRF Instance - VRF Name: Vrf-customer-2
+--------------------------------------------------
+- 192.168.122.227: Creating VRF Instance - VRF Name: Vrf-customer-1
+--------------------------------------------------
+- 192.168.122.227: Creating VRF Instance - VRF Name: Vrf-customer-2
+--------------------------------------------------
+- 192.168.122.228: Creating VRF Instance - VRF Name: Vrf-customer-1
+--------------------------------------------------
+- 192.168.122.228: Creating VRF Instance - VRF Name: Vrf-customer-2
+--------------------------------------------------
+- 192.168.122.229: Creating VRF Instance - VRF Name: Vrf-customer-1
+--------------------------------------------------
+- 192.168.122.229: Creating VRF Instance - VRF Name: Vrf-customer-2
+--------------------------------------------------
+- 192.168.122.230: Creating VRF Instance - VRF Name: Vrf-customer-1
+--------------------------------------------------
+- 192.168.122.230: Creating VRF Instance - VRF Name: Vrf-customer-2
+################################################################################
+--------------------------------------------------
+- 192.168.122.217: Configuring Vlan Interface - Vlan 2
+--------------------------------------------------
+- 192.168.122.217: Configuring Arp Suppress - Vlan 2
+--------------------------------------------------
+- 192.168.122.217: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-1, Interface: 2
+--------------------------------------------------
+- 192.168.122.217: Configuring Vlan Interface - Vlan 3
+--------------------------------------------------
+- 192.168.122.217: Configuring Arp Suppress - Vlan 3
+--------------------------------------------------
+- 192.168.122.217: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-2, Interface: 3
+--------------------------------------------------
+- 192.168.122.217: Configuring Vlan Interface - Vlan 10
+--------------------------------------------------
+- 192.168.122.217: Configuring Arp Suppress - Vlan 10
+--------------------------------------------------
+- 192.168.122.217: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-1, Interface: 10
+--------------------------------------------------
+- 192.168.122.217: Configuring Anycast Gateway - Vlan: 10, IP Address: 192.168.10.1/24
+--------------------------------------------------
+- 192.168.122.217: Configuring Vlan Interface - Vlan 20
+--------------------------------------------------
+- 192.168.122.217: Configuring Arp Suppress - Vlan 20
+--------------------------------------------------
+- 192.168.122.217: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-1, Interface: 20
+--------------------------------------------------
+- 192.168.122.217: Configuring Anycast Gateway - Vlan: 20, IP Address: 192.168.20.1/24
+--------------------------------------------------
+- 192.168.122.217: Configuring Vlan Interface - Vlan 100
+--------------------------------------------------
+- 192.168.122.217: Configuring Arp Suppress - Vlan 100
+--------------------------------------------------
+- 192.168.122.217: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-2, Interface: 100
+--------------------------------------------------
+- 192.168.122.217: Configuring Anycast Gateway - Vlan: 100, IP Address: 192.168.100.1/24
+--------------------------------------------------
+- 192.168.122.217: Configuring Vlan Interface - Vlan 200
+--------------------------------------------------
+- 192.168.122.217: Configuring Arp Suppress - Vlan 200
+--------------------------------------------------
+- 192.168.122.217: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-2, Interface: 200
+--------------------------------------------------
+- 192.168.122.217: Configuring Anycast Gateway - Vlan: 200, IP Address: 192.168.200.1/24
+--------------------------------------------------
+- 192.168.122.218: Configuring Vlan Interface - Vlan 2
+--------------------------------------------------
+- 192.168.122.218: Configuring Arp Suppress - Vlan 2
+--------------------------------------------------
+- 192.168.122.218: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-1, Interface: 2
+--------------------------------------------------
+- 192.168.122.218: Configuring Vlan Interface - Vlan 3
+--------------------------------------------------
+- 192.168.122.218: Configuring Arp Suppress - Vlan 3
+--------------------------------------------------
+- 192.168.122.218: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-2, Interface: 3
+--------------------------------------------------
+- 192.168.122.218: Configuring Vlan Interface - Vlan 10
+--------------------------------------------------
+- 192.168.122.218: Configuring Arp Suppress - Vlan 10
+--------------------------------------------------
+- 192.168.122.218: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-1, Interface: 10
+--------------------------------------------------
+- 192.168.122.218: Configuring Anycast Gateway - Vlan: 10, IP Address: 192.168.10.1/24
+--------------------------------------------------
+- 192.168.122.218: Configuring Vlan Interface - Vlan 20
+--------------------------------------------------
+- 192.168.122.218: Configuring Arp Suppress - Vlan 20
+--------------------------------------------------
+- 192.168.122.218: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-1, Interface: 20
+--------------------------------------------------
+- 192.168.122.218: Configuring Anycast Gateway - Vlan: 20, IP Address: 192.168.20.1/24
+--------------------------------------------------
+- 192.168.122.218: Configuring Vlan Interface - Vlan 100
+--------------------------------------------------
+- 192.168.122.218: Configuring Arp Suppress - Vlan 100
+--------------------------------------------------
+- 192.168.122.218: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-2, Interface: 100
+--------------------------------------------------
+- 192.168.122.218: Configuring Anycast Gateway - Vlan: 100, IP Address: 192.168.100.1/24
+--------------------------------------------------
+- 192.168.122.218: Configuring Vlan Interface - Vlan 200
+--------------------------------------------------
+- 192.168.122.218: Configuring Arp Suppress - Vlan 200
+--------------------------------------------------
+- 192.168.122.218: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-2, Interface: 200
+--------------------------------------------------
+- 192.168.122.218: Configuring Anycast Gateway - Vlan: 200, IP Address: 192.168.200.1/24
+--------------------------------------------------
+- 192.168.122.219: Configuring Vlan Interface - Vlan 2
+--------------------------------------------------
+- 192.168.122.219: Configuring Arp Suppress - Vlan 2
+--------------------------------------------------
+- 192.168.122.219: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-1, Interface: 2
+--------------------------------------------------
+- 192.168.122.219: Configuring Vlan Interface - Vlan 3
+--------------------------------------------------
+- 192.168.122.219: Configuring Arp Suppress - Vlan 3
+--------------------------------------------------
+- 192.168.122.219: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-2, Interface: 3
+--------------------------------------------------
+- 192.168.122.219: Configuring Vlan Interface - Vlan 10
+--------------------------------------------------
+- 192.168.122.219: Configuring Arp Suppress - Vlan 10
+--------------------------------------------------
+- 192.168.122.219: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-1, Interface: 10
+--------------------------------------------------
+- 192.168.122.219: Configuring Anycast Gateway - Vlan: 10, IP Address: 192.168.10.1/24
+--------------------------------------------------
+- 192.168.122.219: Configuring Vlan Interface - Vlan 20
+--------------------------------------------------
+- 192.168.122.219: Configuring Arp Suppress - Vlan 20
+--------------------------------------------------
+- 192.168.122.219: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-1, Interface: 20
+--------------------------------------------------
+- 192.168.122.219: Configuring Anycast Gateway - Vlan: 20, IP Address: 192.168.20.1/24
+--------------------------------------------------
+- 192.168.122.219: Configuring Vlan Interface - Vlan 100
+--------------------------------------------------
+- 192.168.122.219: Configuring Arp Suppress - Vlan 100
+--------------------------------------------------
+- 192.168.122.219: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-2, Interface: 100
+--------------------------------------------------
+- 192.168.122.219: Configuring Anycast Gateway - Vlan: 100, IP Address: 192.168.100.1/24
+--------------------------------------------------
+- 192.168.122.219: Configuring Vlan Interface - Vlan 200
+--------------------------------------------------
+- 192.168.122.219: Configuring Arp Suppress - Vlan 200
+--------------------------------------------------
+- 192.168.122.219: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-2, Interface: 200
+--------------------------------------------------
+- 192.168.122.219: Configuring Anycast Gateway - Vlan: 200, IP Address: 192.168.200.1/24
+--------------------------------------------------
+- 192.168.122.220: Configuring Vlan Interface - Vlan 2
+--------------------------------------------------
+- 192.168.122.220: Configuring Arp Suppress - Vlan 2
+--------------------------------------------------
+- 192.168.122.220: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-1, Interface: 2
+--------------------------------------------------
+- 192.168.122.220: Configuring Vlan Interface - Vlan 3
+--------------------------------------------------
+- 192.168.122.220: Configuring Arp Suppress - Vlan 3
+--------------------------------------------------
+- 192.168.122.220: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-2, Interface: 3
+--------------------------------------------------
+- 192.168.122.220: Configuring Vlan Interface - Vlan 10
+--------------------------------------------------
+- 192.168.122.220: Configuring Arp Suppress - Vlan 10
+--------------------------------------------------
+- 192.168.122.220: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-1, Interface: 10
+--------------------------------------------------
+- 192.168.122.220: Configuring Anycast Gateway - Vlan: 10, IP Address: 192.168.10.1/24
+--------------------------------------------------
+- 192.168.122.220: Configuring Vlan Interface - Vlan 20
+--------------------------------------------------
+- 192.168.122.220: Configuring Arp Suppress - Vlan 20
+--------------------------------------------------
+- 192.168.122.220: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-1, Interface: 20
+--------------------------------------------------
+- 192.168.122.220: Configuring Anycast Gateway - Vlan: 20, IP Address: 192.168.20.1/24
+--------------------------------------------------
+- 192.168.122.220: Configuring Vlan Interface - Vlan 100
+--------------------------------------------------
+- 192.168.122.220: Configuring Arp Suppress - Vlan 100
+--------------------------------------------------
+- 192.168.122.220: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-2, Interface: 100
+--------------------------------------------------
+- 192.168.122.220: Configuring Anycast Gateway - Vlan: 100, IP Address: 192.168.100.1/24
+--------------------------------------------------
+- 192.168.122.220: Configuring Vlan Interface - Vlan 200
+--------------------------------------------------
+- 192.168.122.220: Configuring Arp Suppress - Vlan 200
+--------------------------------------------------
+- 192.168.122.220: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-2, Interface: 200
+--------------------------------------------------
+- 192.168.122.220: Configuring Anycast Gateway - Vlan: 200, IP Address: 192.168.200.1/24
+--------------------------------------------------
+- 192.168.122.227: Configuring Vlan Interface - Vlan 2
+--------------------------------------------------
+- 192.168.122.227: Configuring Arp Suppress - Vlan 2
+--------------------------------------------------
+- 192.168.122.227: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-1, Interface: 2
+--------------------------------------------------
+- 192.168.122.227: Configuring Vlan Interface - Vlan 3
+--------------------------------------------------
+- 192.168.122.227: Configuring Arp Suppress - Vlan 3
+--------------------------------------------------
+- 192.168.122.227: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-2, Interface: 3
+--------------------------------------------------
+- 192.168.122.227: Configuring Vlan Interface - Vlan 10
+--------------------------------------------------
+- 192.168.122.227: Configuring Arp Suppress - Vlan 10
+--------------------------------------------------
+- 192.168.122.227: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-1, Interface: 10
+--------------------------------------------------
+- 192.168.122.227: Configuring Anycast Gateway - Vlan: 10, IP Address: 192.168.10.1/24
+--------------------------------------------------
+- 192.168.122.227: Configuring Vlan Interface - Vlan 30
+--------------------------------------------------
+- 192.168.122.227: Configuring Arp Suppress - Vlan 30
+--------------------------------------------------
+- 192.168.122.227: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-1, Interface: 30
+--------------------------------------------------
+- 192.168.122.227: Configuring Anycast Gateway - Vlan: 30, IP Address: 192.168.30.1/24
+--------------------------------------------------
+- 192.168.122.227: Configuring Vlan Interface - Vlan 100
+--------------------------------------------------
+- 192.168.122.227: Configuring Arp Suppress - Vlan 100
+--------------------------------------------------
+- 192.168.122.227: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-2, Interface: 100
+--------------------------------------------------
+- 192.168.122.227: Configuring Anycast Gateway - Vlan: 100, IP Address: 192.168.100.1/24
+--------------------------------------------------
+- 192.168.122.227: Configuring Vlan Interface - Vlan 300
+--------------------------------------------------
+- 192.168.122.227: Configuring Arp Suppress - Vlan 300
+--------------------------------------------------
+- 192.168.122.227: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-2, Interface: 300
+--------------------------------------------------
+- 192.168.122.227: Configuring Anycast Gateway - Vlan: 300, IP Address: 192.168.33.1/24
+--------------------------------------------------
+- 192.168.122.228: Configuring Vlan Interface - Vlan 2
+--------------------------------------------------
+- 192.168.122.228: Configuring Arp Suppress - Vlan 2
+--------------------------------------------------
+- 192.168.122.228: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-1, Interface: 2
+--------------------------------------------------
+- 192.168.122.228: Configuring Vlan Interface - Vlan 3
+--------------------------------------------------
+- 192.168.122.228: Configuring Arp Suppress - Vlan 3
+--------------------------------------------------
+- 192.168.122.228: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-2, Interface: 3
+--------------------------------------------------
+- 192.168.122.228: Configuring Vlan Interface - Vlan 10
+--------------------------------------------------
+- 192.168.122.228: Configuring Arp Suppress - Vlan 10
+--------------------------------------------------
+- 192.168.122.228: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-1, Interface: 10
+--------------------------------------------------
+- 192.168.122.228: Configuring Anycast Gateway - Vlan: 10, IP Address: 192.168.10.1/24
+--------------------------------------------------
+- 192.168.122.228: Configuring Vlan Interface - Vlan 30
+--------------------------------------------------
+- 192.168.122.228: Configuring Arp Suppress - Vlan 30
+--------------------------------------------------
+- 192.168.122.228: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-1, Interface: 30
+--------------------------------------------------
+- 192.168.122.228: Configuring Anycast Gateway - Vlan: 30, IP Address: 192.168.30.1/24
+--------------------------------------------------
+- 192.168.122.228: Configuring Vlan Interface - Vlan 100
+--------------------------------------------------
+- 192.168.122.228: Configuring Arp Suppress - Vlan 100
+--------------------------------------------------
+- 192.168.122.228: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-2, Interface: 100
+--------------------------------------------------
+- 192.168.122.228: Configuring Anycast Gateway - Vlan: 100, IP Address: 192.168.100.1/24
+--------------------------------------------------
+- 192.168.122.228: Configuring Vlan Interface - Vlan 300
+--------------------------------------------------
+- 192.168.122.228: Configuring Arp Suppress - Vlan 300
+--------------------------------------------------
+- 192.168.122.228: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-2, Interface: 300
+--------------------------------------------------
+- 192.168.122.228: Configuring Anycast Gateway - Vlan: 300, IP Address: 192.168.33.1/24
+--------------------------------------------------
+- 192.168.122.229: Configuring Vlan Interface - Vlan 2
+--------------------------------------------------
+- 192.168.122.229: Configuring Arp Suppress - Vlan 2
+--------------------------------------------------
+- 192.168.122.229: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-1, Interface: 2
+--------------------------------------------------
+- 192.168.122.229: Configuring Vlan Interface - Vlan 3
+--------------------------------------------------
+- 192.168.122.229: Configuring Arp Suppress - Vlan 3
+--------------------------------------------------
+- 192.168.122.229: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-2, Interface: 3
+--------------------------------------------------
+- 192.168.122.229: Configuring Vlan Interface - Vlan 10
+--------------------------------------------------
+- 192.168.122.229: Configuring Arp Suppress - Vlan 10
+--------------------------------------------------
+- 192.168.122.229: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-1, Interface: 10
+--------------------------------------------------
+- 192.168.122.229: Configuring Anycast Gateway - Vlan: 10, IP Address: 192.168.10.1/24
+--------------------------------------------------
+- 192.168.122.229: Configuring Vlan Interface - Vlan 30
+--------------------------------------------------
+- 192.168.122.229: Configuring Arp Suppress - Vlan 30
+--------------------------------------------------
+- 192.168.122.229: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-1, Interface: 30
+--------------------------------------------------
+- 192.168.122.229: Configuring Anycast Gateway - Vlan: 30, IP Address: 192.168.30.1/24
+--------------------------------------------------
+- 192.168.122.229: Configuring Vlan Interface - Vlan 100
+--------------------------------------------------
+- 192.168.122.229: Configuring Arp Suppress - Vlan 100
+--------------------------------------------------
+- 192.168.122.229: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-2, Interface: 100
+--------------------------------------------------
+- 192.168.122.229: Configuring Anycast Gateway - Vlan: 100, IP Address: 192.168.100.1/24
+--------------------------------------------------
+- 192.168.122.229: Configuring Vlan Interface - Vlan 300
+--------------------------------------------------
+- 192.168.122.229: Configuring Arp Suppress - Vlan 300
+--------------------------------------------------
+- 192.168.122.229: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-2, Interface: 300
+--------------------------------------------------
+- 192.168.122.229: Configuring Anycast Gateway - Vlan: 300, IP Address: 192.168.33.1/24
+--------------------------------------------------
+- 192.168.122.230: Configuring Vlan Interface - Vlan 2
+--------------------------------------------------
+- 192.168.122.230: Configuring Arp Suppress - Vlan 2
+--------------------------------------------------
+- 192.168.122.230: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-1, Interface: 2
+--------------------------------------------------
+- 192.168.122.230: Configuring Vlan Interface - Vlan 3
+--------------------------------------------------
+- 192.168.122.230: Configuring Arp Suppress - Vlan 3
+--------------------------------------------------
+- 192.168.122.230: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-2, Interface: 3
+--------------------------------------------------
+- 192.168.122.230: Configuring Vlan Interface - Vlan 10
+--------------------------------------------------
+- 192.168.122.230: Configuring Arp Suppress - Vlan 10
+--------------------------------------------------
+- 192.168.122.230: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-1, Interface: 10
+--------------------------------------------------
+- 192.168.122.230: Configuring Anycast Gateway - Vlan: 10, IP Address: 192.168.10.1/24
+--------------------------------------------------
+- 192.168.122.230: Configuring Vlan Interface - Vlan 30
+--------------------------------------------------
+- 192.168.122.230: Configuring Arp Suppress - Vlan 30
+--------------------------------------------------
+- 192.168.122.230: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-1, Interface: 30
+--------------------------------------------------
+- 192.168.122.230: Configuring Anycast Gateway - Vlan: 30, IP Address: 192.168.30.1/24
+--------------------------------------------------
+- 192.168.122.230: Configuring Vlan Interface - Vlan 100
+--------------------------------------------------
+- 192.168.122.230: Configuring Arp Suppress - Vlan 100
+--------------------------------------------------
+- 192.168.122.230: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-2, Interface: 100
+--------------------------------------------------
+- 192.168.122.230: Configuring Anycast Gateway - Vlan: 100, IP Address: 192.168.100.1/24
+--------------------------------------------------
+- 192.168.122.230: Configuring Vlan Interface - Vlan 300
+--------------------------------------------------
+- 192.168.122.230: Configuring Arp Suppress - Vlan 300
+--------------------------------------------------
+- 192.168.122.230: Attaching Interface to VRF Instance - VRF Name: Vrf-customer-2, Interface: 300
+--------------------------------------------------
+- 192.168.122.230: Configuring Anycast Gateway - Vlan: 300, IP Address: 192.168.33.1/24
+################################################################################
+--------------------------------------------------
+- 192.168.122.215: Configuring Loopback Basic Interface - Interface Loopback0, Description: router-id
+--------------------------------------------------
+- 192.168.122.215: Configuring Interface IPv4 Address - Interface Loopback0, IP: 10.10.10.1, Prefix: 32
+--------------------------------------------------
+- 192.168.122.216: Configuring Loopback Basic Interface - Interface Loopback0, Description: router-id
+--------------------------------------------------
+- 192.168.122.216: Configuring Interface IPv4 Address - Interface Loopback0, IP: 10.10.10.2, Prefix: 32
+--------------------------------------------------
+- 192.168.122.217: Configuring Loopback Basic Interface - Interface Loopback0, Description: router-id
+--------------------------------------------------
+- 192.168.122.217: Configuring Interface IPv4 Address - Interface Loopback0, IP: 10.10.10.3, Prefix: 32
+--------------------------------------------------
+- 192.168.122.217: Configuring Loopback Basic Interface - Interface Loopback1, Description: vtep-loopback
+--------------------------------------------------
+- 192.168.122.217: Configuring Interface IPv4 Address - Interface Loopback1, IP: 10.10.10.10, Prefix: 32
+--------------------------------------------------
+- 192.168.122.217: Configuring Loopback Basic Interface - Interface Loopback2, Description: customer1
+--------------------------------------------------
+- 192.168.122.217: Attaching Loopback Interface to VRF Instance - VRF Name: Vrf-customer-1, Interface: Loopback2
+--------------------------------------------------
+- 192.168.122.217: Configuring Interface IPv4 Address - Interface Loopback2, IP: 10.100.100.1, Prefix: 32
+--------------------------------------------------
+- 192.168.122.217: Configuring Loopback Basic Interface - Interface Loopback3, Description: customer2
+--------------------------------------------------
+- 192.168.122.217: Attaching Loopback Interface to VRF Instance - VRF Name: Vrf-customer-2, Interface: Loopback3
+--------------------------------------------------
+- 192.168.122.217: Configuring Interface IPv4 Address - Interface Loopback3, IP: 10.100.100.5, Prefix: 32
+--------------------------------------------------
+- 192.168.122.218: Configuring Loopback Basic Interface - Interface Loopback0, Description: router-id
+--------------------------------------------------
+- 192.168.122.218: Configuring Interface IPv4 Address - Interface Loopback0, IP: 10.10.10.4, Prefix: 32
+--------------------------------------------------
+- 192.168.122.218: Configuring Loopback Basic Interface - Interface Loopback1, Description: vtep-loopback
+--------------------------------------------------
+- 192.168.122.218: Configuring Interface IPv4 Address - Interface Loopback1, IP: 10.10.10.10, Prefix: 32
+--------------------------------------------------
+- 192.168.122.218: Configuring Loopback Basic Interface - Interface Loopback2, Description: customer1
+--------------------------------------------------
+- 192.168.122.218: Attaching Loopback Interface to VRF Instance - VRF Name: Vrf-customer-1, Interface: Loopback2
+--------------------------------------------------
+- 192.168.122.218: Configuring Interface IPv4 Address - Interface Loopback2, IP: 10.100.100.2, Prefix: 32
+--------------------------------------------------
+- 192.168.122.218: Configuring Loopback Basic Interface - Interface Loopback3, Description: customer2
+--------------------------------------------------
+- 192.168.122.218: Attaching Loopback Interface to VRF Instance - VRF Name: Vrf-customer-2, Interface: Loopback3
+--------------------------------------------------
+- 192.168.122.218: Configuring Interface IPv4 Address - Interface Loopback3, IP: 10.100.100.6, Prefix: 32
+--------------------------------------------------
+- 192.168.122.219: Configuring Loopback Basic Interface - Interface Loopback0, Description: router-id
+--------------------------------------------------
+- 192.168.122.219: Configuring Interface IPv4 Address - Interface Loopback0, IP: 10.10.10.5, Prefix: 32
+--------------------------------------------------
+- 192.168.122.219: Configuring Loopback Basic Interface - Interface Loopback1, Description: vtep-loopback
+--------------------------------------------------
+- 192.168.122.219: Configuring Interface IPv4 Address - Interface Loopback1, IP: 10.10.10.11, Prefix: 32
+--------------------------------------------------
+- 192.168.122.219: Configuring Loopback Basic Interface - Interface Loopback2, Description: customer1
+--------------------------------------------------
+- 192.168.122.219: Attaching Loopback Interface to VRF Instance - VRF Name: Vrf-customer-1, Interface: Loopback2
+--------------------------------------------------
+- 192.168.122.219: Configuring Interface IPv4 Address - Interface Loopback2, IP: 10.100.100.3, Prefix: 32
+--------------------------------------------------
+- 192.168.122.219: Configuring Loopback Basic Interface - Interface Loopback3, Description: customer2
+--------------------------------------------------
+- 192.168.122.219: Attaching Loopback Interface to VRF Instance - VRF Name: Vrf-customer-2, Interface: Loopback3
+--------------------------------------------------
+- 192.168.122.219: Configuring Interface IPv4 Address - Interface Loopback3, IP: 10.100.100.7, Prefix: 32
+--------------------------------------------------
+- 192.168.122.220: Configuring Loopback Basic Interface - Interface Loopback0, Description: router-id
+--------------------------------------------------
+- 192.168.122.220: Configuring Interface IPv4 Address - Interface Loopback0, IP: 10.10.10.6, Prefix: 32
+--------------------------------------------------
+- 192.168.122.220: Configuring Loopback Basic Interface - Interface Loopback1, Description: vtep-loopback
+--------------------------------------------------
+- 192.168.122.220: Configuring Interface IPv4 Address - Interface Loopback1, IP: 10.10.10.12, Prefix: 32
+--------------------------------------------------
+- 192.168.122.220: Configuring Loopback Basic Interface - Interface Loopback2, Description: customer1
+--------------------------------------------------
+- 192.168.122.220: Attaching Loopback Interface to VRF Instance - VRF Name: Vrf-customer-1, Interface: Loopback2
+--------------------------------------------------
+- 192.168.122.220: Configuring Interface IPv4 Address - Interface Loopback2, IP: 10.100.100.0, Prefix: 32
+--------------------------------------------------
+- 192.168.122.220: Configuring Loopback Basic Interface - Interface Loopback3, Description: customer2
+--------------------------------------------------
+- 192.168.122.220: Attaching Loopback Interface to VRF Instance - VRF Name: Vrf-customer-2, Interface: Loopback3
+--------------------------------------------------
+- 192.168.122.220: Configuring Interface IPv4 Address - Interface Loopback3, IP: 10.100.100.4, Prefix: 32
+--------------------------------------------------
+- 192.168.122.220: Configuring Loopback Basic Interface - Interface Loopback100, Description: external-tunnel-vtep
+--------------------------------------------------
+- 192.168.122.220: Configuring Interface IPv4 Address - Interface Loopback100, IP: 10.1.1.1, Prefix: 32
+--------------------------------------------------
+- 192.168.122.225: Configuring Loopback Basic Interface - Interface Loopback0, Description: router-id
+--------------------------------------------------
+- 192.168.122.225: Configuring Interface IPv4 Address - Interface Loopback0, IP: 20.20.20.1, Prefix: 32
+--------------------------------------------------
+- 192.168.122.226: Configuring Loopback Basic Interface - Interface Loopback0, Description: router-id
+--------------------------------------------------
+- 192.168.122.226: Configuring Interface IPv4 Address - Interface Loopback0, IP: 20.20.20.2, Prefix: 32
+--------------------------------------------------
+- 192.168.122.227: Configuring Loopback Basic Interface - Interface Loopback0, Description: router-id
+--------------------------------------------------
+- 192.168.122.227: Configuring Interface IPv4 Address - Interface Loopback0, IP: 20.20.20.3, Prefix: 32
+--------------------------------------------------
+- 192.168.122.227: Configuring Loopback Basic Interface - Interface Loopback1, Description: vtep-loopback
+--------------------------------------------------
+- 192.168.122.227: Configuring Interface IPv4 Address - Interface Loopback1, IP: 20.20.20.10, Prefix: 32
+--------------------------------------------------
+- 192.168.122.227: Configuring Loopback Basic Interface - Interface Loopback2, Description: customer1
+--------------------------------------------------
+- 192.168.122.227: Attaching Loopback Interface to VRF Instance - VRF Name: Vrf-customer-1, Interface: Loopback2
+--------------------------------------------------
+- 192.168.122.227: Configuring Interface IPv4 Address - Interface Loopback2, IP: 20.200.200.1, Prefix: 32
+--------------------------------------------------
+- 192.168.122.227: Configuring Loopback Basic Interface - Interface Loopback3, Description: customer2
+--------------------------------------------------
+- 192.168.122.227: Attaching Loopback Interface to VRF Instance - VRF Name: Vrf-customer-2, Interface: Loopback3
+--------------------------------------------------
+- 192.168.122.227: Configuring Interface IPv4 Address - Interface Loopback3, IP: 20.200.200.5, Prefix: 32
+--------------------------------------------------
+- 192.168.122.228: Configuring Loopback Basic Interface - Interface Loopback0, Description: router-id
+--------------------------------------------------
+- 192.168.122.228: Configuring Interface IPv4 Address - Interface Loopback0, IP: 20.20.20.4, Prefix: 32
+--------------------------------------------------
+- 192.168.122.228: Configuring Loopback Basic Interface - Interface Loopback1, Description: vtep-loopback
+--------------------------------------------------
+- 192.168.122.228: Configuring Interface IPv4 Address - Interface Loopback1, IP: 20.20.20.10, Prefix: 32
+--------------------------------------------------
+- 192.168.122.228: Configuring Loopback Basic Interface - Interface Loopback2, Description: customer1
+--------------------------------------------------
+- 192.168.122.228: Attaching Loopback Interface to VRF Instance - VRF Name: Vrf-customer-1, Interface: Loopback2
+--------------------------------------------------
+- 192.168.122.228: Configuring Interface IPv4 Address - Interface Loopback2, IP: 20.200.200.2, Prefix: 32
+--------------------------------------------------
+- 192.168.122.228: Configuring Loopback Basic Interface - Interface Loopback3, Description: customer2
+--------------------------------------------------
+- 192.168.122.228: Attaching Loopback Interface to VRF Instance - VRF Name: Vrf-customer-2, Interface: Loopback3
+--------------------------------------------------
+- 192.168.122.228: Configuring Interface IPv4 Address - Interface Loopback3, IP: 20.200.200.6, Prefix: 32
+--------------------------------------------------
+- 192.168.122.229: Configuring Loopback Basic Interface - Interface Loopback0, Description: router-id
+--------------------------------------------------
+- 192.168.122.229: Configuring Interface IPv4 Address - Interface Loopback0, IP: 20.20.20.5, Prefix: 32
+--------------------------------------------------
+- 192.168.122.229: Configuring Loopback Basic Interface - Interface Loopback1, Description: vtep-loopback
+--------------------------------------------------
+- 192.168.122.229: Configuring Interface IPv4 Address - Interface Loopback1, IP: 20.20.20.11, Prefix: 32
+--------------------------------------------------
+- 192.168.122.229: Configuring Loopback Basic Interface - Interface Loopback2, Description: customer1
+--------------------------------------------------
+- 192.168.122.229: Attaching Loopback Interface to VRF Instance - VRF Name: Vrf-customer-1, Interface: Loopback2
+--------------------------------------------------
+- 192.168.122.229: Configuring Interface IPv4 Address - Interface Loopback2, IP: 20.200.200.3, Prefix: 32
+--------------------------------------------------
+- 192.168.122.229: Configuring Loopback Basic Interface - Interface Loopback3, Description: customer2
+--------------------------------------------------
+- 192.168.122.229: Attaching Loopback Interface to VRF Instance - VRF Name: Vrf-customer-2, Interface: Loopback3
+--------------------------------------------------
+- 192.168.122.229: Configuring Interface IPv4 Address - Interface Loopback3, IP: 20.200.200.7, Prefix: 32
+--------------------------------------------------
+- 192.168.122.230: Configuring Loopback Basic Interface - Interface Loopback0, Description: router-id
+--------------------------------------------------
+- 192.168.122.230: Configuring Interface IPv4 Address - Interface Loopback0, IP: 20.20.20.6, Prefix: 32
+--------------------------------------------------
+- 192.168.122.230: Configuring Loopback Basic Interface - Interface Loopback1, Description: vtep-loopback
+--------------------------------------------------
+- 192.168.122.230: Configuring Interface IPv4 Address - Interface Loopback1, IP: 20.20.20.12, Prefix: 32
+--------------------------------------------------
+- 192.168.122.230: Configuring Loopback Basic Interface - Interface Loopback2, Description: customer1
+--------------------------------------------------
+- 192.168.122.230: Attaching Loopback Interface to VRF Instance - VRF Name: Vrf-customer-1, Interface: Loopback2
+--------------------------------------------------
+- 192.168.122.230: Configuring Interface IPv4 Address - Interface Loopback2, IP: 20.200.200.0, Prefix: 32
+--------------------------------------------------
+- 192.168.122.230: Configuring Loopback Basic Interface - Interface Loopback3, Description: customer2
+--------------------------------------------------
+- 192.168.122.230: Attaching Loopback Interface to VRF Instance - VRF Name: Vrf-customer-2, Interface: Loopback3
+--------------------------------------------------
+- 192.168.122.230: Configuring Interface IPv4 Address - Interface Loopback3, IP: 20.200.200.4, Prefix: 32
+--------------------------------------------------
+- 192.168.122.230: Configuring Loopback Basic Interface - Interface Loopback100, Description: external-tunnel-vtep
+--------------------------------------------------
+- 192.168.122.230: Configuring Interface IPv4 Address - Interface Loopback100, IP: 20.1.1.1, Prefix: 32
+################################################################################
+--------------------------------------------------
+- 192.168.122.217: Configuring PortChannel Tagged Interface - Interface: PortChannel2, VLAN: "2-3", "10", "20", "100", "200", "2999"
+--------------------------------------------------
+- 192.168.122.217: Configuring MCLag Domain - Domain: 1, Source IP: 10.101.101.0, Peer IP: 10.101.101.1, Peer Link: PortChannel2
+--------------------------------------------------
+- 192.168.122.217: Configuring Vlan Interface - Vlan 2999
+--------------------------------------------------
+- 192.168.122.217: Configuring MCLAG Separate IP - Interface: 2999
+--------------------------------------------------
+- 192.168.122.217: Configuring Vlan IP Address - Vlan: 2999, IP: 10.101.101.0, Prefix: 31
+--------------------------------------------------
+- 192.168.122.217: Configuring PortChannel Access Interface - Interface: PortChannel1, VLAN: 10
+--------------------------------------------------
+- 192.168.122.217: Configuring MCLag Domain to PortChannel- MCLAG: 1, PortChannel: PortChannel1
+--------------------------------------------------
+- 192.168.122.218: Configuring PortChannel Tagged Interface - Interface: PortChannel2, VLAN: "2-3", "10", "20", "100", "200", "2999"
+--------------------------------------------------
+- 192.168.122.218: Configuring MCLag Domain - Domain: 1, Source IP: 10.101.101.1, Peer IP: 10.101.101.0, Peer Link: PortChannel2
+--------------------------------------------------
+- 192.168.122.218: Configuring Vlan Interface - Vlan 2999
+--------------------------------------------------
+- 192.168.122.218: Configuring MCLAG Separate IP - Interface: 2999
+--------------------------------------------------
+- 192.168.122.218: Configuring Vlan IP Address - Vlan: 2999, IP: 10.101.101.1, Prefix: 31
+--------------------------------------------------
+- 192.168.122.218: Configuring PortChannel Access Interface - Interface: PortChannel1, VLAN: 10
+--------------------------------------------------
+- 192.168.122.218: Configuring MCLag Domain to PortChannel- MCLAG: 1, PortChannel: PortChannel1
+--------------------------------------------------
+- 192.168.122.227: Configuring PortChannel Tagged Interface - Interface: PortChannel2, VLAN: "2-3", "10", "30", "100", "300", "2999"
+--------------------------------------------------
+- 192.168.122.227: Configuring MCLag Domain - Domain: 1, Source IP: 20.201.201.0, Peer IP: 20.201.201.1, Peer Link: PortChannel2
+--------------------------------------------------
+- 192.168.122.227: Configuring Vlan Interface - Vlan 2999
+--------------------------------------------------
+- 192.168.122.227: Configuring MCLAG Separate IP - Interface: 2999
+--------------------------------------------------
+- 192.168.122.227: Configuring Vlan IP Address - Vlan: 2999, IP: 20.201.201.0, Prefix: 31
+--------------------------------------------------
+- 192.168.122.227: Configuring PortChannel Access Interface - Interface: PortChannel1, VLAN: 10
+--------------------------------------------------
+- 192.168.122.227: Configuring MCLag Domain to PortChannel- MCLAG: 1, PortChannel: PortChannel1
+--------------------------------------------------
+- 192.168.122.228: Configuring PortChannel Tagged Interface - Interface: PortChannel2, VLAN: "2-3", "10", "30", "100", "300", "2999"
+--------------------------------------------------
+- 192.168.122.228: Configuring MCLag Domain - Domain: 1, Source IP: 20.201.201.1, Peer IP: 20.201.201.0, Peer Link: PortChannel2
+--------------------------------------------------
+- 192.168.122.228: Configuring Vlan Interface - Vlan 2999
+--------------------------------------------------
+- 192.168.122.228: Configuring MCLAG Separate IP - Interface: 2999
+--------------------------------------------------
+- 192.168.122.228: Configuring Vlan IP Address - Vlan: 2999, IP: 20.201.201.1, Prefix: 31
+--------------------------------------------------
+- 192.168.122.228: Configuring PortChannel Access Interface - Interface: PortChannel1, VLAN: 10
+--------------------------------------------------
+- 192.168.122.228: Configuring MCLag Domain to PortChannel- MCLAG: 1, PortChannel: PortChannel1
+################################################################################
+--------------------------------------------------
+- 192.168.122.215: Configuring Interface IPv4 Interface - Interface Eth1/2, IP: 10.10.0.0, Prefix: 31, Description: to-borderleaf1
+--------------------------------------------------
+- 192.168.122.215: Configuring Interface IPv4 Interface - Interface Eth1/3, IP: 10.10.0.2, Prefix: 31, Description: to-leaf1
+--------------------------------------------------
+- 192.168.122.215: Configuring Interface IPv4 Interface - Interface Eth1/4, IP: 10.10.0.4, Prefix: 31, Description: to-leaf2
+--------------------------------------------------
+- 192.168.122.215: Configuring Interface IPv4 Interface - Interface Eth1/5, IP: 10.10.0.6, Prefix: 31, Description: to-leaf3
+--------------------------------------------------
+- 192.168.122.216: Configuring Interface IPv4 Interface - Interface Eth1/2, IP: 10.10.0.8, Prefix: 31, Description: to-borderleaf1
+--------------------------------------------------
+- 192.168.122.216: Configuring Interface IPv4 Interface - Interface Eth1/3, IP: 10.10.0.10, Prefix: 31, Description: to-leaf1
+--------------------------------------------------
+- 192.168.122.216: Configuring Interface IPv4 Interface - Interface Eth1/4, IP: 10.10.0.12, Prefix: 31, Description: to-leaf2
+--------------------------------------------------
+- 192.168.122.216: Configuring Interface IPv4 Interface - Interface Eth1/5, IP: 10.10.0.14, Prefix: 31, Description: to-leaf3
+--------------------------------------------------
+- 192.168.122.217: Configuring Interface IPv4 Interface - Interface Eth1/2, IP: 10.10.0.3, Prefix: 31, Description: to-spine1
+--------------------------------------------------
+- 192.168.122.217: Configuring Interface IPv4 Interface - Interface Eth1/3, IP: 10.10.0.11, Prefix: 31, Description: to-spine2
+--------------------------------------------------
+- 192.168.122.217: Configuring Basic Physical Interface - Interface Eth1/6, MTU: 9000, Description: to-customer1-vlan10
+--------------------------------------------------
+- 192.168.122.217: Configuring PortChannel Interface Member - Interface: Eth1/6, PortChannel: PortChannel1
+--------------------------------------------------
+- 192.168.122.217: Configuring Basic Physical Interface - Interface Eth1/12, MTU: 9050, Description: to-mclag-peer
+--------------------------------------------------
+- 192.168.122.217: Configuring PortChannel Interface Member - Interface: Eth1/12, PortChannel: PortChannel2
+--------------------------------------------------
+- 192.168.122.218: Configuring Interface IPv4 Interface - Interface Eth1/2, IP: 10.10.0.5, Prefix: 31, Description: to-spine1
+--------------------------------------------------
+- 192.168.122.218: Configuring Interface IPv4 Interface - Interface Eth1/3, IP: 10.10.0.13, Prefix: 31, Description: to-spine2
+--------------------------------------------------
+- 192.168.122.218: Configuring Basic Physical Interface - Interface Eth1/6, MTU: 9000, Description: to-customer1-vlan10
+--------------------------------------------------
+- 192.168.122.218: Configuring PortChannel Interface Member - Interface: Eth1/6, PortChannel: PortChannel1
+--------------------------------------------------
+- 192.168.122.218: Configuring Access Vlan - Vlan Eth1/7, Access: 100
+--------------------------------------------------
+- 192.168.122.218: Configuring Basic Physical Interface - Interface Eth1/12, MTU: 9050, Description: to-mclag-peer
+--------------------------------------------------
+- 192.168.122.218: Configuring PortChannel Interface Member - Interface: Eth1/12, PortChannel: PortChannel2
+--------------------------------------------------
+- 192.168.122.219: Configuring Interface IPv4 Interface - Interface Eth1/2, IP: 10.10.0.7, Prefix: 31, Description: to-spine1
+--------------------------------------------------
+- 192.168.122.219: Configuring Interface IPv4 Interface - Interface Eth1/3, IP: 10.10.0.15, Prefix: 31, Description: to-spine2
+--------------------------------------------------
+- 192.168.122.219: Configuring Access Vlan - Vlan Eth1/6, Access: 10
+--------------------------------------------------
+- 192.168.122.219: Configuring Access Vlan - Vlan Eth1/7, Access: 20
+--------------------------------------------------
+- 192.168.122.219: Configuring Access Vlan - Vlan Eth1/8, Access: 200
+--------------------------------------------------
+- 192.168.122.220: Configuring Interface IPv4 Interface - Interface Eth1/2, IP: 10.10.0.1, Prefix: 31, Description: to-spine1
+--------------------------------------------------
+- 192.168.122.220: Configuring Interface IPv4 Interface - Interface Eth1/3, IP: 10.10.0.9, Prefix: 31, Description: to-spine2
+--------------------------------------------------
+- 192.168.122.220: Configuring Interface IPv4 Interface - Interface Eth1/6, IP: 30.30.0.0, Prefix: 31, Description: to-dc2-borderleaf1
+--------------------------------------------------
+- 192.168.122.225: Configuring Interface IPv4 Interface - Interface Eth1/2, IP: 20.20.0.0, Prefix: 31, Description: to-borderleaf1
+--------------------------------------------------
+- 192.168.122.225: Configuring Interface IPv4 Interface - Interface Eth1/3, IP: 20.20.0.2, Prefix: 31, Description: to-leaf1
+--------------------------------------------------
+- 192.168.122.225: Configuring Interface IPv4 Interface - Interface Eth1/4, IP: 20.20.0.4, Prefix: 31, Description: to-leaf2
+--------------------------------------------------
+- 192.168.122.225: Configuring Interface IPv4 Interface - Interface Eth1/5, IP: 20.20.0.6, Prefix: 31, Description: to-leaf3
+--------------------------------------------------
+- 192.168.122.226: Configuring Interface IPv4 Interface - Interface Eth1/2, IP: 20.20.0.8, Prefix: 31, Description: to-borderleaf1
+--------------------------------------------------
+- 192.168.122.226: Configuring Interface IPv4 Interface - Interface Eth1/3, IP: 20.20.0.10, Prefix: 31, Description: to-leaf1
+--------------------------------------------------
+- 192.168.122.226: Configuring Interface IPv4 Interface - Interface Eth1/4, IP: 20.20.0.12, Prefix: 31, Description: to-leaf2
+--------------------------------------------------
+- 192.168.122.226: Configuring Interface IPv4 Interface - Interface Eth1/5, IP: 20.20.0.14, Prefix: 31, Description: to-leaf3
+--------------------------------------------------
+- 192.168.122.227: Configuring Interface IPv4 Interface - Interface Eth1/2, IP: 20.20.0.3, Prefix: 31, Description: to-spine1
+--------------------------------------------------
+- 192.168.122.227: Configuring Interface IPv4 Interface - Interface Eth1/3, IP: 20.20.0.11, Prefix: 31, Description: to-spine2
+--------------------------------------------------
+- 192.168.122.227: Configuring Basic Physical Interface - Interface Eth1/6, MTU: 9000, Description: to-customer1-vlan10
+--------------------------------------------------
+- 192.168.122.227: Configuring PortChannel Interface Member - Interface: Eth1/6, PortChannel: PortChannel1
+--------------------------------------------------
+- 192.168.122.227: Configuring Basic Physical Interface - Interface Eth1/12, MTU: 9050, Description: to-mclag-peer
+--------------------------------------------------
+- 192.168.122.227: Configuring PortChannel Interface Member - Interface: Eth1/12, PortChannel: PortChannel2
+--------------------------------------------------
+- 192.168.122.228: Configuring Interface IPv4 Interface - Interface Eth1/2, IP: 20.20.0.5, Prefix: 31, Description: to-spine1
+--------------------------------------------------
+- 192.168.122.228: Configuring Interface IPv4 Interface - Interface Eth1/3, IP: 20.20.0.13, Prefix: 31, Description: to-spine2
+--------------------------------------------------
+- 192.168.122.228: Configuring Basic Physical Interface - Interface Eth1/6, MTU: 9000, Description: to-customer1-vlan10
+--------------------------------------------------
+- 192.168.122.228: Configuring PortChannel Interface Member - Interface: Eth1/6, PortChannel: PortChannel1
+--------------------------------------------------
+- 192.168.122.228: Configuring Access Vlan - Vlan Eth1/7, Access: 100
+--------------------------------------------------
+- 192.168.122.228: Configuring Basic Physical Interface - Interface Eth1/12, MTU: 9050, Description: to-mclag-peer
+--------------------------------------------------
+- 192.168.122.228: Configuring PortChannel Interface Member - Interface: Eth1/12, PortChannel: PortChannel2
+--------------------------------------------------
+- 192.168.122.229: Configuring Interface IPv4 Interface - Interface Eth1/2, IP: 20.20.0.7, Prefix: 31, Description: to-spine1
+--------------------------------------------------
+- 192.168.122.229: Configuring Interface IPv4 Interface - Interface Eth1/3, IP: 20.20.0.15, Prefix: 31, Description: to-spine2
+--------------------------------------------------
+- 192.168.122.229: Configuring Access Vlan - Vlan Eth1/6, Access: 10
+--------------------------------------------------
+- 192.168.122.229: Configuring Access Vlan - Vlan Eth1/7, Access: 30
+--------------------------------------------------
+- 192.168.122.229: Configuring Access Vlan - Vlan Eth1/8, Access: 300
+--------------------------------------------------
+- 192.168.122.230: Configuring Interface IPv4 Interface - Interface Eth1/2, IP: 20.20.0.1, Prefix: 31, Description: to-spine1
+--------------------------------------------------
+- 192.168.122.230: Configuring Interface IPv4 Interface - Interface Eth1/3, IP: 20.20.0.9, Prefix: 31, Description: to-spine2
+--------------------------------------------------
+- 192.168.122.230: Configuring Interface IPv4 Interface - Interface Eth1/6, IP: 30.30.0.1, Prefix: 31, Description: to-dc2-borderleaf1
+################################################################################
+--------------------------------------------------
+- 192.168.122.217: Enabling Vlan Interface - Vlan: 2, Enabled: true
+--------------------------------------------------
+- 192.168.122.217: Enabling Vlan Interface - Vlan: 3, Enabled: true
+--------------------------------------------------
+- 192.168.122.217: Enabling Vlan Interface - Vlan: 10, Enabled: true
+--------------------------------------------------
+- 192.168.122.217: Enabling Vlan Interface - Vlan: 20, Enabled: true
+--------------------------------------------------
+- 192.168.122.217: Enabling Vlan Interface - Vlan: 100, Enabled: true
+--------------------------------------------------
+- 192.168.122.217: Enabling Vlan Interface - Vlan: 200, Enabled: true
+--------------------------------------------------
+- 192.168.122.218: Enabling Vlan Interface - Vlan: 2, Enabled: true
+--------------------------------------------------
+- 192.168.122.218: Enabling Vlan Interface - Vlan: 3, Enabled: true
+--------------------------------------------------
+- 192.168.122.218: Enabling Vlan Interface - Vlan: 10, Enabled: true
+--------------------------------------------------
+- 192.168.122.218: Enabling Vlan Interface - Vlan: 20, Enabled: true
+--------------------------------------------------
+- 192.168.122.218: Enabling Vlan Interface - Vlan: 100, Enabled: true
+--------------------------------------------------
+- 192.168.122.218: Enabling Vlan Interface - Vlan: 200, Enabled: true
+--------------------------------------------------
+- 192.168.122.219: Enabling Vlan Interface - Vlan: 2, Enabled: true
+--------------------------------------------------
+- 192.168.122.219: Enabling Vlan Interface - Vlan: 3, Enabled: true
+--------------------------------------------------
+- 192.168.122.219: Enabling Vlan Interface - Vlan: 10, Enabled: true
+--------------------------------------------------
+- 192.168.122.219: Enabling Vlan Interface - Vlan: 20, Enabled: true
+--------------------------------------------------
+- 192.168.122.219: Enabling Vlan Interface - Vlan: 100, Enabled: true
+--------------------------------------------------
+- 192.168.122.219: Enabling Vlan Interface - Vlan: 200, Enabled: true
+--------------------------------------------------
+- 192.168.122.220: Enabling Vlan Interface - Vlan: 2, Enabled: true
+--------------------------------------------------
+- 192.168.122.220: Enabling Vlan Interface - Vlan: 3, Enabled: true
+--------------------------------------------------
+- 192.168.122.220: Enabling Vlan Interface - Vlan: 10, Enabled: true
+--------------------------------------------------
+- 192.168.122.220: Enabling Vlan Interface - Vlan: 20, Enabled: true
+--------------------------------------------------
+- 192.168.122.220: Enabling Vlan Interface - Vlan: 100, Enabled: true
+--------------------------------------------------
+- 192.168.122.220: Enabling Vlan Interface - Vlan: 200, Enabled: true
+--------------------------------------------------
+- 192.168.122.227: Enabling Vlan Interface - Vlan: 2, Enabled: true
+--------------------------------------------------
+- 192.168.122.227: Enabling Vlan Interface - Vlan: 3, Enabled: true
+--------------------------------------------------
+- 192.168.122.227: Enabling Vlan Interface - Vlan: 10, Enabled: true
+--------------------------------------------------
+- 192.168.122.227: Enabling Vlan Interface - Vlan: 30, Enabled: true
+--------------------------------------------------
+- 192.168.122.227: Enabling Vlan Interface - Vlan: 100, Enabled: true
+--------------------------------------------------
+- 192.168.122.227: Enabling Vlan Interface - Vlan: 300, Enabled: true
+--------------------------------------------------
+- 192.168.122.228: Enabling Vlan Interface - Vlan: 2, Enabled: true
+--------------------------------------------------
+- 192.168.122.228: Enabling Vlan Interface - Vlan: 3, Enabled: true
+--------------------------------------------------
+- 192.168.122.228: Enabling Vlan Interface - Vlan: 10, Enabled: true
+--------------------------------------------------
+- 192.168.122.228: Enabling Vlan Interface - Vlan: 30, Enabled: true
+--------------------------------------------------
+- 192.168.122.228: Enabling Vlan Interface - Vlan: 100, Enabled: true
+--------------------------------------------------
+- 192.168.122.228: Enabling Vlan Interface - Vlan: 300, Enabled: true
+--------------------------------------------------
+- 192.168.122.229: Enabling Vlan Interface - Vlan: 2, Enabled: true
+--------------------------------------------------
+- 192.168.122.229: Enabling Vlan Interface - Vlan: 3, Enabled: true
+--------------------------------------------------
+- 192.168.122.229: Enabling Vlan Interface - Vlan: 10, Enabled: true
+--------------------------------------------------
+- 192.168.122.229: Enabling Vlan Interface - Vlan: 30, Enabled: true
+--------------------------------------------------
+- 192.168.122.229: Enabling Vlan Interface - Vlan: 100, Enabled: true
+--------------------------------------------------
+- 192.168.122.229: Enabling Vlan Interface - Vlan: 300, Enabled: true
+--------------------------------------------------
+- 192.168.122.230: Enabling Vlan Interface - Vlan: 2, Enabled: true
+--------------------------------------------------
+- 192.168.122.230: Enabling Vlan Interface - Vlan: 3, Enabled: true
+--------------------------------------------------
+- 192.168.122.230: Enabling Vlan Interface - Vlan: 10, Enabled: true
+--------------------------------------------------
+- 192.168.122.230: Enabling Vlan Interface - Vlan: 30, Enabled: true
+--------------------------------------------------
+- 192.168.122.230: Enabling Vlan Interface - Vlan: 100, Enabled: true
+--------------------------------------------------
+- 192.168.122.230: Enabling Vlan Interface - Vlan: 300, Enabled: true
+################################################################################
+--------------------------------------------------
+- 192.168.122.217: Configuring Route MAP - Route MAP: MlagPeer
+--------------------------------------------------
+- 192.168.122.218: Configuring Route MAP - Route MAP: MlagPeer
+--------------------------------------------------
+- 192.168.122.227: Configuring Route MAP - Route MAP: MlagPeer
+--------------------------------------------------
+- 192.168.122.228: Configuring Route MAP - Route MAP: MlagPeer
+################################################################################
+--------------------------------------------------
+- 192.168.122.215: Configuring BGP Global Config - AS Number: 65101, Router ID: 10.10.10.1
+--------------------------------------------------
+- 192.168.122.215: BGP IPv4 Redistribute Connected IPv4 - VRF Name: default
+--------------------------------------------------
+- 192.168.122.216: Configuring BGP Global Config - AS Number: 65102, Router ID: 10.10.10.2
+--------------------------------------------------
+- 192.168.122.216: BGP IPv4 Redistribute Connected IPv4 - VRF Name: default
+--------------------------------------------------
+- 192.168.122.217: Configuring BGP Global Config - AS Number: 65103, Router ID: 10.10.10.3
+--------------------------------------------------
+- 192.168.122.217: BGP IPv4 Redistribute Connected IPv4 - VRF Name: default
+--------------------------------------------------
+- 192.168.122.218: Configuring BGP Global Config - AS Number: 65104, Router ID: 10.10.10.4
+--------------------------------------------------
+- 192.168.122.218: BGP IPv4 Redistribute Connected IPv4 - VRF Name: default
+--------------------------------------------------
+- 192.168.122.219: Configuring BGP Global Config - AS Number: 65105, Router ID: 10.10.10.5
+--------------------------------------------------
+- 192.168.122.219: BGP IPv4 Redistribute Connected IPv4 - VRF Name: default
+--------------------------------------------------
+- 192.168.122.220: Configuring BGP Global Config - AS Number: 65106, Router ID: 10.10.10.6
+--------------------------------------------------
+- 192.168.122.220: BGP IPv4 Redistribute Connected IPv4 - VRF Name: default
+--------------------------------------------------
+- 192.168.122.225: Configuring BGP Global Config - AS Number: 65201, Router ID: 20.20.20.1
+--------------------------------------------------
+- 192.168.122.225: BGP IPv4 Redistribute Connected IPv4 - VRF Name: default
+--------------------------------------------------
+- 192.168.122.226: Configuring BGP Global Config - AS Number: 65202, Router ID: 20.20.20.2
+--------------------------------------------------
+- 192.168.122.226: BGP IPv4 Redistribute Connected IPv4 - VRF Name: default
+--------------------------------------------------
+- 192.168.122.227: Configuring BGP Global Config - AS Number: 65203, Router ID: 20.20.20.3
+--------------------------------------------------
+- 192.168.122.227: BGP IPv4 Redistribute Connected IPv4 - VRF Name: default
+--------------------------------------------------
+- 192.168.122.228: Configuring BGP Global Config - AS Number: 65204, Router ID: 20.20.20.4
+--------------------------------------------------
+- 192.168.122.228: BGP IPv4 Redistribute Connected IPv4 - VRF Name: default
+--------------------------------------------------
+- 192.168.122.229: Configuring BGP Global Config - AS Number: 65205, Router ID: 20.20.20.5
+--------------------------------------------------
+- 192.168.122.229: BGP IPv4 Redistribute Connected IPv4 - VRF Name: default
+--------------------------------------------------
+- 192.168.122.230: Configuring BGP Global Config - AS Number: 65206, Router ID: 20.20.20.6
+--------------------------------------------------
+- 192.168.122.230: BGP IPv4 Redistribute Connected IPv4 - VRF Name: default
+################################################################################
+--------------------------------------------------
+- 192.168.122.215: BGP Peer Group - Peer Group: fabric-underlay
+--------------------------------------------------
+- 192.168.122.215: BGP Peer Group - Peer Group: fabric-overlay
+--------------------------------------------------
+- 192.168.122.216: BGP Peer Group - Peer Group: fabric-underlay
+--------------------------------------------------
+- 192.168.122.216: BGP Peer Group - Peer Group: fabric-overlay
+--------------------------------------------------
+- 192.168.122.217: BGP Peer Group - Peer Group: fabric-underlay
+--------------------------------------------------
+- 192.168.122.217: BGP Peer Group - Peer Group: fabric-overlay
+--------------------------------------------------
+- 192.168.122.217: BGP Peer Group - Peer Group: mclag-peer, Export Policy: MlagPeer
+--------------------------------------------------
+- 192.168.122.218: BGP Peer Group - Peer Group: fabric-underlay
+--------------------------------------------------
+- 192.168.122.218: BGP Peer Group - Peer Group: fabric-overlay
+--------------------------------------------------
+- 192.168.122.218: BGP Peer Group - Peer Group: mclag-peer, Export Policy: MlagPeer
+--------------------------------------------------
+- 192.168.122.219: BGP Peer Group - Peer Group: fabric-underlay
+--------------------------------------------------
+- 192.168.122.219: BGP Peer Group - Peer Group: fabric-overlay
+--------------------------------------------------
+- 192.168.122.220: BGP Peer Group - Peer Group: fabric-underlay
+--------------------------------------------------
+- 192.168.122.220: BGP Peer Group - Peer Group: fabric-overlay
+--------------------------------------------------
+- 192.168.122.220: BGP Peer Group - Peer Group: evpn-gw, Multi-hop: 30
+--------------------------------------------------
+- 192.168.122.220: BGP Peer Group - Peer Group: ext-router, Multi-hop: 10
+--------------------------------------------------
+- 192.168.122.225: BGP Peer Group - Peer Group: fabric-underlay
+--------------------------------------------------
+- 192.168.122.225: BGP Peer Group - Peer Group: fabric-overlay
+--------------------------------------------------
+- 192.168.122.226: BGP Peer Group - Peer Group: fabric-underlay
+--------------------------------------------------
+- 192.168.122.226: BGP Peer Group - Peer Group: fabric-overlay
+--------------------------------------------------
+- 192.168.122.227: BGP Peer Group - Peer Group: fabric-underlay
+--------------------------------------------------
+- 192.168.122.227: BGP Peer Group - Peer Group: fabric-overlay
+--------------------------------------------------
+- 192.168.122.227: BGP Peer Group - Peer Group: mclag-peer, Export Policy: MlagPeer
+--------------------------------------------------
+- 192.168.122.228: BGP Peer Group - Peer Group: fabric-underlay
+--------------------------------------------------
+- 192.168.122.228: BGP Peer Group - Peer Group: fabric-overlay
+--------------------------------------------------
+- 192.168.122.228: BGP Peer Group - Peer Group: mclag-peer, Export Policy: MlagPeer
+--------------------------------------------------
+- 192.168.122.229: BGP Peer Group - Peer Group: fabric-underlay
+--------------------------------------------------
+- 192.168.122.229: BGP Peer Group - Peer Group: fabric-overlay
+--------------------------------------------------
+- 192.168.122.230: BGP Peer Group - Peer Group: fabric-underlay
+--------------------------------------------------
+- 192.168.122.230: BGP Peer Group - Peer Group: fabric-overlay
+--------------------------------------------------
+- 192.168.122.230: BGP Peer Group - Peer Group: evpn-gw, Multi-hop: 30
+--------------------------------------------------
+- 192.168.122.230: BGP Peer Group - Peer Group: ext-router, Multi-hop: 10
+################################################################################
+--------------------------------------------------
+- 192.168.122.215: BGP Neighbor Config - Neighbor: 10.10.0.1, Peer AS: 65106, Peer Group: fabric-underlay, Description: to-borderleaf1
+--------------------------------------------------
+- 192.168.122.215: BGP Neighbor Config - Neighbor: 10.10.0.3, Peer AS: 65103, Peer Group: fabric-underlay, Description: to-leaf1
+--------------------------------------------------
+- 192.168.122.215: BGP Neighbor Config - Neighbor: 10.10.0.5, Peer AS: 65104, Peer Group: fabric-underlay, Description: to-leaf3
+--------------------------------------------------
+- 192.168.122.215: BGP Neighbor Config - Neighbor: 10.10.0.7, Peer AS: 65105, Peer Group: fabric-underlay, Description: to-leaf3
+--------------------------------------------------
+- 192.168.122.215: BGP Neighbor Config - Neighbor: 10.10.10.3, Peer AS: 65103, Peer Group: fabric-overlay, Description: to-leaf1-overlay
+--------------------------------------------------
+- 192.168.122.215: BGP Neighbor Config - Neighbor: 10.10.10.4, Peer AS: 65104, Peer Group: fabric-overlay, Description: to-leaf3-overlay
+--------------------------------------------------
+- 192.168.122.215: BGP Neighbor Config - Neighbor: 10.10.10.5, Peer AS: 65105, Peer Group: fabric-overlay, Description: to-leaf3-overlay
+--------------------------------------------------
+- 192.168.122.215: BGP Neighbor Config - Neighbor: 10.10.10.6, Peer AS: 65106, Peer Group: fabric-overlay, Description: to-borderleaf1-overlay
+--------------------------------------------------
+- 192.168.122.216: BGP Neighbor Config - Neighbor: 10.10.0.9, Peer AS: 65106, Peer Group: fabric-underlay, Description: to-borderleaf1
+--------------------------------------------------
+- 192.168.122.216: BGP Neighbor Config - Neighbor: 10.10.0.11, Peer AS: 65103, Peer Group: fabric-underlay, Description: to-leaf1
+--------------------------------------------------
+- 192.168.122.216: BGP Neighbor Config - Neighbor: 10.10.0.13, Peer AS: 65104, Peer Group: fabric-underlay, Description: to-leaf3
+--------------------------------------------------
+- 192.168.122.216: BGP Neighbor Config - Neighbor: 10.10.0.15, Peer AS: 65105, Peer Group: fabric-underlay, Description: to-leaf3
+--------------------------------------------------
+- 192.168.122.216: BGP Neighbor Config - Neighbor: 10.10.10.3, Peer AS: 65103, Peer Group: fabric-overlay, Description: to-leaf1-overlay
+--------------------------------------------------
+- 192.168.122.216: BGP Neighbor Config - Neighbor: 10.10.10.4, Peer AS: 65104, Peer Group: fabric-overlay, Description: to-leaf3-overlay
+--------------------------------------------------
+- 192.168.122.216: BGP Neighbor Config - Neighbor: 10.10.10.5, Peer AS: 65105, Peer Group: fabric-overlay, Description: to-leaf3-overlay
+--------------------------------------------------
+- 192.168.122.216: BGP Neighbor Config - Neighbor: 10.10.10.6, Peer AS: 65106, Peer Group: fabric-overlay, Description: to-borderleaf1-overlay
+--------------------------------------------------
+- 192.168.122.217: BGP Neighbor Config - Neighbor: 10.10.0.2, Peer AS: 65101, Peer Group: fabric-underlay, Description: to-spine1
+--------------------------------------------------
+- 192.168.122.217: BGP Neighbor Config - Neighbor: 10.10.0.10, Peer AS: 65102, Peer Group: fabric-underlay, Description: to-spine2
+--------------------------------------------------
+- 192.168.122.217: BGP Neighbor Config - Neighbor: 10.10.10.1, Peer AS: 65101, Peer Group: fabric-overlay, Description: to-spine1-overlay
+--------------------------------------------------
+- 192.168.122.217: BGP Neighbor Config - Neighbor: 10.10.10.2, Peer AS: 65102, Peer Group: fabric-overlay, Description: to-spine2-overlay
+--------------------------------------------------
+- 192.168.122.217: BGP Neighbor Config - Neighbor: 10.101.101.1, Peer AS: 65104, Peer Group: mclag-peer, Description: to-leaf2-mclag
+--------------------------------------------------
+- 192.168.122.218: BGP Neighbor Config - Neighbor: 10.10.0.4, Peer AS: 65101, Peer Group: fabric-underlay, Description: to-spine1
+--------------------------------------------------
+- 192.168.122.218: BGP Neighbor Config - Neighbor: 10.10.0.12, Peer AS: 65102, Peer Group: fabric-underlay, Description: to-spine2
+--------------------------------------------------
+- 192.168.122.218: BGP Neighbor Config - Neighbor: 10.10.10.1, Peer AS: 65101, Peer Group: fabric-overlay, Description: to-spine1-overlay
+--------------------------------------------------
+- 192.168.122.218: BGP Neighbor Config - Neighbor: 10.10.10.2, Peer AS: 65102, Peer Group: fabric-overlay, Description: to-spine2-overlay
+--------------------------------------------------
+- 192.168.122.218: BGP Neighbor Config - Neighbor: 10.101.101.0, Peer AS: 65103, Peer Group: mclag-peer, Description: to-leaf1-mclag
+--------------------------------------------------
+- 192.168.122.219: BGP Neighbor Config - Neighbor: 10.10.0.6, Peer AS: 65101, Peer Group: fabric-underlay, Description: to-spine1
+--------------------------------------------------
+- 192.168.122.219: BGP Neighbor Config - Neighbor: 10.10.0.14, Peer AS: 65102, Peer Group: fabric-underlay, Description: to-spine2
+--------------------------------------------------
+- 192.168.122.219: BGP Neighbor Config - Neighbor: 10.10.10.1, Peer AS: 65101, Peer Group: fabric-overlay, Description: to-spine1-overlay
+--------------------------------------------------
+- 192.168.122.219: BGP Neighbor Config - Neighbor: 10.10.10.2, Peer AS: 65102, Peer Group: fabric-overlay, Description: to-spine2-overlay
+--------------------------------------------------
+- 192.168.122.220: BGP Neighbor Config - Neighbor: 10.10.0.0, Peer AS: 65101, Peer Group: fabric-underlay, Description: to-spine1
+--------------------------------------------------
+- 192.168.122.220: BGP Neighbor Config - Neighbor: 10.10.0.8, Peer AS: 65102, Peer Group: fabric-underlay, Description: to-spine2
+--------------------------------------------------
+- 192.168.122.220: BGP Neighbor Config - Neighbor: 10.10.10.1, Peer AS: 65101, Peer Group: fabric-overlay, Description: to-spine1-overlay
+--------------------------------------------------
+- 192.168.122.220: BGP Neighbor Config - Neighbor: 10.10.10.2, Peer AS: 65102, Peer Group: fabric-overlay, Description: to-spine2-overlay
+--------------------------------------------------
+- 192.168.122.220: BGP Neighbor Config - Neighbor: 20.20.20.6, Peer AS: 65206, Peer Group: evpn-gw, Description: to-borderleaf1-dci-overlay
+--------------------------------------------------
+- 192.168.122.220: BGP Neighbor Config - Neighbor: 30.30.0.1, Peer AS: 65206, Peer Group: ext-router, Description: to-borderleaf1-dci-underlay
+--------------------------------------------------
+- 192.168.122.225: BGP Neighbor Config - Neighbor: 20.20.0.1, Peer AS: 65206, Peer Group: fabric-underlay, Description: to-borderleaf1
+--------------------------------------------------
+- 192.168.122.225: BGP Neighbor Config - Neighbor: 20.20.0.3, Peer AS: 65203, Peer Group: fabric-underlay, Description: to-leaf1
+--------------------------------------------------
+- 192.168.122.225: BGP Neighbor Config - Neighbor: 20.20.0.5, Peer AS: 65204, Peer Group: fabric-underlay, Description: to-leaf3
+--------------------------------------------------
+- 192.168.122.225: BGP Neighbor Config - Neighbor: 20.20.0.7, Peer AS: 65205, Peer Group: fabric-underlay, Description: to-leaf3
+--------------------------------------------------
+- 192.168.122.225: BGP Neighbor Config - Neighbor: 20.20.20.3, Peer AS: 65203, Peer Group: fabric-overlay, Description: to-leaf1-overlay
+--------------------------------------------------
+- 192.168.122.225: BGP Neighbor Config - Neighbor: 20.20.20.4, Peer AS: 65204, Peer Group: fabric-overlay, Description: to-leaf3-overlay
+--------------------------------------------------
+- 192.168.122.225: BGP Neighbor Config - Neighbor: 20.20.20.5, Peer AS: 65205, Peer Group: fabric-overlay, Description: to-leaf3-overlay
+--------------------------------------------------
+- 192.168.122.225: BGP Neighbor Config - Neighbor: 20.20.20.6, Peer AS: 65206, Peer Group: fabric-overlay, Description: to-borderleaf1-overlay
+--------------------------------------------------
+- 192.168.122.226: BGP Neighbor Config - Neighbor: 20.20.0.9, Peer AS: 65206, Peer Group: fabric-underlay, Description: to-borderleaf1
+--------------------------------------------------
+- 192.168.122.226: BGP Neighbor Config - Neighbor: 20.20.0.11, Peer AS: 65203, Peer Group: fabric-underlay, Description: to-leaf1
+--------------------------------------------------
+- 192.168.122.226: BGP Neighbor Config - Neighbor: 20.20.0.13, Peer AS: 65204, Peer Group: fabric-underlay, Description: to-leaf3
+--------------------------------------------------
+- 192.168.122.226: BGP Neighbor Config - Neighbor: 20.20.0.15, Peer AS: 65205, Peer Group: fabric-underlay, Description: to-leaf3
+--------------------------------------------------
+- 192.168.122.226: BGP Neighbor Config - Neighbor: 20.20.20.3, Peer AS: 65203, Peer Group: fabric-overlay, Description: to-leaf1-overlay
+--------------------------------------------------
+- 192.168.122.226: BGP Neighbor Config - Neighbor: 20.20.20.4, Peer AS: 65204, Peer Group: fabric-overlay, Description: to-leaf3-overlay
+--------------------------------------------------
+- 192.168.122.226: BGP Neighbor Config - Neighbor: 20.20.20.5, Peer AS: 65205, Peer Group: fabric-overlay, Description: to-leaf3-overlay
+--------------------------------------------------
+- 192.168.122.226: BGP Neighbor Config - Neighbor: 20.20.20.6, Peer AS: 65206, Peer Group: fabric-overlay, Description: to-borderleaf1-overlay
+--------------------------------------------------
+- 192.168.122.227: BGP Neighbor Config - Neighbor: 20.20.0.2, Peer AS: 65201, Peer Group: fabric-underlay, Description: to-spine1
+--------------------------------------------------
+- 192.168.122.227: BGP Neighbor Config - Neighbor: 20.20.0.10, Peer AS: 65202, Peer Group: fabric-underlay, Description: to-spine2
+--------------------------------------------------
+- 192.168.122.227: BGP Neighbor Config - Neighbor: 20.20.20.1, Peer AS: 65201, Peer Group: fabric-overlay, Description: to-spine1-overlay
+--------------------------------------------------
+- 192.168.122.227: BGP Neighbor Config - Neighbor: 20.20.20.2, Peer AS: 65202, Peer Group: fabric-overlay, Description: to-spine2-overlay
+--------------------------------------------------
+- 192.168.122.227: BGP Neighbor Config - Neighbor: 20.201.201.1, Peer AS: 65204, Peer Group: mclag-peer, Description: to-leaf2-mclag
+--------------------------------------------------
+- 192.168.122.228: BGP Neighbor Config - Neighbor: 20.20.0.4, Peer AS: 65201, Peer Group: fabric-underlay, Description: to-spine1
+--------------------------------------------------
+- 192.168.122.228: BGP Neighbor Config - Neighbor: 20.20.0.12, Peer AS: 65202, Peer Group: fabric-underlay, Description: to-spine2
+--------------------------------------------------
+- 192.168.122.228: BGP Neighbor Config - Neighbor: 20.20.20.1, Peer AS: 65201, Peer Group: fabric-overlay, Description: to-spine1-overlay
+--------------------------------------------------
+- 192.168.122.228: BGP Neighbor Config - Neighbor: 20.20.20.2, Peer AS: 65202, Peer Group: fabric-overlay, Description: to-spine2-overlay
+--------------------------------------------------
+- 192.168.122.228: BGP Neighbor Config - Neighbor: 20.201.201.0, Peer AS: 65203, Peer Group: mclag-peer, Description: to-leaf1-mclag
+--------------------------------------------------
+- 192.168.122.229: BGP Neighbor Config - Neighbor: 20.20.0.6, Peer AS: 65201, Peer Group: fabric-underlay, Description: to-spine1
+--------------------------------------------------
+- 192.168.122.229: BGP Neighbor Config - Neighbor: 20.20.0.14, Peer AS: 65202, Peer Group: fabric-underlay, Description: to-spine2
+--------------------------------------------------
+- 192.168.122.229: BGP Neighbor Config - Neighbor: 20.20.20.1, Peer AS: 65201, Peer Group: fabric-overlay, Description: to-spine1-overlay
+--------------------------------------------------
+- 192.168.122.229: BGP Neighbor Config - Neighbor: 20.20.20.2, Peer AS: 65202, Peer Group: fabric-overlay, Description: to-spine2-overlay
+--------------------------------------------------
+- 192.168.122.230: BGP Neighbor Config - Neighbor: 20.20.0.0, Peer AS: 65201, Peer Group: fabric-underlay, Description: to-spine1
+--------------------------------------------------
+- 192.168.122.230: BGP Neighbor Config - Neighbor: 20.20.0.8, Peer AS: 65202, Peer Group: fabric-underlay, Description: to-spine2
+--------------------------------------------------
+- 192.168.122.230: BGP Neighbor Config - Neighbor: 20.20.20.1, Peer AS: 65201, Peer Group: fabric-overlay, Description: to-spine1-overlay
+--------------------------------------------------
+- 192.168.122.230: BGP Neighbor Config - Neighbor: 20.20.20.2, Peer AS: 65202, Peer Group: fabric-overlay, Description: to-spine2-overlay
+--------------------------------------------------
+- 192.168.122.230: BGP Neighbor Config - Neighbor: 10.10.10.6, Peer AS: 65106, Peer Group: evpn-gw, Description: to-borderleaf1-dci-overlay
+--------------------------------------------------
+- 192.168.122.230: BGP Neighbor Config - Neighbor: 30.30.0.0, Peer AS: 65106, Peer Group: ext-router, Description: to-borderleaf1-dci-underlay
+################################################################################
+--------------------------------------------------
+- 192.168.122.217: BGP L2VPN VNI Config - VRF Name: default, VNI: 5010, RD: 10.10.10.3:10, RT-Import: 5010:1, RT Export: 5010:1
+--------------------------------------------------
+- 192.168.122.217: BGP L2VPN VNI Config - VRF Name: default, VNI: 5020, RD: 10.10.10.3:20, RT-Import: 5020:1, RT Export: 5020:1
+--------------------------------------------------
+- 192.168.122.217: BGP L2VPN VNI Config - VRF Name: default, VNI: 5100, RD: 10.10.10.3:100, RT-Import: 5100:1, RT Export: 5100:1
+--------------------------------------------------
+- 192.168.122.217: BGP L2VPN VNI Config - VRF Name: default, VNI: 5200, RD: 10.10.10.3:200, RT-Import: 5200:1, RT Export: 5200:1
+--------------------------------------------------
+- 192.168.122.218: BGP L2VPN VNI Config - VRF Name: default, VNI: 5010, RD: 10.10.10.4:10, RT-Import: 5010:1, RT Export: 5010:1
+--------------------------------------------------
+- 192.168.122.218: BGP L2VPN VNI Config - VRF Name: default, VNI: 5020, RD: 10.10.10.4:20, RT-Import: 5020:1, RT Export: 5020:1
+--------------------------------------------------
+- 192.168.122.218: BGP L2VPN VNI Config - VRF Name: default, VNI: 5100, RD: 10.10.10.4:100, RT-Import: 5100:1, RT Export: 5100:1
+--------------------------------------------------
+- 192.168.122.218: BGP L2VPN VNI Config - VRF Name: default, VNI: 5200, RD: 10.10.10.4:200, RT-Import: 5200:1, RT Export: 5200:1
+--------------------------------------------------
+- 192.168.122.219: BGP L2VPN VNI Config - VRF Name: default, VNI: 5010, RD: 10.10.10.5:10, RT-Import: 5010:1, RT Export: 5010:1
+--------------------------------------------------
+- 192.168.122.219: BGP L2VPN VNI Config - VRF Name: default, VNI: 5020, RD: 10.10.10.5:20, RT-Import: 5020:1, RT Export: 5020:1
+--------------------------------------------------
+- 192.168.122.219: BGP L2VPN VNI Config - VRF Name: default, VNI: 5100, RD: 10.10.10.5:100, RT-Import: 5100:1, RT Export: 5100:1
+--------------------------------------------------
+- 192.168.122.219: BGP L2VPN VNI Config - VRF Name: default, VNI: 5200, RD: 10.10.10.5:200, RT-Import: 5200:1, RT Export: 5200:1
+--------------------------------------------------
+- 192.168.122.220: BGP L2VPN VNI Config - VRF Name: default, VNI: 5010, RD: 10.10.10.6:10, RT-Import: 5010:1, RT Export: 5010:1
+--------------------------------------------------
+- 192.168.122.220: BGP L2VPN VNI Config - VRF Name: default, VNI: 5020, RD: 10.10.10.6:20, RT-Import: 5020:1, RT Export: 5020:1
+--------------------------------------------------
+- 192.168.122.220: BGP L2VPN VNI Config - VRF Name: default, VNI: 5100, RD: 10.10.10.6:100, RT-Import: 5100:1, RT Export: 5100:1
+--------------------------------------------------
+- 192.168.122.220: BGP L2VPN VNI Config - VRF Name: default, VNI: 5200, RD: 10.10.10.6:200, RT-Import: 5200:1, RT Export: 5200:1
+--------------------------------------------------
+- 192.168.122.227: BGP L2VPN VNI Config - VRF Name: default, VNI: 5010, RD: 20.20.20.3:10, RT-Import: 5010:1, RT Export: 5010:1
+--------------------------------------------------
+- 192.168.122.227: BGP L2VPN VNI Config - VRF Name: default, VNI: 5030, RD: 20.20.20.3:30, RT-Import: 5030:1, RT Export: 5030:1
+--------------------------------------------------
+- 192.168.122.227: BGP L2VPN VNI Config - VRF Name: default, VNI: 5100, RD: 20.20.20.3:100, RT-Import: 5100:1, RT Export: 5100:1
+--------------------------------------------------
+- 192.168.122.227: BGP L2VPN VNI Config - VRF Name: default, VNI: 5300, RD: 20.20.20.3:300, RT-Import: 5300:1, RT Export: 5300:1
+--------------------------------------------------
+- 192.168.122.228: BGP L2VPN VNI Config - VRF Name: default, VNI: 5010, RD: 20.20.20.4:10, RT-Import: 5010:1, RT Export: 5010:1
+--------------------------------------------------
+- 192.168.122.228: BGP L2VPN VNI Config - VRF Name: default, VNI: 5030, RD: 20.20.20.4:30, RT-Import: 5030:1, RT Export: 5030:1
+--------------------------------------------------
+- 192.168.122.228: BGP L2VPN VNI Config - VRF Name: default, VNI: 5100, RD: 20.20.20.4:100, RT-Import: 5100:1, RT Export: 5100:1
+--------------------------------------------------
+- 192.168.122.228: BGP L2VPN VNI Config - VRF Name: default, VNI: 5300, RD: 20.20.20.4:300, RT-Import: 5300:1, RT Export: 5300:1
+--------------------------------------------------
+- 192.168.122.229: BGP L2VPN VNI Config - VRF Name: default, VNI: 5010, RD: 20.20.20.5:10, RT-Import: 5010:1, RT Export: 5010:1
+--------------------------------------------------
+- 192.168.122.229: BGP L2VPN VNI Config - VRF Name: default, VNI: 5030, RD: 20.20.20.5:30, RT-Import: 5030:1, RT Export: 5030:1
+--------------------------------------------------
+- 192.168.122.229: BGP L2VPN VNI Config - VRF Name: default, VNI: 5100, RD: 20.20.20.5:100, RT-Import: 5100:1, RT Export: 5100:1
+--------------------------------------------------
+- 192.168.122.229: BGP L2VPN VNI Config - VRF Name: default, VNI: 5300, RD: 20.20.20.5:300, RT-Import: 5300:1, RT Export: 5300:1
+--------------------------------------------------
+- 192.168.122.230: BGP L2VPN VNI Config - VRF Name: default, VNI: 5010, RD: 20.20.20.6:10, RT-Import: 5010:1, RT Export: 5010:1
+--------------------------------------------------
+- 192.168.122.230: BGP L2VPN VNI Config - VRF Name: default, VNI: 5030, RD: 20.20.20.6:30, RT-Import: 5030:1, RT Export: 5030:1
+--------------------------------------------------
+- 192.168.122.230: BGP L2VPN VNI Config - VRF Name: default, VNI: 5100, RD: 20.20.20.6:100, RT-Import: 5100:1, RT Export: 5100:1
+--------------------------------------------------
+- 192.168.122.230: BGP L2VPN VNI Config - VRF Name: default, VNI: 5300, RD: 20.20.20.6:300, RT-Import: 5300:1, RT Export: 5300:1
+################################################################################
+--------------------------------------------------
+- 192.168.122.217: Configuring VRF BGP Global Config - VRF Name: Vrf-customer-1, AS: 65103, Router ID: 10.100.100.1, RD: 10.10.10.3:2, RT-Import: 10010:1, RT-Export: 10010:1
+--------------------------------------------------
+- 192.168.122.217: VRF IPv4 Redistribute Connected IPv4 - VRF Name: Vrf-customer-1
+--------------------------------------------------
+- 192.168.122.217: Creating VRF BGP Peer Group - VRF Name: Vrf-customer-1, Peer Group: mclag-peer
+--------------------------------------------------
+- 192.168.122.217: Creating VRF BGP Peer Group - VRF Name: Vrf-customer-1, Peer Group: ext-router
+--------------------------------------------------
+- 192.168.122.217: Configuring VRF BGP Global Config - VRF Name: Vrf-customer-2, AS: 65103, Router ID: 10.100.100.5, RD: 10.10.10.3:3, RT-Import: 10020:1, RT-Export: 10020:1
+--------------------------------------------------
+- 192.168.122.217: VRF IPv4 Redistribute Connected IPv4 - VRF Name: Vrf-customer-2
+--------------------------------------------------
+- 192.168.122.217: Creating VRF BGP Peer Group - VRF Name: Vrf-customer-2, Peer Group: mclag-peer
+--------------------------------------------------
+- 192.168.122.217: Creating VRF BGP Peer Group - VRF Name: Vrf-customer-2, Peer Group: ext-router
+--------------------------------------------------
+- 192.168.122.218: Configuring VRF BGP Global Config - VRF Name: Vrf-customer-1, AS: 65104, Router ID: 10.100.100.2, RD: 10.10.10.4:2, RT-Import: 10010:1, RT-Export: 10010:1
+--------------------------------------------------
+- 192.168.122.218: VRF IPv4 Redistribute Connected IPv4 - VRF Name: Vrf-customer-1
+--------------------------------------------------
+- 192.168.122.218: Creating VRF BGP Peer Group - VRF Name: Vrf-customer-1, Peer Group: mclag-peer
+--------------------------------------------------
+- 192.168.122.218: Creating VRF BGP Peer Group - VRF Name: Vrf-customer-1, Peer Group: ext-router
+--------------------------------------------------
+- 192.168.122.218: Configuring VRF BGP Global Config - VRF Name: Vrf-customer-2, AS: 65104, Router ID: 10.100.100.6, RD: 10.10.10.4:3, RT-Import: 10020:1, RT-Export: 10020:1
+--------------------------------------------------
+- 192.168.122.218: VRF IPv4 Redistribute Connected IPv4 - VRF Name: Vrf-customer-2
+--------------------------------------------------
+- 192.168.122.218: Creating VRF BGP Peer Group - VRF Name: Vrf-customer-2, Peer Group: mclag-peer
+--------------------------------------------------
+- 192.168.122.218: Creating VRF BGP Peer Group - VRF Name: Vrf-customer-2, Peer Group: ext-router
+--------------------------------------------------
+- 192.168.122.219: Configuring VRF BGP Global Config - VRF Name: Vrf-customer-1, AS: 65105, Router ID: 10.100.100.3, RD: 10.10.10.5:2, RT-Import: 10010:1, RT-Export: 10010:1
+--------------------------------------------------
+- 192.168.122.219: VRF IPv4 Redistribute Connected IPv4 - VRF Name: Vrf-customer-1
+--------------------------------------------------
+- 192.168.122.219: Creating VRF BGP Peer Group - VRF Name: Vrf-customer-1, Peer Group: ext-router
+--------------------------------------------------
+- 192.168.122.219: Configuring VRF BGP Global Config - VRF Name: Vrf-customer-2, AS: 65105, Router ID: 10.100.100.7, RD: 10.10.10.5:3, RT-Import: 10020:1, RT-Export: 10020:1
+--------------------------------------------------
+- 192.168.122.219: VRF IPv4 Redistribute Connected IPv4 - VRF Name: Vrf-customer-2
+--------------------------------------------------
+- 192.168.122.219: Creating VRF BGP Peer Group - VRF Name: Vrf-customer-2, Peer Group: ext-router
+--------------------------------------------------
+- 192.168.122.220: Configuring VRF BGP Global Config - VRF Name: Vrf-customer-1, AS: 65106, Router ID: 10.100.100.0, RD: 10.10.10.6:2, RT-Import: 10010:1, RT-Export: 10010:1
+--------------------------------------------------
+- 192.168.122.220: VRF IPv4 Redistribute Connected IPv4 - VRF Name: Vrf-customer-1
+--------------------------------------------------
+- 192.168.122.220: Creating VRF BGP Peer Group - VRF Name: Vrf-customer-1, Peer Group: ext-router
+--------------------------------------------------
+- 192.168.122.220: Configuring VRF BGP Global Config - VRF Name: Vrf-customer-2, AS: 65106, Router ID: 10.100.100.4, RD: 10.10.10.6:3, RT-Import: 10020:1, RT-Export: 10020:1
+--------------------------------------------------
+- 192.168.122.220: VRF IPv4 Redistribute Connected IPv4 - VRF Name: Vrf-customer-2
+--------------------------------------------------
+- 192.168.122.220: Creating VRF BGP Peer Group - VRF Name: Vrf-customer-2, Peer Group: ext-router
+--------------------------------------------------
+- 192.168.122.227: Configuring VRF BGP Global Config - VRF Name: Vrf-customer-1, AS: 65203, Router ID: 20.200.200.1, RD: 20.20.20.3:2, RT-Import: 10010:1, RT-Export: 10010:1
+--------------------------------------------------
+- 192.168.122.227: VRF IPv4 Redistribute Connected IPv4 - VRF Name: Vrf-customer-1
+--------------------------------------------------
+- 192.168.122.227: Creating VRF BGP Peer Group - VRF Name: Vrf-customer-1, Peer Group: mclag-peer
+--------------------------------------------------
+- 192.168.122.227: Creating VRF BGP Peer Group - VRF Name: Vrf-customer-1, Peer Group: ext-router
+--------------------------------------------------
+- 192.168.122.227: Configuring VRF BGP Global Config - VRF Name: Vrf-customer-2, AS: 65203, Router ID: 20.200.200.5, RD: 20.20.20.3:3, RT-Import: 10020:1, RT-Export: 10020:1
+--------------------------------------------------
+- 192.168.122.227: VRF IPv4 Redistribute Connected IPv4 - VRF Name: Vrf-customer-2
+--------------------------------------------------
+- 192.168.122.227: Creating VRF BGP Peer Group - VRF Name: Vrf-customer-2, Peer Group: mclag-peer
+--------------------------------------------------
+- 192.168.122.227: Creating VRF BGP Peer Group - VRF Name: Vrf-customer-2, Peer Group: ext-router
+--------------------------------------------------
+- 192.168.122.228: Configuring VRF BGP Global Config - VRF Name: Vrf-customer-1, AS: 65204, Router ID: 20.200.200.2, RD: 20.20.20.4:2, RT-Import: 10010:1, RT-Export: 10010:1
+--------------------------------------------------
+- 192.168.122.228: VRF IPv4 Redistribute Connected IPv4 - VRF Name: Vrf-customer-1
+--------------------------------------------------
+- 192.168.122.228: Creating VRF BGP Peer Group - VRF Name: Vrf-customer-1, Peer Group: mclag-peer
+--------------------------------------------------
+- 192.168.122.228: Creating VRF BGP Peer Group - VRF Name: Vrf-customer-1, Peer Group: ext-router
+--------------------------------------------------
+- 192.168.122.228: Configuring VRF BGP Global Config - VRF Name: Vrf-customer-2, AS: 65204, Router ID: 20.200.200.6, RD: 20.20.20.4:3, RT-Import: 10020:1, RT-Export: 10020:1
+--------------------------------------------------
+- 192.168.122.228: VRF IPv4 Redistribute Connected IPv4 - VRF Name: Vrf-customer-2
+--------------------------------------------------
+- 192.168.122.228: Creating VRF BGP Peer Group - VRF Name: Vrf-customer-2, Peer Group: mclag-peer
+--------------------------------------------------
+- 192.168.122.228: Creating VRF BGP Peer Group - VRF Name: Vrf-customer-2, Peer Group: ext-router
+--------------------------------------------------
+- 192.168.122.229: Configuring VRF BGP Global Config - VRF Name: Vrf-customer-1, AS: 65205, Router ID: 20.200.200.3, RD: 20.20.20.5:2, RT-Import: 10010:1, RT-Export: 10010:1
+--------------------------------------------------
+- 192.168.122.229: VRF IPv4 Redistribute Connected IPv4 - VRF Name: Vrf-customer-1
+--------------------------------------------------
+- 192.168.122.229: Creating VRF BGP Peer Group - VRF Name: Vrf-customer-1, Peer Group: ext-router
+--------------------------------------------------
+- 192.168.122.229: Configuring VRF BGP Global Config - VRF Name: Vrf-customer-2, AS: 65205, Router ID: 20.200.200.7, RD: 20.20.20.5:3, RT-Import: 10020:1, RT-Export: 10020:1
+--------------------------------------------------
+- 192.168.122.229: VRF IPv4 Redistribute Connected IPv4 - VRF Name: Vrf-customer-2
+--------------------------------------------------
+- 192.168.122.229: Creating VRF BGP Peer Group - VRF Name: Vrf-customer-2, Peer Group: ext-router
+--------------------------------------------------
+- 192.168.122.230: Configuring VRF BGP Global Config - VRF Name: Vrf-customer-1, AS: 65206, Router ID: 20.200.200.0, RD: 20.20.20.6:2, RT-Import: 10010:1, RT-Export: 10010:1
+--------------------------------------------------
+- 192.168.122.230: VRF IPv4 Redistribute Connected IPv4 - VRF Name: Vrf-customer-1
+--------------------------------------------------
+- 192.168.122.230: Creating VRF BGP Peer Group - VRF Name: Vrf-customer-1, Peer Group: ext-router
+--------------------------------------------------
+- 192.168.122.230: Configuring VRF BGP Global Config - VRF Name: Vrf-customer-2, AS: 65206, Router ID: 20.200.200.4, RD: 20.20.20.6:3, RT-Import: 10020:1, RT-Export: 10020:1
+--------------------------------------------------
+- 192.168.122.230: VRF IPv4 Redistribute Connected IPv4 - VRF Name: Vrf-customer-2
+--------------------------------------------------
+- 192.168.122.230: Creating VRF BGP Peer Group - VRF Name: Vrf-customer-2, Peer Group: ext-router
+################################################################################
+--------------------------------------------------
+- 192.168.122.217: Configuring VTEP Interface - Interface: vtep1, Source IP: 10.10.10.10
+--------------------------------------------------
+- 192.168.122.217: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 10010, VLAN: 2
+--------------------------------------------------
+- 192.168.122.217: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 10020, VLAN: 3
+--------------------------------------------------
+- 192.168.122.217: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 5010, VLAN: 10
+--------------------------------------------------
+- 192.168.122.217: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 5020, VLAN: 20
+--------------------------------------------------
+- 192.168.122.217: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 5100, VLAN: 100
+--------------------------------------------------
+- 192.168.122.217: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 5200, VLAN: 200
+--------------------------------------------------
+- 192.168.122.217: Creating VRF VNI MAP - VRF Name: Vrf-customer-1, VNI Number: 10010
+--------------------------------------------------
+- 192.168.122.217: Creating VRF VNI MAP - VRF Name: Vrf-customer-2, VNI Number: 10020
+--------------------------------------------------
+- 192.168.122.218: Configuring VTEP Interface - Interface: vtep1, Source IP: 10.10.10.10
+--------------------------------------------------
+- 192.168.122.218: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 10010, VLAN: 2
+--------------------------------------------------
+- 192.168.122.218: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 10020, VLAN: 3
+--------------------------------------------------
+- 192.168.122.218: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 5010, VLAN: 10
+--------------------------------------------------
+- 192.168.122.218: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 5020, VLAN: 20
+--------------------------------------------------
+- 192.168.122.218: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 5100, VLAN: 100
+--------------------------------------------------
+- 192.168.122.218: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 5200, VLAN: 200
+--------------------------------------------------
+- 192.168.122.218: Creating VRF VNI MAP - VRF Name: Vrf-customer-1, VNI Number: 10010
+--------------------------------------------------
+- 192.168.122.218: Creating VRF VNI MAP - VRF Name: Vrf-customer-2, VNI Number: 10020
+--------------------------------------------------
+- 192.168.122.219: Configuring VTEP Interface - Interface: vtep1, Source IP: 10.10.10.11
+--------------------------------------------------
+- 192.168.122.219: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 10010, VLAN: 2
+--------------------------------------------------
+- 192.168.122.219: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 10020, VLAN: 3
+--------------------------------------------------
+- 192.168.122.219: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 5010, VLAN: 10
+--------------------------------------------------
+- 192.168.122.219: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 5020, VLAN: 20
+--------------------------------------------------
+- 192.168.122.219: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 5100, VLAN: 100
+--------------------------------------------------
+- 192.168.122.219: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 5200, VLAN: 200
+--------------------------------------------------
+- 192.168.122.219: Creating VRF VNI MAP - VRF Name: Vrf-customer-1, VNI Number: 10010
+--------------------------------------------------
+- 192.168.122.219: Creating VRF VNI MAP - VRF Name: Vrf-customer-2, VNI Number: 10020
+--------------------------------------------------
+- 192.168.122.220: Configuring VTEP Interface - Interface: vtep1, Source IP: 10.10.10.12
+--------------------------------------------------
+- 192.168.122.220: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 10010, VLAN: 2
+--------------------------------------------------
+- 192.168.122.220: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 10020, VLAN: 3
+--------------------------------------------------
+- 192.168.122.220: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 5010, VLAN: 10
+--------------------------------------------------
+- 192.168.122.220: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 5020, VLAN: 20
+--------------------------------------------------
+- 192.168.122.220: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 5100, VLAN: 100
+--------------------------------------------------
+- 192.168.122.220: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 5200, VLAN: 200
+--------------------------------------------------
+- 192.168.122.220: Creating VRF VNI MAP - VRF Name: Vrf-customer-1, VNI Number: 10010
+--------------------------------------------------
+- 192.168.122.220: Creating VRF VNI MAP - VRF Name: Vrf-customer-2, VNI Number: 10020
+--------------------------------------------------
+- 192.168.122.227: Configuring VTEP Interface - Interface: vtep1, Source IP: 20.20.20.10
+--------------------------------------------------
+- 192.168.122.227: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 10010, VLAN: 2
+--------------------------------------------------
+- 192.168.122.227: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 10020, VLAN: 3
+--------------------------------------------------
+- 192.168.122.227: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 5010, VLAN: 10
+--------------------------------------------------
+- 192.168.122.227: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 5030, VLAN: 30
+--------------------------------------------------
+- 192.168.122.227: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 5100, VLAN: 100
+--------------------------------------------------
+- 192.168.122.227: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 5300, VLAN: 300
+--------------------------------------------------
+- 192.168.122.227: Creating VRF VNI MAP - VRF Name: Vrf-customer-1, VNI Number: 10010
+--------------------------------------------------
+- 192.168.122.227: Creating VRF VNI MAP - VRF Name: Vrf-customer-2, VNI Number: 10020
+--------------------------------------------------
+- 192.168.122.228: Configuring VTEP Interface - Interface: vtep1, Source IP: 20.20.20.10
+--------------------------------------------------
+- 192.168.122.228: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 10010, VLAN: 2
+--------------------------------------------------
+- 192.168.122.228: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 10020, VLAN: 3
+--------------------------------------------------
+- 192.168.122.228: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 5010, VLAN: 10
+--------------------------------------------------
+- 192.168.122.228: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 5030, VLAN: 30
+--------------------------------------------------
+- 192.168.122.228: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 5100, VLAN: 100
+--------------------------------------------------
+- 192.168.122.228: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 5300, VLAN: 300
+--------------------------------------------------
+- 192.168.122.228: Creating VRF VNI MAP - VRF Name: Vrf-customer-1, VNI Number: 10010
+--------------------------------------------------
+- 192.168.122.228: Creating VRF VNI MAP - VRF Name: Vrf-customer-2, VNI Number: 10020
+--------------------------------------------------
+- 192.168.122.229: Configuring VTEP Interface - Interface: vtep1, Source IP: 20.20.20.11
+--------------------------------------------------
+- 192.168.122.229: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 10010, VLAN: 2
+--------------------------------------------------
+- 192.168.122.229: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 10020, VLAN: 3
+--------------------------------------------------
+- 192.168.122.229: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 5010, VLAN: 10
+--------------------------------------------------
+- 192.168.122.229: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 5030, VLAN: 30
+--------------------------------------------------
+- 192.168.122.229: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 5100, VLAN: 100
+--------------------------------------------------
+- 192.168.122.229: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 5300, VLAN: 300
+--------------------------------------------------
+- 192.168.122.229: Creating VRF VNI MAP - VRF Name: Vrf-customer-1, VNI Number: 10010
+--------------------------------------------------
+- 192.168.122.229: Creating VRF VNI MAP - VRF Name: Vrf-customer-2, VNI Number: 10020
+--------------------------------------------------
+- 192.168.122.230: Configuring VTEP Interface - Interface: vtep1, Source IP: 20.20.20.12
+--------------------------------------------------
+- 192.168.122.230: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 10010, VLAN: 2
+--------------------------------------------------
+- 192.168.122.230: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 10020, VLAN: 3
+--------------------------------------------------
+- 192.168.122.230: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 5010, VLAN: 10
+--------------------------------------------------
+- 192.168.122.230: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 5030, VLAN: 30
+--------------------------------------------------
+- 192.168.122.230: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 5100, VLAN: 100
+--------------------------------------------------
+- 192.168.122.230: Configuring VTEP VNI VLAN Mapping - VTEP: vtep1, VNI: 5300, VLAN: 300
+--------------------------------------------------
+- 192.168.122.230: Creating VRF VNI MAP - VRF Name: Vrf-customer-1, VNI Number: 10010
+--------------------------------------------------
+- 192.168.122.230: Creating VRF VNI MAP - VRF Name: Vrf-customer-2, VNI Number: 10020
+################################################################################
+--------------------------------------------------
+- 192.168.122.215: Saving Config - Write Memory
+--------------------------------------------------
+- 192.168.122.216: Saving Config - Write Memory
+--------------------------------------------------
+- 192.168.122.217: Saving Config - Write Memory
+--------------------------------------------------
+- 192.168.122.218: Saving Config - Write Memory
+--------------------------------------------------
+- 192.168.122.219: Saving Config - Write Memory
+--------------------------------------------------
+- 192.168.122.220: Saving Config - Write Memory
+--------------------------------------------------
+- 192.168.122.225: Saving Config - Write Memory
+--------------------------------------------------
+- 192.168.122.226: Saving Config - Write Memory
+--------------------------------------------------
+- 192.168.122.227: Saving Config - Write Memory
+--------------------------------------------------
+- 192.168.122.228: Saving Config - Write Memory
+--------------------------------------------------
+- 192.168.122.229: Saving Config - Write Memory
+--------------------------------------------------
+- 192.168.122.230: Saving Config - Write Memory
