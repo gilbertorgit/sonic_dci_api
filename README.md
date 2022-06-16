@@ -1,4 +1,4 @@
-# Using Virtual Sonic Enterprise 4.0.0 Powered by Dell and REST-API to build a full DCI topology - (KVM environment)
+# Using Virtual Sonic Enterprise 4.0.0 Powered by Dell and REST API to build a full DCI topology - (KVM environment)
 
 ## Authors
 
@@ -19,7 +19,7 @@
 
 ## Getting Started
 
-This document provides some basic configuration examples for lab purposes only in order to help you get started with Virtual Sonic Enterprise Powered by Dell using Python and REST-API. 
+This document provides some basic configuration examples for lab purposes only in order to help you get started with Virtual Sonic Enterprise Powered by Dell using Python and REST API. 
 
 * **This lab guide does not intend to cover any best practice and/or production configuration. All the configuration provided in this guide, are just "simple examples"**
 
@@ -37,8 +37,8 @@ This project will make available:
 
 Following this guide, you will be able to build
 
-1. DC1 - 3-Stage Clos network using Virtual Enterprise Sonic using REST-API
-2. DC2 - 3-Stage Clos network using Virtual Enterprise Sonic using REST-API
+1. DC1 - 3-Stage Clos network with Enterprise Sonic 4.0.0 using REST API to configure every single device
+2. DC2 - 3-Stage Clos network with Enterprise Sonic 4.0.0 using REST API to configure every single device
 
 Important Information
 - The python script available in this guide will create and delete all resources as well as start and stop the entire topology.
@@ -109,7 +109,6 @@ root@lab:/home/lab# shutdown -r now
 root@lab:/home/lab# sudo su -
 
 root@lab:~$ cd /home/lab
-
 ```
 
 ## Preparing the environment
@@ -122,7 +121,6 @@ root@lab:~$ cd /home/lab
 
 ```
 root@lab:/home/lab# cp Enterprise_SONiC_OS_3.3.0.img CentOS-7-x86_64-GenericCloud.qcow2 /home/lab/ent_sonic_apstra/sonic_3clos/images/
-
 ```
 
 ***Make sure you download the right version as described in this guide. 
@@ -237,7 +235,7 @@ Enter new: admin
 # exit
 ```
 
-* The script below will configure the entire topology using REST-APIs
+* The script below will configure the entire topology using REST APIs
 ```
 root@lab:# cd /home/lab/ent_sonic_apstra/sonic_3clos/api_config/
 
