@@ -89,6 +89,16 @@ root@lab:/home/lab# apt -y install ansible git
 root@lab:/home/lab# git clone https://github.com/gilbertorgit/sonic_dci_api.git
 
 root@lab:/home/lab# ansible-playbook sonic_dci_api/base-pkg-kvm/playbook.yml
+
+root@lab:/home/lab/sonic_dci_api# cd sonic_dci_api/
+
+root@lab:/home/lab/sonic_dci_api#  python3.10 -m venv my-env
+
+root@lab:/home/lab/sonic_dci_api# source my-env/bin/activate
+
+(my-env) root@lab:/home/lab/sonic_dci_api# pip install -r requirements.txt
+
+(my-env) root@lab:/home/lab/sonic_dci_api# deactivate
 ```
 
 **Change default virbr0 dhcp range from .254 to .100**
@@ -152,7 +162,9 @@ root@lab:~# export LIBGUESTFS_BACKEND_SETTINGS=force_tcg
 ```
 root@lab:~# cd /home/lab/sonic_dci_api/
 
-root@lab:/home/lab/sonic_dci_api# python3.7 main.py
+root@lab:/home/lab/sonic_dci_api# source my-env/bin/activate
+
+(my-env) root@lab:/home/lab/sonic_dci_api# python main.py
 1 - Start Topology
 
 2 - Stop Topology
@@ -242,7 +254,7 @@ Enter new: admin
 ```
 root@lab:# cd /home/lab/sonic_dci_api/sonic_api/
 
-root@lab:/home/lab/sonic_dci_api/sonic_api# python3.7 main.py
+root@lab:/home/lab/sonic_dci_api/sonic_api# python main.py
 ```
 
 **You can check some scripts output in the folder "Output_Script_Example**

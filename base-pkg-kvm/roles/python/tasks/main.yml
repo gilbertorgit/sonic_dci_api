@@ -20,6 +20,5 @@
     - name: Additional pip packages
       command: "{{ item }}"
       loop:
-        - 'python3.7 -m pip install pexpect'
         - 'pip install pyyaml '
         - 'pip install netifaces'
