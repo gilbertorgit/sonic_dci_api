@@ -8,7 +8,7 @@
 from basicInfra import *
 import routers_config
 
-sonic_image = 'images/Enterprise_SONiC_OS_4.0.0.img'
+sonic_image = 'images/Enterprise_SONiC_OS_4.0.1.img'
 linux_image = 'images/CentOS-7-x86_64-GenericCloud.qcow2'
 
 logical_interfaces = "L-"

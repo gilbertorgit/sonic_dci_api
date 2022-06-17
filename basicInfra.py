@@ -19,7 +19,7 @@ class BasicInfra():
         self.source_sonic_image = source_sonic_image
         self.source_linux_image = source_linux_image
         self.source_apstra_image = source_apstra_image
-        self.ent_sonic_image = '/var/lib/libvirt/images/Enterprise_SONiC_OS_4.0.0.img'
+        self.ent_sonic_image = '/var/lib/libvirt/images/Enterprise_SONiC_OS_4.0.1.img'
         self.generic_centos_image = '/var/lib/libvirt/images/CentOS-7-x86_64-GenericCloud.qcow2'
         self.apstra_image = '/var/lib/libvirt/images/aos_server_4.0.0-314.qcow2'
         self.image_path = '/var/lib/libvirt/images/'

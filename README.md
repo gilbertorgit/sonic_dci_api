@@ -1,4 +1,4 @@
-# Using Virtual Sonic Enterprise 4.0.0 Powered by Dell and REST API to build a full DCI topology - (KVM environment)
+# Using Virtual Sonic Enterprise 4.0.1 Powered by Dell and REST API to build a full DCI topology - (KVM environment)
 
 ## Authors
 
@@ -37,8 +37,8 @@ This project will make available:
 
 Following this guide, you will be able to build
 
-1. DC1 - 3-Stage Clos network with Enterprise Sonic 4.0.0 using REST API to configure every single device
-2. DC2 - 3-Stage Clos network with Enterprise Sonic 4.0.0 using REST API to configure every single device
+1. DC1 - 3-Stage Clos network with Enterprise Sonic 4.0.1 using REST API to configure every single device
+2. DC2 - 3-Stage Clos network with Enterprise Sonic 4.0.1 using REST API to configure every single device
 
 Important Information
 - The python script available in this guide will create and delete all resources as well as start and stop the entire topology.
@@ -140,7 +140,7 @@ You will have a directory like that one:***
 root@lab:/home/lab/# ls -l /home/lab/sonic_dci_api/images/
 
 -rw-r--r-- 1 root root  858783744 Jan 14 08:55 CentOS-7-x86_64-GenericCloud.qcow2
--rw-r--r-- 1 root root 2473066496 Jan 14 08:55 Enterprise_SONiC_OS_4.0.0.img
+-rw-r--r-- 1 root root 2473066496 Jan 14 08:55 Enterprise_SONiC_OS_4.0.1.img
 -rw-r--r-- 1 root root 53 Jun 16 12:33 README.md
 ```
 
