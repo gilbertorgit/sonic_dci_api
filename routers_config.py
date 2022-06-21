@@ -4,7 +4,7 @@
  Date: 18/06/2022
 ---------------------------------
 """
-
+import os
 import time
 from time import sleep
 import console_config
@@ -73,3 +73,25 @@ def configure_virtual_router():
         mgmt_ip = virtual_hosts[i].get('mgmt_ip')
 
         console_config.config_virtual_sonic(hostname, mgmt_ip)
+
+
+def check_ping():
+
+    a = BasicInfra()
+    virtual_hosts = a.createVirtualVmDic("vrdc_info.csv")
+
+    for i in virtual_hosts.keys():
+        hostname = virtual_hosts[i].get('hostname')
+        mgmt_ip = virtual_hosts[i].get('mgmt_ip')
+
+        response = os.system("ping -c 1 " + mgmt_ip)
+
+        if response == 0:
+            pingstatus = print(f'{hostname} - MGMT Network: {mgmt_ip} is reachable')
+        else:
+            pingstatus = print(f'{hostname} - MGMT Network: {mgmt_ip} is unreachable')
+
+        return pingstatus
+
+if __name__ == "__main__":
+    check_ping()
