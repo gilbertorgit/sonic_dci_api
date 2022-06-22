@@ -45,7 +45,7 @@ class BGPSonic():
                                             "ibgp": {{
                                                 "config": {{
                                                     "equal-cluster-length": false,
-                                                    "maximum-paths": 1
+                                                    "maximum-paths": 2
                                                 }}
                                             }}
                                         }}
@@ -58,7 +58,7 @@ class BGPSonic():
                                         "l2vpn-evpn": {{
                                             "openconfig-bgp-evpn-ext:config": {{
                                                 "advertise-all-vni": true,
-                                                "advertise-default-gw": true
+                                                "advertise-default-gw": false
                                             }}
                                         }}
                                     }}
@@ -182,7 +182,7 @@ class BGPSonic():
                                         ]
                                     }},
                                     "config": {{
-                                        "capability-extended-nexthop": true,
+                                        "capability-extended-nexthop": false,
                                         "enabled": true,
                                         "peer-group-name": "{pg_name}"
                                     }},
@@ -202,7 +202,7 @@ class BGPSonic():
                                             "connect-retry": 5,
                                             "hold-time": 3,
                                             "keepalive-interval": 1,
-                                            "minimum-advertisement-interval": 0
+                                            "minimum-advertisement-interval": 5
                                         }}
                                     }},
                                     "transport": {{
@@ -252,7 +252,7 @@ class BGPSonic():
                                         ]
                                     }},
                                     "config": {{
-                                        "capability-extended-nexthop": true,
+                                        "capability-extended-nexthop": false,
                                         "enabled": true,
                                         "peer-group-name": "{pg_name}"
                                     }},
@@ -268,7 +268,7 @@ class BGPSonic():
                                             "connect-retry": 5,
                                             "hold-time": 3,
                                             "keepalive-interval": 1,
-                                            "minimum-advertisement-interval": 0
+                                            "minimum-advertisement-interval": 5
                                         }}
                                     }},
                                     "transport": {{
@@ -338,7 +338,7 @@ class BGPSonic():
                                         ]
                                     }},
                                     "config": {{
-                                        "capability-extended-nexthop": true,
+                                        "capability-extended-nexthop": false,
                                         "enabled": true,
                                         "peer-group-name": "{pg_name}"
                                     }},
@@ -358,7 +358,7 @@ class BGPSonic():
                                             "connect-retry": 5,
                                             "hold-time": 3,
                                             "keepalive-interval": 1,
-                                            "minimum-advertisement-interval": 0
+                                            "minimum-advertisement-interval": 5
                                         }}
                                     }},
                                     "transport": {{
@@ -417,7 +417,7 @@ class BGPSonic():
                                             "connect-retry": 5,
                                             "hold-time": 30,
                                             "keepalive-interval": 10,
-                                            "minimum-advertisement-interval": 0
+                                            "minimum-advertisement-interval": 5
                                         }}
                                     }},
                                     "transport": {{
@@ -500,7 +500,7 @@ class BGPSonic():
                                     "timers": {{
                                         "config": {{
                                             "connect-retry": 5,
-                                            "minimum-advertisement-interval": 0
+                                            "minimum-advertisement-interval": 5
                                         }}
                                     }},
                                     "transport": {{
