@@ -59,7 +59,18 @@ class BGPSonic():
                                             "openconfig-bgp-evpn-ext:config": {{
                                                 "advertise-all-vni": true,
                                                 "advertise-default-gw": false
+                                            }},
+                                            "openconfig-bgp-evpn-ext:route-advertise": {{
+                                                "route-advertise-list": [
+                                                    {{
+                                                        "advertise-afi-safi": "openconfig-bgp-types:IPV4_UNICAST",
+                                                        "config": {{
+                                                            "advertise-afi-safi": "openconfig-bgp-types:IPV4_UNICAST"
+                                                        }}
+                                                    }}
+                                                ]
                                             }}
+                                            
                                         }}
                                     }}
                                 ]
