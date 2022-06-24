@@ -7,8 +7,11 @@
 ## Topology
 
 <p align="center">
+  DCI TOPOLOGY
   <img src="https://github.com/gilbertorgit/sonic_dci_api/blob/main/topology_prints/DCI-TOPOLOGY.JPG">
+  SONIC MGMT IPs AND CREDENTIALS
   <img src="https://github.com/gilbertorgit/sonic_dci_api/blob/main/topology_prints/MGMT_IP.JPG">
+  VM HOSTS IPs AND CREDENTIALS
   <img src="https://github.com/gilbertorgit/sonic_dci_api/blob/main/topology_prints/VM_HOSTS_IP.JPG">
 </p>
 
