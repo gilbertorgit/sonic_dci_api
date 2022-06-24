@@ -82,7 +82,7 @@ class CreateSonicConfig:
     def sendListInfo(self):
 
         excel_tab_list = ("SYSTEM", "VRF", "VLAN", "LOOPBACK", "PORTCHANNEL", "INTERFACE", "ROUTEMAP",
-                          "BGP_GLOBAL", "BGP_PG", "BGP_NEIGH", "BGP_VNI_MAP", "BGP_VRF", "VTEP")
+                          "BGP_GLOBAL", "BGP_NEIGH", "BGP_VNI_MAP", "BGP_VRF", "VTEP")
 
         for name in excel_tab_list:
             self.generateDataInfo('sonic_data.xlsx', name)
@@ -639,8 +639,8 @@ if __name__ == "__main__":
     sleep(1)
     sonic_instance.createBgpNeighbor()
     sleep(1)
-    sonic_instance.createBgpVniMap()
-    sleep(1)
+    #sonic_instance.createBgpVniMap()
+    #sleep(1)
     sonic_instance.createBgpVrf()
     sleep(1)
     sonic_instance.createVtepSonic()

@@ -107,13 +107,13 @@ class VrfSonic():
                                         "use-multiple-paths": {{
                                             "ebgp": {{
                                                 "config": {{
-                                                    "maximum-paths": 1
+                                                    "maximum-paths": 2
                                                 }}
                                             }},
                                             "ibgp": {{
                                                 "config": {{
                                                     "equal-cluster-length": false,
-                                                    "maximum-paths": 1
+                                                    "maximum-paths": 2
                                                 }}
                                             }}
                                         }}
