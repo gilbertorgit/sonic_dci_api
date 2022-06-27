@@ -196,6 +196,8 @@ ping 192.168.122.230 -c 2
 
 In case you face any issues, you can configure it manually:
 ```
+(my-env) root@lab:/home/lab/sonic_dci_api# virsh list
+
  Id    Name                           State
 ----------------------------------------------------
  45    lab3-dc1-sonic-leaf-1          running
