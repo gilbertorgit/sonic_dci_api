@@ -32,7 +32,9 @@ This project will make available:
 4. Alternatively, there is a PDF document providing all steps to configure your entire topology
    1. If you are a Partner, contact your account manager to have access
    2. If you are an end customer, contact your partner to have access
-6. Lab Topology
+5. Lab Topology
+6. GNS3 Environment
+   1. 
 
 Following this guide, you will be able to build
 
@@ -250,6 +252,8 @@ Enter new: admin
 # exit
 # exit
 ```
+
+## Sonic API Configuration
 
 * The script below will configure the entire topology using REST APIs
 ```
