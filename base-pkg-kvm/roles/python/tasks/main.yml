@@ -5,20 +5,8 @@
        - python3.10-dev
        - python3.10-venv
 
-    - name: Additional Packages
-      apt: name={{ item }} state=present
-      loop:
-       - python-pip
-       - python-netifaces
-
     - name: Remove Pexpect Conflicts
       apt: name={{ item }} state=absent
       loop:
         - python-pexpect
         - python3-pexpect
-
-    - name: Additional pip packages
-      command: "{{ item }}"
-      loop:
-        - 'pip install pyyaml '
-        - 'pip install netifaces'
