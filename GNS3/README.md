@@ -12,7 +12,7 @@
 4. GNS3 allows you to upload .iso, please see the VM_ISO directory to automatically configure your hosts VMs
    1. C1-V10-H1 and C1-V10-H4 have 3 interfaces
       1. eth0 - no use
-      2. eth1 - dc1/2-leaf-2
+      2. eth1 - dc1/2-leaf-1
       3. eth2 - dc1/2-leaf-2
    2. All other VMs have 2 interfaces
       1. eth0 - no use
