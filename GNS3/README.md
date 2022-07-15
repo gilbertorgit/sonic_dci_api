@@ -8,8 +8,16 @@
 
 1. Topology, IP, and credentials remain the same, once GNS3 provides the same NAT Subnet Interface (192.168.122.0/24)
 2. Make sure to connect your MGMT interface to this NAT Interface
-2. CentOS Cloud Guest - https://gns3.com/marketplace/appliances/centos-cloud-guest
-3. GNS3 allows you to upload .iso, please see the VM_ISO directory to automatically configure your hosts VMs
+3. CentOS Cloud Guest - https://gns3.com/marketplace/appliances/centos-cloud-guest
+4. GNS3 allows you to upload .iso, please see the VM_ISO directory to automatically configure your hosts VMs
+   1. C1-V10-H1 and C1-V10-H4 have 3 interfaces
+      1. eth0 - no use
+      2. eth1 - dc1/2-leaf-2
+      3. eth2 - dc1/2-leaf-2
+   2. All other VMs have 2 interfaces
+      1. eth0 - no use
+      2. eth1 - connected to the leaf - See topology
+
 
 ## Basic Devices configuration - GNS3 Console Mode
 
