@@ -275,22 +275,22 @@ You can still use Sonic API scripts to configure the entire topology.
 In your GNS3 Shell:
 
 ```
-gns3vm# apt -y install software-properties-common
+gns3vm# sudo apt -y install software-properties-common
 
-gns3vm# add-apt-repository --yes ppa:deadsnakes/ppa
+gns3vm# sudo add-apt-repository --yes ppa:deadsnakes/ppa
 
-gns3vm# add-apt-repository --yes --update ppa:ansible/ansible
+gns3vm# sudo add-apt-repository --yes --update ppa:ansible/ansible
 
-gns3vm# apt -y update
+gns3vm# sudo apt -y update
 
-gns3vm# apt -y install ansible git
+gns3vm# sudo apt -y install ansible git
 
 gns3vm# git clone https://github.com/gilbertorgit/sonic_dci_api.git
 ```
 
 Change the playbook
 ```
-gns3vm# vi sonic_dci_api/base-pkg-kvm/playbook.yml
+gns3vm# nano sonic_dci_api/base-pkg-kvm/playbook.yml
 ```
 
 Remove all the roles but python
@@ -307,7 +307,7 @@ Remove all the roles but python
 
 Save and run the playbook
 ```
-gns3vm# ansible-playbook sonic_dci_api/base-pkg-kvm/playbook.yml
+gns3vm# sudo ansible-playbook sonic_dci_api/base-pkg-kvm/playbook.yml
 ```
 
 Create Python venv and run the script
@@ -320,9 +320,7 @@ root@gns3vm:~/sonic_dci_api# source my-env/bin/activate
 
 root@gns3vm:~/sonic_dci_api# pip install -r requirements.txt
 
-root@gns3vm:~/sonic_dci_api# source my-env/bin/activate 
-
-(my-env) root@gns3vm:~/sonic_dci_api#  cd sonic_api/
+(my-env) root@gns3vm:~/sonic_dci_api# cd sonic_api/
 ```
 
 ### Sonic API Configuration
