@@ -16,7 +16,9 @@
       3. eth2 - dc1/2-leaf-2
    2. All other VMs have 2 interfaces
       1. eth0 - no use
-      2. eth1 - connected to the leaf - See topology
+      2. eth1 - connected to leaf - See "main" topology
+
+### GNS3 Topology - Print
 
 
 ## Basic Devices configuration - GNS3 Console Mode
