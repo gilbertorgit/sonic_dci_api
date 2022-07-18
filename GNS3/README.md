@@ -20,6 +20,11 @@
 
 ### GNS3 Topology - Print
 
+<p align="center">
+  DCI TOPOLOGY
+  <img src="https://github.com/gilbertorgit/sonic_dci_api/blob/main/GNS3/GNS3PRINT.JPG">
+</p>
+
 
 ## Basic Devices configuration - GNS3 Console Mode
 
