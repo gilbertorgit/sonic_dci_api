@@ -254,6 +254,9 @@ class BasicInfra():
 
             subprocess.call(install_vrdc, bufsize=2000, shell=True)
 
+            print("-", f'Starting Ent Virtual Sonic {i}')
+            sleep(2)
+
     def createVirtualVms(self, csv_file):
 
         print("-" * 120)
