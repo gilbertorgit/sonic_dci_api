@@ -31,9 +31,9 @@ def configure_sonic_ztp():
 
     threads = []
 
-    print("Wait 1 minute to disable Sonic ZTP")
+    print("Wait 2 minutes to disable Sonic ZTP")
     start_time = time.time()
-    sleep(60)
+    sleep(120)
     run_time = time.time() - start_time
     print("** Time waiting: %s sec" % round(run_time, 2))
     print("########## Basic MGMT Configuration - hostname and ip")
