@@ -10,8 +10,8 @@ Interesting Projects:
 
 https://github.com/gilbertorgit?tab=repositories
 
-1. Enterprise Sonic - DCI Topology with API Automation
-   1. https://github.com/gilbertorgit/sonic_dci_api
+1. Enterprise Sonic and Apstra
+   1. https://github.com/gilbertorgit/ent_sonic_apstra
 2. Juniper vQFX and Apstra
    1. https://github.com/gilbertorgit/jnpr_apstra_kvm
 
