@@ -4,6 +4,17 @@
 
 **Gilberto Rampini**
 
+## Other Projects
+
+Interesting Projects:
+
+https://github.com/gilbertorgit?tab=repositories
+
+1. Enterprise Sonic - DCI Topology with API Automation
+   1. https://github.com/gilbertorgit/sonic_dci_api
+2. Juniper vQFX and Apstra
+   1. https://github.com/gilbertorgit/jnpr_apstra_kvm
+
 ## Topology
 
 <p align="center">
