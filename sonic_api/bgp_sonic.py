@@ -6,7 +6,7 @@
 """
 
 
-class BGPSonic():
+class BGPSonic:
 
     @staticmethod
     def bgpGlobalSet(as_number, router_id, maximum_paths):

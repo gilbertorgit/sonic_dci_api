@@ -11,7 +11,7 @@ from time import sleep
 import time
 
 
-class BasicInfra():
+class BasicInfra:
 
     def __init__(self, source_sonic_image=None, source_linux_image=None, source_apstra_image=None ):
         self.interface_list = []

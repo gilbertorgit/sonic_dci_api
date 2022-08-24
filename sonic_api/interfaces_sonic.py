@@ -6,7 +6,7 @@
 """
 
 
-class InterfacesSonic():
+class InterfacesSonic:
     """
     # Vlan
     """

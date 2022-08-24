@@ -6,7 +6,7 @@
 """
 
 
-class RoutingPolicySonic():
+class RoutingPolicySonic:
 
     @staticmethod
     def rpPrependMcLagPeerSet(name: str, policy_result: str, as_number, sequence_number, match_set: str = "ANY"):

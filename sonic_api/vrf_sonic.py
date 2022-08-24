@@ -6,7 +6,7 @@
 """
 
 
-class VrfSonic():
+class VrfSonic:
 
     @staticmethod
     def vrfSet(vrf_name: str):

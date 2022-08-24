@@ -15,7 +15,7 @@ from bgp_sonic import *
 
 requests.packages.urllib3.disable_warnings() #Supress SSL verify warnings
 
-class Sonic():
+class Sonic:
 
     def __init__(self):
         self.password = None
@@ -104,9 +104,17 @@ class Sonic():
                 response = requests.request("PATCH", url, data=data, headers=headers, verify=False, timeout=15)
 
             return response
+        except requests.exceptions.HTTPError as e:
+            print("HTTP Error:", e)
+        except requests.exceptions.ConnectionError as e:
+            print("Error Connecting:", e)
+        except requests.exceptions.Timeout as e:
+            print("Timeout Error:", e)
+        except requests.exceptions.RequestException as e:
+            print("Something Else Happened:", e)
 
-        except:
-            exit("Error URL")
+        #except:
+        #   exit("Error URL")
 
     def loginRequest(self, **kwargs: dict):
         """

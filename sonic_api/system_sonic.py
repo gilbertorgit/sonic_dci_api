@@ -6,7 +6,7 @@
 """
 
 
-class SystemSonic():
+class SystemSonic:
 
     @staticmethod
     def hostnameSet(hostname: str):
